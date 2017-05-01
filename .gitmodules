@@ -7,3 +7,6 @@
 [submodule "docker-cheat-sheet"]
 	path = docker-cheat-sheet
 	url = git://github.com/lorin/docker-cheat-sheet.git
+[submodule "awk-cheat-sheet"]
+	path = awk-cheat-sheet
+	url = git://github.com/lorin/awk-cheat-sheet.git
