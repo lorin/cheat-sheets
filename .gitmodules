@@ -4,3 +4,6 @@
 [submodule "macos-cheat-sheet"]
 	path = macos-cheat-sheet
 	url = git://github.com/lorin/macos-cheat-sheet.git
+[submodule "docker-cheat-sheet"]
+	path = docker-cheat-sheet
+	url = git://github.com/lorin/docker-cheat-sheet.git
