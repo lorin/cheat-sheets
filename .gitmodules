@@ -1,0 +1,6 @@
+[submodule "vim-cheat-sheet"]
+	path = vim-cheat-sheet
+	url = git://github.com/lorin/vim-cheat-sheet.git
+[submodule "macos-cheat-sheet"]
+	path = macos-cheat-sheet
+	url = git://github.com/lorin/macos-cheat-sheet.git
