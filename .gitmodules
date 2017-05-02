@@ -10,3 +10,6 @@
 [submodule "awk-cheat-sheet"]
 	path = awk-cheat-sheet
 	url = git://github.com/lorin/awk-cheat-sheet.git
+[submodule "git-cheat-sheet"]
+	path = git-cheat-sheet
+	url = git://github.com/lorin/git-cheat-sheet.git
