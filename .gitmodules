@@ -13,3 +13,6 @@
 [submodule "git-cheat-sheet"]
 	path = git-cheat-sheet
 	url = git://github.com/lorin/git-cheat-sheet.git
+[submodule "mkdocs-cheat-sheet"]
+	path = mkdocs-cheat-sheet
+	url = git://github.com/lorin/mkdocs-cheat-sheet.git
