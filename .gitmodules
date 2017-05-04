@@ -19,3 +19,6 @@
 [submodule "jq-cheat-sheet"]
 	path = jq-cheat-sheet
 	url = git://github.com/lorin/jq-cheat-sheet.git
+[submodule "ipython-cheat-sheet"]
+	path = ipython-cheat-sheet
+	url = git://github.com/lorin/ipython-cheat-sheet.git
