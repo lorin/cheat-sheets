@@ -22,3 +22,6 @@
 [submodule "ipython-cheat-sheet"]
 	path = ipython-cheat-sheet
 	url = git://github.com/lorin/ipython-cheat-sheet.git
+[submodule "ggplot-cheat-sheet"]
+	path = ggplot-cheat-sheet
+	url = git://github.com/lorin/ggplot-cheat-sheet.git
