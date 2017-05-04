@@ -25,3 +25,6 @@
 [submodule "ggplot-cheat-sheet"]
 	path = ggplot-cheat-sheet
 	url = git://github.com/lorin/ggplot-cheat-sheet.git
+[submodule "pandas-cheat-sheet"]
+	path = pandas-cheat-sheet
+	url = git://github.com/lorin/pandas-cheat-sheet.git
