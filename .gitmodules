@@ -28,3 +28,6 @@
 [submodule "pandas-cheat-sheet"]
 	path = pandas-cheat-sheet
 	url = git://github.com/lorin/pandas-cheat-sheet.git
+[submodule "asciidoc-cheat-sheet"]
+	path = asciidoc-cheat-sheet
+	url = git://github.com/lorin/asciidoc-cheat-sheet.git
