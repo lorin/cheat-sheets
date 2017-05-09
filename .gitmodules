@@ -31,3 +31,6 @@
 [submodule "asciidoc-cheat-sheet"]
 	path = asciidoc-cheat-sheet
 	url = git://github.com/lorin/asciidoc-cheat-sheet.git
+[submodule "time-cheat-sheet"]
+	path = time-cheat-sheet
+	url = git://github.com/lorin/time-cheat-sheet.git
