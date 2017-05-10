@@ -37,3 +37,6 @@
 [submodule "java-cheat-sheet"]
 	path = java-cheat-sheet
 	url = git://github.com/lorin/java-cheat-sheet.git
+[submodule "idea-cheat-sheet"]
+	path = idea-cheat-sheet
+	url = git@github.com:lorin/idea-cheat-sheet.git
