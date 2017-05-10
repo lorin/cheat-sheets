@@ -34,3 +34,6 @@
 [submodule "time-cheat-sheet"]
 	path = time-cheat-sheet
 	url = git://github.com/lorin/time-cheat-sheet.git
+[submodule "java-cheat-sheet"]
+	path = java-cheat-sheet
+	url = git://github.com/lorin/java-cheat-sheet.git
