@@ -43,3 +43,6 @@
 [submodule "cassandra-cheat-sheet"]
 	path = cassandra-cheat-sheet
 	url = git://github.com/lorin/cassandra-cheat-sheet.git
+[submodule "react-cheat-sheet"]
+	path = react-cheat-sheet
+	url = git@github.com:lorin/react-cheat-sheet.git
