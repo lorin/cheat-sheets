@@ -40,3 +40,6 @@
 [submodule "idea-cheat-sheet"]
 	path = idea-cheat-sheet
 	url = git@github.com:lorin/idea-cheat-sheet.git
+[submodule "cassandra-cheat-sheet"]
+	path = cassandra-cheat-sheet
+	url = git://github.com/lorin/cassandra-cheat-sheet.git
