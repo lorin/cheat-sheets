@@ -46,3 +46,6 @@
 [submodule "react-cheat-sheet"]
 	path = react-cheat-sheet
 	url = git@github.com:lorin/react-cheat-sheet.git
+[submodule "html-cheat-sheet"]
+	path = html-cheat-sheet
+	url = git@github.com:lorin/html-cheat-sheet.git
