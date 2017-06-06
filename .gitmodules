@@ -49,3 +49,6 @@
 [submodule "html-cheat-sheet"]
 	path = html-cheat-sheet
 	url = git@github.com:lorin/html-cheat-sheet.git
+[submodule "net-cheat-sheet"]
+	path = net-cheat-sheet
+	url = git@github.com:lorin/net-cheat-sheet.git
