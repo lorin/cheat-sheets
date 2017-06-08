@@ -52,3 +52,6 @@
 [submodule "net-cheat-sheet"]
 	path = net-cheat-sheet
 	url = git@github.com:lorin/net-cheat-sheet.git
+[submodule "zsh-cheat-sheet"]
+	path = zsh-cheat-sheet
+	url = git@github.com:lorin/zsh-cheat-sheet.git
