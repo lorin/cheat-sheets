@@ -55,3 +55,6 @@
 [submodule "zsh-cheat-sheet"]
 	path = zsh-cheat-sheet
 	url = git@github.com:lorin/zsh-cheat-sheet.git
+[submodule "tlaplus-cheat-sheet"]
+	path = tlaplus-cheat-sheet
+	url = git@github.com:lorin/tlaplus-cheat-sheet.git
