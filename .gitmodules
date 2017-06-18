@@ -58,3 +58,9 @@
 [submodule "tlaplus-cheat-sheet"]
 	path = tlaplus-cheat-sheet
 	url = git@github.com:lorin/tlaplus-cheat-sheet.git
+[submodule "gradle-cheat-sheet"]
+	path = gradle-cheat-sheet
+	url = git@github.com:lorin/gradle-cheat-sheet.git
+[submodule "alloy-cheat-sheet"]
+	path = alloy-cheat-sheet
+	url = git@github.com:lorin/alloy-cheat-sheet.git
