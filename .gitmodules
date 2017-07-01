@@ -64,3 +64,6 @@
 [submodule "alloy-cheat-sheet"]
 	path = alloy-cheat-sheet
 	url = git@github.com:lorin/alloy-cheat-sheet.git
+[submodule "go-cheat-sheet"]
+	path = go-cheat-sheet
+	url = git@github.com:lorin/go-cheat-sheet.git
