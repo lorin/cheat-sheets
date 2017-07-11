@@ -67,3 +67,6 @@
 [submodule "go-cheat-sheet"]
 	path = go-cheat-sheet
 	url = git@github.com:lorin/go-cheat-sheet.git
+[submodule "python-cheat-sheet"]
+	path = python-cheat-sheet
+	url = git@github.com:lorin/python-cheat-sheet.git
