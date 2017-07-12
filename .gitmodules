@@ -73,3 +73,6 @@
 [submodule "meteor-cheat-sheet"]
 	path = meteor-cheat-sheet
 	url = git@github.com:lorin/meteor-cheat-sheet.git
+[submodule "bootstrap-cheat-sheet"]
+	path = bootstrap-cheat-sheet
+	url = git@github.com:lorin/bootstrap-cheat-sheet.git
