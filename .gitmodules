@@ -70,6 +70,3 @@
 [submodule "python-cheat-sheet"]
 	path = python-cheat-sheet
 	url = git@github.com:lorin/python-cheat-sheet.git
-[submodule "meteor-cheat-sheet"]
-	path = meteor-cheat-sheet
-	url = git@github.com:lorin/meteor-cheat-sheet.git
