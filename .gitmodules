@@ -79,3 +79,6 @@
 [submodule "javascript-cheat-sheet"]
 	path = javascript-cheat-sheet
 	url = git@github.com:lorin/javascript-cheat-sheet.git
+[submodule "mongo-cheat-sheet"]
+	path = mongo-cheat-sheet
+	url = git@github.com:lorin/mongo-cheat-sheet.git
