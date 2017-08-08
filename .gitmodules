@@ -82,3 +82,6 @@
 [submodule "mongo-cheat-sheet"]
 	path = mongo-cheat-sheet
 	url = git@github.com:lorin/mongo-cheat-sheet.git
+[submodule "spock-cheat-sheet"]
+	path = spock-cheat-sheet
+	url = git@github.com:lorin/spock-cheat-sheet.git
