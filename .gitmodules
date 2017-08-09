@@ -85,3 +85,6 @@
 [submodule "spock-cheat-sheet"]
 	path = spock-cheat-sheet
 	url = git@github.com:lorin/spock-cheat-sheet.git
+[submodule "pixelmator-cheat-sheet"]
+	path = pixelmator-cheat-sheet
+	url = git@github.com:lorin/pixelmator-cheat-sheet.git
