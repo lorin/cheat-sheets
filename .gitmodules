@@ -88,3 +88,6 @@
 [submodule "pixelmator-cheat-sheet"]
 	path = pixelmator-cheat-sheet
 	url = git@github.com:lorin/pixelmator-cheat-sheet.git
+[submodule "deckset-cheat-sheet"]
+	path = deckset-cheat-sheet
+	url = git@github.com:lorin/deckset-cheat-sheet.git
