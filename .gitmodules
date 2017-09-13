@@ -91,3 +91,6 @@
 [submodule "deckset-cheat-sheet"]
 	path = deckset-cheat-sheet
 	url = git@github.com:lorin/deckset-cheat-sheet.git
+[submodule "chrome-cheat-sheet"]
+	path = chrome-cheat-sheet
+	url = git@github.com:lorin/chrome-cheat-sheet.git
