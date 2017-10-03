@@ -198,5 +198,30 @@ cheatsheet do
             END
         end
     end
+    category do
+        id 'submodule'
+        entry do
+            name 'De-submodule'
+            notes <<-'END'
+            This will lose history.  Here's a zsh script I used,
+            based on <https://stackoverflow.com/a/16162228/742>
+
+            ```
+            #!/usr/local/bin/zsh
+            set -eu
+
+            for d in $(ls -d *cheat-sheet); do
+                echo $d
+                mv $d "${d}_tmp"
+                git submodule deinit $d
+                git rm $d
+                mv "${d}_tmp" $d
+                rm -rf "${d}"/.git
+                git add $d
+            done
+            ```
+            END
+        end
+    end
 end
 
