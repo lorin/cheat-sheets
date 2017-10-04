@@ -1,5 +1,5 @@
 cheatsheet do
-    title 'network stuff'
+    title 'net'
     docset_file_name 'net'
     keyword 'net'
     category do
