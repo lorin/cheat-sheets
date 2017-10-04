@@ -672,4 +672,35 @@ cheatsheet do
             END
         end
     end
+    category do
+        id 'Recursion'
+        entry do
+            name 'Recursive operators'
+            notes <<-'END'
+
+            Operator to sum a set of numbers:
+
+            ```
+            RECURSIVE Sum(_)
+            Sum(S) == 
+                IF S = {} THEN 0
+                ELSE LET x == CHOOSE x \in S : TRUE IN
+                    x + Sum(S \ {x})
+            ```
+            END
+        end
+        entry do
+            name 'Recursive functions'
+            notes <<-'END'
+            Function to sum a set of naturals
+
+            ```
+            Sum[S \in SUBSET Nat] == 
+                IF S = {} THEN 0
+                ELSE LET x == CHOOSE x \in S : TRUE IN
+                    x + Sum[S \ {x}]
+            ```
+            END
+        end
+    end
 end
