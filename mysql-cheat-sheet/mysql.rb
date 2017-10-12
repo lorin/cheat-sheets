@@ -8,6 +8,14 @@ cheatsheet do
             name 'port'
             command '3306'
         end
+        entry do
+            name 'Connect to remote host (prompt for password)'
+            notes <<-'END'
+            ```
+            mysql -u $USER -h $HOSTNAME [$DBNAME] -p
+            ```
+            END
+        end
     end
     category do
         id 'Docker'
