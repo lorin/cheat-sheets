@@ -3,7 +3,67 @@ cheatsheet do
     docset_file_name 'Java'
     keyword 'java'
     category do
-        id 'Jersey'
+        id 'JDBC'
+        entry do
+            name 'Library for mysql (build.gradle)'
+            notes <<-'END'
+            ```groovy
+            dependencies {
+                ...
+                compile "mysql:mysql-connector-java:5.1.44"
+            
+            ```
+            END
+        end
+        entry do
+            name 'Setting up a mysql connection'
+            notes <<-'END'
+            ```java
+            import java.sql.Connection;
+            import java.sql.DriverManager;
+            import java.util.Properties;
+
+            // Assumptions:
+            //  * SSL is enabled
+            //  * Cert of server is trusted in keystore file
+            //  * Keystore file has been saved to src/main/resources
+            private Connection getConnection(String hostname, String database, String user, String password, String keystoreFilename, keystorePassword) throws SQLException {
+                String url = String.format("jdbc:mysql://%s/%s", hostname, database);
+                Properties props = new Properties();
+                props.setProperty("user", user);
+                props.setProperty("password", password);
+                props.setProperty("verifyServerCertificate", "true");
+                props.setProperty("useSSL", "true");
+                props.setProperty("requireSSL", "true");
+                props.setProperty("trustCertificateKeyStoreUrl", getClass().getClassLoader().getResource(keystoreFilename).toString());
+                props.setProperty("trustCertificateKeyStorePassword", keystorePassword);
+                return DriverManager.getConnection(url, props);
+            }
+            
+            ```
+            END
+        end
+        entry do
+            name 'Basic query'
+            notes <<-'END'
+            ```java
+            private void query(Connection conn) throws SQLException {
+                try (Statement stmt = conn.createStatement()) {
+                    String sql = "SELECT `key`, `value` FROM test";
+                    try (ResultSet rs = stmt.executeQuery(sql)) {
+
+                        while (rs.next()) {
+                            String key = rs.getString("key");
+                            String value = rs.getString("value");
+                            System.out.println(String.format("key=%s, value=%s", key, value));
+                        }
+                    }
+                }
+            }
+            
+            ```
+            END
+        end
     end
     category do
         id 'RxJava'
