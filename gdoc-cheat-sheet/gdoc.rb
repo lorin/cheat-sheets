@@ -10,5 +10,13 @@ cheatsheet do
             ⌘+Shift+X
             END
         end
+        entry do
+            name 'Outline'
+            notes <<-'END'
+            ```
+            Tools -> Document Outline
+            ```
+            END
+        end
     end
 end
