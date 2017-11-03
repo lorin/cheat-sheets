@@ -171,6 +171,23 @@ cheatsheet do
     category do
         id 'Testing'
         entry do
+            name 'Test one package'
+            notes <<-'END'
+            ```
+            go test github.com/org/project/package
+            ```
+            END
+        end
+        entry do
+            name 'Show coverage report for one package'
+            notes <<-'END'
+            ```
+            go test -coverprofile=coverage.out github.com/org/project/package
+            go tool cover -html=coverage.out
+            ```
+            END
+        end
+        entry do
             name 'Call one test function'
             notes <<-'END'
             ```
