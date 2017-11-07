@@ -333,7 +333,33 @@ cheatsheet do
     category do
         id 'Macros'
         entry do
-            name 'Run a macro over multiple lines'
+            name 'Record macro "q"'
+            notes <<-'END'
+            ```
+            qq
+            <do stuff>
+            q
+            ```
+            END
+        end
+        entry do
+            name 'Play back macro "q"'
+            notes <<-'END'
+            ```
+            @q
+            ```
+            END
+        end
+        entry do
+            name 'Play back last macro'
+            notes <<-'END'
+            ```
+            @@
+            ```
+            END
+        end
+        entry do
+            name 'Run macro "q" over multiple lines'
             notes <<-'END'
             Visual select the lines, then type:
 
