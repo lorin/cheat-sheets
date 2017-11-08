@@ -31,10 +31,10 @@ cheatsheet do
             END
         end
         entry do
-            name 'Generate client stubs'
+            name 'Generate client stubs into api dir'
             notes <<-'END'
             ```
-            protoc --gofast_out=. -I root/dir/of/prot/files foo/bar/baz.proto
+            protoc --gofast_out=plugins=grpc:api -I root/dir/of/prot/files foo/bar/*.proto
             ```
             END
         end
