@@ -34,7 +34,16 @@ cheatsheet do
             name 'Generate client stubs into api dir'
             notes <<-'END'
             ```
-            protoc --gofast_out=plugins=grpc:api -I root/dir/of/prot/files foo/bar/*.proto
+            protoc -I root/dir/of/prot/files --gofast_out=\
+            Mgoogle/protobuf/empty.proto=github.com/gogo/protobuf/types,\
+            Mgoogle/protobuf/any.proto=github.com/gogo/protobuf/types,\
+            Mgoogle/protobuf/duration.proto=github.com/gogo/protobuf/types,\
+            Mgoogle/protobuf/struct.proto=github.com/gogo/protobuf/types,\
+            Mgoogle/protobuf/timestamp.proto=github.com/gogo/protobuf/types,\
+            Mgoogle/protobuf/wrappers.proto=github.com/gogo/protobuf/types,\
+            plugins=grpc:api \
+            foo/bar/baz.proto \
+            foo/bar/quux.proto
             ```
             END
         end
