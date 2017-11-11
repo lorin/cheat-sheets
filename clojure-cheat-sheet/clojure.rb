@@ -3,11 +3,34 @@ cheatsheet do
     docset_file_name 'clojure'
     keyword 'clojure'
     category do
-        id 'Basics'
+        id 'lein'
         entry do
-            name 'Docs'
+            name 'New project'
             notes <<-'END'
-            <https://clojuredocs.org/>
+            ```
+            lein new app my-appname
+            ```
+
+            Note: this will create a new directory named my-appname
+            and put the files in there.
+
+            The main file is: `myappname/src/myap_appname/core.clj`
+            END
+        end
+        entry do
+            name 'Run'
+            notes <<-'END'
+            ```
+            lein run
+            ```
+            END
+        end
+        entry do
+            name 'repl'
+            notes <<-'END'
+            ```
+            lein repl
+            ```
             END
         end
     end
@@ -53,7 +76,6 @@ cheatsheet do
             notes <<-'END'
             ```
             #(+ % 3)
-            
             ```
             END
         end
@@ -103,5 +125,89 @@ cheatsheet do
     end
     category do
         id 'Destructuring'
+        entry do
+            name 'Lists'
+            notes <<-'END'
+            ```
+            (let [[elt & remaining] entries])
+            ```
+
+            If entries is empty, `elt` will be `nil`.
+            END
+        end
+    end
+    category do
+        id 'deps'
+        entry do
+            name 'Specify deps'
+            notes <<-'END'
+            In project.cls.
+
+
+            ```
+            :dependencies [[org.clojure/clojure "1.8.0"]
+                           [org.example/libname "1.2.3"]
+
+            ```
+
+            From gradle style:
+
+            `org.exmaple:lib:1.2.3 -> org.example/libname "1.2.3"`
+            END
+        end
+        entry do
+            name 'Download deps'
+            notes <<-'END'
+            ```
+            lein deps
+            
+            ```
+            END
+        end
+    end
+    category do
+        id 'spacemacs'
+        entry do
+            name 'Docs'
+            notes <<-'END'
+            <http://spacemacs.org/layers/+lang/clojure/README.html>
+            END
+        end
+        entry do
+            name 'Connect to repl'
+            notes <<-'END'
+            ```
+            <space> m s i
+            ```
+
+            Note: expects the file to be in a lein project (see above).
+            END
+        end
+        entry do
+            name 'Evaluate expression'
+            notes <<-'END'
+            ```
+            <space> m e e
+            ```
+            END
+        end
+        entry do
+            name 'Evaluate region'
+            notes <<-'END'
+            ```
+            <space> m e r
+            ```
+            END
+        end
+        entry do
+            name 'Help on function'
+            notes <<-'END'
+            ```
+            <space> m h h 
+            ```
+
+            Hit `q` to close help
+            END
+        end
     end
 end
