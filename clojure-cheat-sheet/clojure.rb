@@ -3,6 +3,21 @@ cheatsheet do
     docset_file_name 'clojure'
     keyword 'clojure'
     category do
+        id 'Basic stuff'
+        entry do
+            name 'zip'
+            notes <<-'END'
+            Call `map` using a function that takes multiple args,
+            and then pass each seq as a separate arg:
+
+            ```
+            > (map vector '(1 2 3) '("a" "b" "c"))
+            ([1 "a"] [2 "b"] [3 "c"])
+            ```
+            END
+        end
+    end
+    category do
         id 'lein'
         entry do
             name 'New project'
@@ -171,6 +186,14 @@ cheatsheet do
             name 'Docs'
             notes <<-'END'
             <http://spacemacs.org/layers/+lang/clojure/README.html>
+            END
+        end
+        entry do
+            name 'Jump back from doc buffer'
+            notes <<-'END'
+            ```
+            SPC 1
+            ```
             END
         end
         entry do
