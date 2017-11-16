@@ -60,14 +60,24 @@ cheatsheet do
         end
     end
     category do
-        id 'form url encode data'
+        id 'url encoding and decoding'
         entry do
-            name 'Python 3'
+            name 'encode: Python 3'
             notes <<-'END'
             ```python
             from urllib.parse import urlencode
             x = [("shape", "circle"), ("color", "red")]
             y = urlencode(x)
+            ```
+            END
+        end
+        entry do
+            name 'decode: python 3'
+            notes <<-'END'
+            ```python
+            import urllib
+            qs = ...
+            s = urllib.parse.unquote(quoted_string)
             ```
             END
         end
