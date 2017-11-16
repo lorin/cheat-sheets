@@ -16,6 +16,19 @@ cheatsheet do
         end
     end
     category do
+        id 'Generics'
+        entry do
+            name 'Define a generic method'
+            notes <<-'END'
+            ```java
+            static <T,U> Optional<U> get(Map<T,U> map, T key) {
+                return Optional.ofNullable(map.get(key));
+            }
+            ```
+            END
+        end
+    end
+    category do
         id 'JDBC'
         entry do
             name 'Library for mysql (build.gradle)'
