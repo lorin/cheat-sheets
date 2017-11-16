@@ -82,4 +82,17 @@ cheatsheet do
             END
         end
     end
+    category do
+        id 'Insomnia'
+        entry do
+            name 'Import an url'
+            notes <<-'END'
+            1. Click the + on the left
+            2. Give this url a meaningful name
+            3. Paste the url into the top
+            4. Click "Query"
+            5. Click "Import from URL" at the bottom
+            END
+        end
+    end
 end
