@@ -59,11 +59,8 @@ cheatsheet do
         entry do
             name 'Restart mDNSResponder'
             notes <<-'END'
-            From <https://gist.github.com/mipmip/1844353>
-
             ```
-            sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist
-            sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist
+            sudo killall -TERM mDNSResponder
             ```
             END
         end
