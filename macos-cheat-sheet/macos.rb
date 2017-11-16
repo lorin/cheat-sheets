@@ -54,5 +54,19 @@ cheatsheet do
             END
         end
     end
+    category do
+        id 'System stuff'
+        entry do
+            name 'Restart mDNSResponder'
+            notes <<-'END'
+            From <https://gist.github.com/mipmip/1844353>
+
+            ```
+            sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist
+            sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist
+            ```
+            END
+        end
+    end
 end
 
