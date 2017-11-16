@@ -3,6 +3,19 @@ cheatsheet do
     docset_file_name 'Java'
     keyword 'java'
     category do
+        id 'File I/O'
+        entry do
+            name 'Write to a text file'
+            notes <<-'END'
+            ```java
+            try(PrintWriter os = new PrintWriter(new FileWriter("myfile.txt"))) {
+                os.println("I'm writing to a file!");
+            }
+            ```
+            END
+        end
+    end
+    category do
         id 'JDBC'
         entry do
             name 'Library for mysql (build.gradle)'
