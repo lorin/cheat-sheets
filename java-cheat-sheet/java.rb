@@ -651,11 +651,21 @@ cheatsheet do
             END
         end
         entry do
-            name 'Convert from epoch milis to HH:mm:ss string in local time'
+            name 'Convert from epoch millis to local datetime string'
             notes <<-'END'
             ```
-            long timestamp = ...;
-            LocalDateTime dateTime = Instant.ofEpochMilli(timestamp).atZone(ZoneId.systemDefault()).toLocalDateTime();
+            long timestamp = ...; LocalDateTime dateTime = Instant.ofEpochMilli(timestamp).atZone(ZoneId.systemDefault()).toLocalDateTime();
+            String local = dateTime.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
+            ```
+
+            Check out the DateTimeFormatter docs for predefined formatters.
+            END
+        end
+        entry do
+            name 'Convert from epoch millis to HH:mm:ss string in local time'
+            notes <<-'END'
+            ```
+            long timestamp = ...; LocalDateTime dateTime = Instant.ofEpochMilli(timestamp).atZone(ZoneId.systemDefault()).toLocalDateTime();
             DateTimeFormatter df = DateTimeFormatter.ofPattern("HH:mm:ss");
             String hoursMinSec = dateTime.format(df);
             ```
