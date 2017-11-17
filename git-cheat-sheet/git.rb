@@ -5,6 +5,14 @@ cheatsheet do
     category do
         id ''
         entry do
+            name 'Set upstream for current branch'
+            notes <<-'END'
+            ```
+            git branch -u origin/my-branch
+            ```
+            END
+        end
+        entry do
             name 'Useful links'
             notes <<-'END'
             <https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/>
