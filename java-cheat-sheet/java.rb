@@ -3,6 +3,73 @@ cheatsheet do
     docset_file_name 'Java'
     keyword 'java'
     category do
+        id 'Time'
+        entry do
+            name 'Gist with conversions'
+            notes <<-'END'
+            <https://gist.github.com/mscharhag/9195718>
+            END
+        end
+        entry do
+            name 'Convert time interval to milliseconds'
+            notes <<-'END'
+            ```java
+            import java.util.concurrent.TimeUnit;
+
+            long millis = TimeUnit.MINUTES.toMillis(5);
+            ```
+            END
+        end
+        entry do
+            name 'Convert datetime to epoch milis'
+            notes <<-'END'
+            ```java
+            ZonedDateTime time = ...;
+            long timestamp = time.toInstant().toEpochMilli();
+            ```
+            END
+        end
+        entry do
+            name 'Instantiate from year/month/date'
+            notes <<-'END'
+            ```
+            ZonedDateTime time = ZonedDateTime.of(year, month, day, hour, minute, second, nanoOfSecond, ZoneOffset.UTC);
+            ```java
+            END
+        end
+        entry do
+            name 'Convert from epoch milis to UTC'
+            notes <<-'END'
+            ```java
+            long timestamp = ...;
+            Instant i = Instant.ofEpochMilli(timestamp);
+            ZonedDateTime t = i.atZone(ZoneOffset.UTC);
+            ```
+            END
+        end
+        entry do
+            name 'Convert from epoch millis to local datetime string'
+            notes <<-'END'
+            ```java
+            long timestamp = ...; LocalDateTime dateTime = Instant.ofEpochMilli(timestamp).atZone(ZoneId.systemDefault()).toLocalDateTime();
+            String local = dateTime.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
+            ```
+
+            Check out the DateTimeFormatter docs for predefined formatters.
+            END
+        end
+        entry do
+            name 'Convert from epoch millis to HH:mm:ss string in local time'
+            notes <<-'END'
+            ```java
+            long timestamp = ...; LocalDateTime dateTime = Instant.ofEpochMilli(timestamp).atZone(ZoneId.systemDefault()).toLocalDateTime();
+            DateTimeFormatter df = DateTimeFormatter.ofPattern("HH:mm:ss");
+            String hoursMinSec = dateTime.format(df);
+            ```
+            END
+        end
+    end
+    category do
         id 'File I/O'
         entry do
             name 'Write to a text file'
@@ -606,78 +673,11 @@ cheatsheet do
         end
     end
     category do
-        id 'Time'
-        entry do
-            name 'Gist with conversions'
-            notes <<-'END'
-            <https://gist.github.com/mscharhag/9195718>
-            END
-        end
-        entry do
-            name 'Convert time interval to milliseconds'
-            notes <<-'END'
-            ```java
-            import java.util.concurrent.TimeUnit;
-
-            long millis = TimeUnit.MINUTES.toMillis(5);
-            ```
-            END
-        end
-        entry do
-            name 'Convert datetime to epoch milis'
-            notes <<-'END'
-            ```
-            ZonedDateTime time = ...;
-            long timestamp = time.toInstant().toEpochMilli();
-            ```
-            END
-        end
-        entry do
-            name 'Instantiate from year/month/date'
-            notes <<-'END'
-            ```
-            ZonedDateTime time = ZonedDateTime.of(year, month, day, hour, minute, second, nanoOfSecond, ZoneOffset.UTC);
-            ```
-            END
-        end
-        entry do
-            name 'Convert from epoch milis to UTC'
-            notes <<-'END'
-            ```
-            long timestamp = ...;
-            Instant i = Instant.ofEpochMilli(timestamp);
-            ZonedDateTime t = i.atZone(ZoneOffset.UTC);
-            ```
-            END
-        end
-        entry do
-            name 'Convert from epoch millis to local datetime string'
-            notes <<-'END'
-            ```
-            long timestamp = ...; LocalDateTime dateTime = Instant.ofEpochMilli(timestamp).atZone(ZoneId.systemDefault()).toLocalDateTime();
-            String local = dateTime.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
-            ```
-
-            Check out the DateTimeFormatter docs for predefined formatters.
-            END
-        end
-        entry do
-            name 'Convert from epoch millis to HH:mm:ss string in local time'
-            notes <<-'END'
-            ```
-            long timestamp = ...; LocalDateTime dateTime = Instant.ofEpochMilli(timestamp).atZone(ZoneId.systemDefault()).toLocalDateTime();
-            DateTimeFormatter df = DateTimeFormatter.ofPattern("HH:mm:ss");
-            String hoursMinSec = dateTime.format(df);
-            ```
-            END
-        end
-    end
-    category do
         id 'Enums'
         entry do
             name 'Declare an enum'
             notes <<-'END'
-            ```
+            ```java
             public enum State {ON, OFF, HALFWAY}
             ```
             END
@@ -685,7 +685,7 @@ cheatsheet do
         entry do
             name 'To string'
             notes <<-'END'
-            ```
+            ```java
             assertThat(State.ON.name()).isEqualTo("ON");
             ```
 
@@ -694,7 +694,7 @@ cheatsheet do
         entry do
             name 'From string'
             notes <<-'END'
-            ```
+            ```java
             assertThat(State.valueOf("HALFWAY")).isEqualTo(State.HALFWAY);
             ```
             END
