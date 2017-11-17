@@ -7,7 +7,7 @@ cheatsheet do
         entry do
             name 'Literal'
             notes <<-'END'
-            ```
+            ```groovy
             [name: "foo", "age": 43]
             
             ```
@@ -16,7 +16,7 @@ cheatsheet do
         entry do
             name 'Interpolate variable for key'
             notes <<-'END'
-            ```
+            ```groovy
             def name = "key"
             [(name): "foo"]
             ```
