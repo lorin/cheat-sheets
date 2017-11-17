@@ -32,9 +32,9 @@ cheatsheet do
         entry do
             name 'Instantiate from year/month/date'
             notes <<-'END'
-            ```
-            ZonedDateTime time = ZonedDateTime.of(year, month, day, hour, minute, second, nanoOfSecond, ZoneOffset.UTC);
             ```java
+            ZonedDateTime time = ZonedDateTime.of(year, month, day, hour, minute, second, nanoOfSecond, ZoneOffset.UTC);
+            ```
             END
         end
         entry do
