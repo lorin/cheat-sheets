@@ -5,7 +5,7 @@ cheatsheet do
     category do
         id 'CQL queries'
         entry do
-            name 'Delete wows'
+            name 'Delete rows'
             notes <<-'END'
             ```
             DELETE FROM tablename WHERE id = 79dfb128-3a63-11e7-9ef0-784f438fef77;
