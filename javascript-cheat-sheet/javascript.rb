@@ -5,6 +5,12 @@ cheatsheet do
     category do
         id 'Basics'
         entry do
+            name 'See also'
+            notes <<-'END'
+            See the frontend cheat-sheet for frontend dev stuff.
+            END
+        end
+        entry do
             name 'Array length'
             notes <<-'END'
             ```
