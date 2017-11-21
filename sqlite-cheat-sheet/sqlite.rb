@@ -14,6 +14,18 @@ cheatsheet do
         end
     end
     category do
+        id 'Formatting'
+        entry do
+            name 'Output as table with column names'
+            notes <<-'END'
+            ```
+            .mode column
+            .headers on
+            ```
+            END
+        end
+    end
+    category do
         id 'SQL'
         entry do
             name 'Create table'
