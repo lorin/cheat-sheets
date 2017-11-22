@@ -33,7 +33,6 @@ cheatsheet do
             notes <<-'END'
             ```
             SPC m s s
-            
             ```
             END
         end
@@ -45,6 +44,14 @@ cheatsheet do
             ```
 
             Note: expects the file to be in a lein project (see above).
+            END
+        end
+        entry do
+            name 'Evaluate buffer'
+            notes <<-'END'
+            ```
+            SPC m e b
+            ```
             END
         end
         entry do
