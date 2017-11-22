@@ -175,7 +175,6 @@ cheatsheet do
             notes <<-'END'
             ```
             lein deps
-            
             ```
             END
         end
@@ -197,7 +196,17 @@ cheatsheet do
             END
         end
         entry do
-            name 'Connect to repl'
+          name 'Connect to existing repl'
+          notes <<-'END'
+          ```
+          <space> m s c
+          localhost
+          9999
+          ```
+          END
+        end
+        entry do
+            name 'Start repl'
             notes <<-'END'
             ```
             <space> m s i
