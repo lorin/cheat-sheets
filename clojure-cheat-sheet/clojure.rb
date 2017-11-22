@@ -3,6 +3,69 @@ cheatsheet do
     docset_file_name 'clojure'
     keyword 'clojure'
     category do
+        id 'spacemacs'
+        entry do
+            name 'Docs'
+            notes <<-'END'
+            <http://spacemacs.org/layers/+lang/clojure/README.html>
+            END
+        end
+        entry do
+            name 'Jump back from doc buffer'
+            notes <<-'END'
+            ```
+            SPC 1
+            ```
+            END
+        end
+        entry do
+          name 'Connect to existing repl'
+          notes <<-'END'
+          ```
+          <space> m s c
+          localhost
+          9999
+          ```
+          END
+        end
+        entry do
+            name 'Start repl'
+            notes <<-'END'
+            ```
+            <space> m s i
+            ```
+
+            Note: expects the file to be in a lein project (see above).
+            END
+        end
+        entry do
+            name 'Evaluate expression'
+            notes <<-'END'
+            ```
+            <space> m e e
+            ```
+            END
+        end
+        entry do
+            name 'Evaluate region'
+            notes <<-'END'
+            ```
+            <space> m e r
+            ```
+            END
+        end
+        entry do
+            name 'Help on function'
+            notes <<-'END'
+            ```
+            <space> m h h 
+            ```
+
+            Hit `q` to close help
+            END
+        end
+    end
+    category do
         id 'Basic stuff'
         entry do
             name 'zip'
@@ -176,69 +239,6 @@ cheatsheet do
             ```
             lein deps
             ```
-            END
-        end
-    end
-    category do
-        id 'spacemacs'
-        entry do
-            name 'Docs'
-            notes <<-'END'
-            <http://spacemacs.org/layers/+lang/clojure/README.html>
-            END
-        end
-        entry do
-            name 'Jump back from doc buffer'
-            notes <<-'END'
-            ```
-            SPC 1
-            ```
-            END
-        end
-        entry do
-          name 'Connect to existing repl'
-          notes <<-'END'
-          ```
-          <space> m s c
-          localhost
-          9999
-          ```
-          END
-        end
-        entry do
-            name 'Start repl'
-            notes <<-'END'
-            ```
-            <space> m s i
-            ```
-
-            Note: expects the file to be in a lein project (see above).
-            END
-        end
-        entry do
-            name 'Evaluate expression'
-            notes <<-'END'
-            ```
-            <space> m e e
-            ```
-            END
-        end
-        entry do
-            name 'Evaluate region'
-            notes <<-'END'
-            ```
-            <space> m e r
-            ```
-            END
-        end
-        entry do
-            name 'Help on function'
-            notes <<-'END'
-            ```
-            <space> m h h 
-            ```
-
-            Hit `q` to close help
             END
         end
     end
