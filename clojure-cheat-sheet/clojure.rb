@@ -22,17 +22,26 @@ cheatsheet do
           name 'Connect to existing repl'
           notes <<-'END'
           ```
-          <space> m s c
+          SPC m s c
           localhost
           9999
           ```
           END
         end
         entry do
-            name 'Start repl'
+            name 'Open repl'
             notes <<-'END'
             ```
-            <space> m s i
+            SPC m s s
+            
+            ```
+            END
+        end
+        entry do
+            name 'Start new repl'
+            notes <<-'END'
+            ```
+            SPC m s i
             ```
 
             Note: expects the file to be in a lein project (see above).
@@ -42,7 +51,7 @@ cheatsheet do
             name 'Evaluate expression'
             notes <<-'END'
             ```
-            <space> m e e
+            SPC m e e
             ```
             END
         end
@@ -61,7 +70,8 @@ cheatsheet do
             <space> m h h 
             ```
 
-            Hit `q` to close help
+            * `SPC 1` to switch buffers 
+            * `q` to close help
             END
         end
     end
@@ -76,6 +86,36 @@ cheatsheet do
             ```
             > (map vector '(1 2 3) '("a" "b" "c"))
             ([1 "a"] [2 "b"] [3 "c"])
+            ```
+            END
+        end
+    end
+    category do
+        id 'HTTP client'
+        entry do
+            name 'build.gradle'
+            notes <<-'END'
+            ```
+            dependencies {
+              compile 'org.clojure:clojure:1.8.0'
+              compile 'org.clojure:data.json:0.2.3'
+              compile "clj-http:clj-http:3.7.0"
+            }
+            ```
+
+            It's just the clj-http, but you'll always want clojure and data.json
+            END
+        end
+        entry do
+            name 'Return the body of a request'
+            notes <<-'END'
+            ```
+            (ns myns
+              (:require [clj-http.client :as client])
+              (:refer-clojure))
+
+            (:body client/get "http://www.example.com")
+            
             ```
             END
         end
