@@ -262,6 +262,68 @@ cheatsheet do
         end
     end
     category do
+        id 'core.async'
+        entry do
+            name 'Complete-ish example'
+            notes <<-'END'
+            ```clojure
+            (ns asyncset
+              (:require [clojure.core.async
+                         :as a
+                         :refer [>! <! >!! <!! go chan buffer close! thread
+                                 alts! alts!! timeout]])
+              (:refer-clojure))
+
+            ;; We want to create a process with two channels
+
+            ;; Use this to write a value to teh set
+            (def write-chan (chan))
+
+            ;; Use this to check for set membership
+            (def req-chan (chan))
+
+            ;; The result comes back on the response channel
+            (def resp-chan (chan))
+
+            (defn start-set
+              "Launches the thread that allows for writing in a set and checking membership, args are channels"
+              [write req resp]
+              (go
+                (loop [acc #{}]
+                    (let [[value channel] (alts!! [write req])]
+                      (condp = channel
+                        write (recur (conj acc value))
+                        req  (do
+                               (>! resp (contains? acc value))
+                               (recur acc)))))))
+
+
+            (defn remember [value]
+              "Remember a value"
+              (>!! write-chan value))
+
+            (defn in?
+              "Check if that value was defined"
+              [value]
+              (>!! req-chan value)
+              (<!! resp-chan))
+
+
+            (start-set write-chan req-chan resp-chan)
+
+            ; Check for membership
+            (in? 3)
+
+            ; Remember a value
+            (remember 3)
+
+            ; Check again, should be there
+            (in? 3)
+            ```
+            END
+        end
+    end
+    category do
         id 'deps'
         entry do
             name 'Specify deps'
