@@ -98,6 +98,46 @@ cheatsheet do
         end
     end
     category do
+        id 'Java interop'
+        entry do
+            name 'Method call'
+            notes <<-'END'
+            ```clojure
+            (.method obj arg)
+            ```
+            END
+        end
+        entry do
+            name 'New object'
+            notes <<-'END'
+            ```
+            (MyClass.)
+            ```
+            END
+        end
+        entry do
+            name 'Static method'
+            notes <<-'END'
+            ```clojure
+            (.MyClass/method arg1)
+            ```
+            END
+        end
+        entry do
+            name 'Static inner class'
+            notes <<-'END'
+            ```clojure
+            (ns myns
+                (:import com.example.Outer$Inner))
+
+            (Outer$Inner.)
+
+            
+            ```
+            END
+        end
+    end
+    category do
         id 'HTTP client'
         entry do
             name 'build.gradle'
