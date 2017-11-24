@@ -32,6 +32,32 @@ cheatsheet do
     end
     category do
         id 'webpack'
+        entry do
+            name 'Build the js'
+            notes <<-'END'
+            Can configure this via yarn by adding to package.json:
+
+            ```
+            ...
+
+              "scripts": {
+                "build": "webpack",
+              },
+            ```
+
+            Then do:
+
+            ```
+            yarn build
+            ```
+            END
+        end
+        entry do
+            name 'html-webpack-plugin docs'
+            notes <<-'END'
+            [Configuration options](https://github.com/jantimon/html-webpack-plugin#configuration)
+            END
+        end
     end
     category do
         id 'babel'
