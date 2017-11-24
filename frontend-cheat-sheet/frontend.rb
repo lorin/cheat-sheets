@@ -24,7 +24,7 @@ cheatsheet do
             name 'Install the required stuff'
             notes <<-'END'
             ```
-            yarn add react react-dom ewbpack webpack-dev-server path html-webpack-plugin
+            yarn add react react-dom webpack webpack-dev-server path html-webpack-plugin
             yarn add babel-loader babel-core babel-preset-env babel-preset-react css-loader --dev
             ```
             END
