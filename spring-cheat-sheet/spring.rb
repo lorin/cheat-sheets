@@ -5,6 +5,38 @@ cheatsheet do
     category do
         id 'Controllers'
         entry do
+            name 'Serve index.html from a rendered template'
+            notes <<-'END'
+            Add thymeleaf to build.gradle:
+
+            ```
+            dependencies {
+                compile "org.springframework.boot:spring-boot-starter-thymeleaf"
+            }
+            ```
+
+            Create a controller that returns the name of the template
+
+            ```
+            import org.springframework.stereotype.Controller;
+            import org.springframework.web.bind.annotation.RequestMapping;
+
+            @Controller
+            public class IndexController {
+                @RequestMapping("/")
+                // This returns the name of the template, without the extension
+                // In this case: index.html
+                public String index() {
+                    return "index";
+                }
+            }
+            ```
+
+            Create src/main/resources/templates/index.html
+
+            END
+        end
+        entry do
             name 'Hello, world controller at /'
             notes <<-'END'
             ```java
