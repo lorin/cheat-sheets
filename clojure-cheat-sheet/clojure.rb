@@ -3,6 +3,33 @@ cheatsheet do
     docset_file_name 'clojure'
     keyword 'clojure'
     category do
+        id 'Basics'
+        entry do
+            name 'Size/length of a collection'
+            notes <<-'END'
+            ```
+            count
+            ```
+            END
+        end
+    end
+    category do
+        id 'namespaces'
+        entry do
+            name 'Example'
+            notes <<-'END'
+            ```
+            (ns foo
+              (:require [clj-http.client :as client]
+                        [clojure.data.json :as json]
+                        [korma.db :refer [postgres defdb]]
+                        [korma.core :refer [defentity select insert values]])
+              (:refer-clojure))
+            ```
+            END
+        end
+    end
+    category do
         id 'spacemacs'
         entry do
             name 'Docs'
@@ -140,6 +167,12 @@ cheatsheet do
     category do
         id 'HTTP client'
         entry do
+            name 'Docs'
+            notes <<-'END'
+            <https://github.com/dakrone/clj-http#get>
+            END
+        end
+        entry do
             name 'build.gradle'
             notes <<-'END'
             ```
@@ -165,6 +198,17 @@ cheatsheet do
 
             ; query and converrt keys to keywrods
             (-> "http://www.example.com" client/get :body (json/read-str :key-fn keyword))
+            ```
+            END
+        end
+        entry do
+            name 'Basic auth'
+            notes <<-'END'
+            ```clojure
+            (client/get "url" {:basic-auth ["user" "pass"]})
+
+            ; alternately
+            (client/get "url" :basic-auth ["user:pass"])
             ```
             END
         end
