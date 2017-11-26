@@ -23,6 +23,18 @@ cheatsheet do
     category do
         id 'Java'
         entry do
+            name 'JAR'
+            notes <<-'END'
+            ```groovy
+            dependencies {
+                compile "org.postgresql:postgresql:42.1.4"
+            }
+            ```
+
+            See <https://jdbc.postgresql.org/> for the latest version number.
+            END
+        end
+        entry do
             name 'JDBC url'
             notes <<-'END'
             ```
