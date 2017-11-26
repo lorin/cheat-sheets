@@ -5,17 +5,17 @@ cheatsheet do
     category do
         id 'httpie'
         entry do
+            name 'Docs'
+            notes <<-'END'
+            <https://httpie.org/doc>
+            END
+        end
+        entry do
             name 'Headers'
             notes <<-'END'
             ```
             http put foo.example.com Content-Type:application/json < file.json
             ```
-            END
-        end
-        entry do
-            name 'Docs'
-            notes <<-'END'
-            <https://httpie.org/doc>
             END
         end
         entry do
@@ -55,6 +55,15 @@ cheatsheet do
 
             ```bash
             http post $ENDPOINT < input.json
+            ```
+            END
+        end
+        entry do
+            name 'Basic auth'
+            notes <<-'END'
+            ```
+            http -a username:password www.example.com
+            
             ```
             END
         end
