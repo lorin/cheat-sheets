@@ -30,6 +30,21 @@ cheatsheet do
         end
     end
     category do
+        id 'Testing'
+        entry do
+            name 'Define and execute a test'
+            notes <<-'END'
+            ```clojure
+            (with-test
+                (defn myfunc [x] (inc x))
+                (is (= 3 (myfunc 1))))
+
+            (test #'myfunc)
+            ```
+            END
+        end
+    end
+    category do
         id 'spacemacs'
         entry do
             name 'Docs'
