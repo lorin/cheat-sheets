@@ -156,13 +156,15 @@ cheatsheet do
         entry do
             name 'Return the body of a request'
             notes <<-'END'
-            ```
+            ```clojure
             (ns myns
-              (:require [clj-http.client :as client])
+              (:require [clj-http.client :as client]
+                        [clojure.data.json :as json]
+              )
               (:refer-clojure))
 
-            (:body client/get "http://www.example.com")
-            
+            ; query and converrt keys to keywrods
+            (-> "http://www.example.com" client/get :body (json/read-str :key-fn keyword))
             ```
             END
         end
