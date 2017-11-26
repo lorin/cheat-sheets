@@ -59,11 +59,35 @@ cheatsheet do
         entry do
             name 'Auto-increment primary key'
             notes <<-'END'
-            ```
+            ```sql
             CREATE TABLE widgets (
                 id SERIAL PRIMARY KEY
             );
             
+            ```
+            END
+        end
+        entry do
+            name 'All values unique'
+            notes <<-'END'
+            ```sql
+            CREATE TABLE ... (
+                ...
+                name VARCHAR(50) UNIQUE,
+                ...
+            )
+            
+            ```
+            END
+        end
+    end
+    category do
+        id 'Modify table'
+        entry do
+            name 'Change type'
+            notes <<-'END'
+            ```sql
+            ALTER TABLE mytable ALTER COLUMN name TYPE VARCHAR(200);
             ```
             END
         end
