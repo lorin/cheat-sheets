@@ -53,6 +53,14 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Describe table'
+            notes <<-'END'
+            ```
+            \d tablename
+            ```
+            END
+        end
     end
     category do
         id 'Creating a table'
