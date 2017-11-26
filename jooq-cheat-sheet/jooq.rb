@@ -61,4 +61,20 @@ cheatsheet do
             END
         end
     end
+    category do
+        id 'Select'
+        entry do
+            name 'SELECT *'
+            notes <<-'END'
+            ```
+            import static org.example.foo.jooq.tables.Widgets.WIDGETS;
+
+            DSLContext dsl = ...;
+
+            // Result implements List
+            Result<IncsRecord> result = dsl.selectFrom(WIDGETS).fetch();
+            ```
+            END
+        end
+    end
 end
