@@ -21,6 +21,28 @@ cheatsheet do
         end
     end
     category do
+        id 'Java'
+        entry do
+            name 'JDBC url'
+            notes <<-'END'
+            ```
+            jdbc:postgresql://hostname:5432/dbname
+            ```
+            END
+        end
+    end
+    category do
+        id 'CLI'
+        entry do
+            name 'List tables'
+            notes <<-'END'
+            ```
+            \dt
+            ```
+            END
+        end
+    end
+    category do
         id 'Creating a table'
         entry do
             name 'Auto-increment primary key'
