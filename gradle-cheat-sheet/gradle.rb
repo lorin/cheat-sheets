@@ -5,6 +5,40 @@ cheatsheet do
     category do
         id ''
         entry do
+            name 'Custom variable'
+            notes <<-'END'
+            You can create [extra user-defined properties][1] with an "ext" block.
+
+            [1]: https://docs.gradle.org/current/userguide/writing_build_scripts.html#sec:extra_properties
+
+            ```gradle
+            ext {
+                // This is only used for local development
+                jdbcURL = "jdbc:postgresql://localhost:5432/foo"
+            }
+
+            // Example of derferencing
+
+            flyway {
+                url = jdbcURL
+            }
+
+            jooq {
+                foo(sourceSets.main) {
+                    jdbc {
+                        url = jdbcURL
+                        ...
+                    }
+                   ... 
+               }
+            }
+            ```
+            END
+        end
+    end
+    category do
+        id ''
+        entry do
             name 'Find jars'
             notes <<-'END'
             <https://search.maven.org>
