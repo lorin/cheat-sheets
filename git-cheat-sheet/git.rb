@@ -90,6 +90,14 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'List changed files'
+            notes <<-'END'
+            ```
+            git diff --name-only master
+            ```
+            END
+        end
     end
     category do
         id 'rebase'
@@ -145,17 +153,6 @@ cheatsheet do
         end
     end
     category do
-        id 'diff'
-        entry do
-            name 'List changed files'
-            notes <<-'END'
-            ```
-            git diff --name-only master
-            ```
-            END
-        end
-    end
-    category do
         id 'merge'
         entry do
             name 'Clobber one branch with another w/o losing history'
@@ -170,6 +167,18 @@ cheatsheet do
             ```
 
             [1]: http://stackoverflow.com/a/2862938/742
+            END
+        end
+    end
+    category do
+        id 'other'
+        entry do
+            name 'Most recent common ancestor'
+            notes <<-'END'
+            ```
+            git merge-base feature master
+            
+            ```
             END
         end
     end
