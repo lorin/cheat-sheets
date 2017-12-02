@@ -65,7 +65,7 @@ cheatsheet do
             END
         end
         entry do
-            name "Convert to Unix epoch time in Python"
+            name "Convert to Unix epoch time in Python (arrow)"
             notes <<-'END'
             ```
             import arrow
@@ -84,12 +84,26 @@ cheatsheet do
     category do
         id 'Epoch time'
         entry do
-            name 'Millis to current'
+            name 'Millis to local time (pandas)'
+            notes <<-'END'
+            ```python
+            import pandas as pd
+
+            def to_pst(millis):
+                return pd.to_datetime(millis, unit="ms", utc=True).tz_convert("US/Pacific")
+            ```
+            END
+        end
+        entry do
+            name 'Millis to local time (arrow)'
             notes <<-'END'
             ```
-            >>> import arrow
-            >>> millis = 1487193135000
-            >>> arrow.get(millis / 1000).to('US/Pacific')
+            import arrow
+
+            def to_pst(millis):
+               return arrow.get(millis / 1000).to('US/Pacific') 
+
+            >>> to_pst(1487193135000)
             <Arrow [2017-02-15T13:12:15-08:00]>
             ```
             END

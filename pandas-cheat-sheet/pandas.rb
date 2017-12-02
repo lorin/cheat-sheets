@@ -28,8 +28,17 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'List of dictionaries in json format'
+            notes <<-'END'
+            This assumes that there's a timestamp in epoch mililis
 
-
+            ```python
+            df = pd.read_json("rows.json", date_unit="ms")
+            df.timestamp = df.timestamp.apply(lambda x: x.tz_localize('UTC').tz_convert('US/Pacific'))
+            ```
+            END
+        end
         entry do
             name 'Dictionary of lists (columnwise)'
             notes <<-'END'
@@ -137,6 +146,28 @@ cheatsheet do
             notes <<-'END'
             ```python
             df['mycol'].idxmax()
+            ```
+            END
+        end
+    end
+    category do
+        id 'Date & Time'
+        entry do
+            name 'Localize a time column'
+            notes <<-'END'
+            ```python
+            df.timestamp = df.timestamp.apply(lambda x: x.tz_convert('US/Pacific'))
+            ```
+            END
+        end
+        entry do
+            name 'Millis to local time (pandas)'
+            notes <<-'END'
+            ```python
+            import pandas as pd
+
+            def to_pst(millis):
+                return pd.to_datetime(millis, unit="ms", utc=True).tz_convert("US/Pacific")
             ```
             END
         end

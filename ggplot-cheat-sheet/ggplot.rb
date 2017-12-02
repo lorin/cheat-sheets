@@ -176,13 +176,22 @@ cheatsheet do
             END
         end
         entry do
+            name 'Date break examples'
+            notes <<-'END'
+            See <https://github.com/has2k1/plotnine-examples/blob/master/plotnine_examples/tutorials/miscellaneous-manipulating-date-breaks-and-date-labels.ipynb>
+            END
+        end
+        entry do
             name 'Format x-axis tick labels as years'
             notes <<-'END'
             ```
             from mizani.formatters import date_format
             ...
-            + scale_x_datetime(labels=date_format('%Y'))
+            ... + scale_x_datetime(labels=date_format("%Y-%m-%d %H:%M:%S"))
             ```
+
+            Note that the mizani.formatters.date_format call returns a function
+            that is called on a series of data.
             END
         end
         entry do
