@@ -83,6 +83,12 @@ cheatsheet do
     category do
         id 'Filtering and indexing'
         entry do
+            name 'Filtering and indexing docs'
+            notes <<-'END'
+            <http://pandas.pydata.org/pandas-docs/stable/indexing.html?#boolean-operators>
+            END
+        end
+        entry do
             name 'First 10 rows'
             notes <<-'END'
             ```python
@@ -90,12 +96,19 @@ cheatsheet do
             ```
             END
         end
-
         entry do
-            name 'Filter by column value'
+            name 'Filter by column value (query)'
             notes <<-'END'
             ```python
-                df[df['days']>=1]
+            df.query('group == 'control" and days >= 1")
+            ```
+            END
+        end
+        entry do
+            name 'Filter by column value (pure Python)'
+            notes <<-'END'
+            ```python
+            df[(df.group == 'control') & (df.days >= 1)]
             ```
             END
         end
