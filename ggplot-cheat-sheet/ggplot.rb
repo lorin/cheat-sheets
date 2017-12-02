@@ -182,6 +182,17 @@ cheatsheet do
             END
         end
         entry do
+            name 'Vertical line with x axis is timestamps'
+            notes <<-'END'
+            ```python
+            # Workaround for https://github.com/has2k1/plotnine/issues/97
+            from matplotlib.dates import date2num
+
+            geom_vline(xintercept=date2num(ts))
+            ```
+            END
+        end
+        entry do
             name 'Format x-axis tick labels as years'
             notes <<-'END'
             ```
