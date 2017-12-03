@@ -11,6 +11,28 @@ cheatsheet do
             END
         end
         entry do
+            name 'Simple plot'
+            notes <<-'END'
+            ```
+            import pandas as pd
+
+            from plotnine import *
+            from mizani.formatters import *
+
+            entries = [{"timestamp": pd.Timestamp("2017-11-30 12:16"), "count": 1},
+                       {"timestamp": pd.Timestamp("2017-11-30 12:17"), "count": 2}, 
+                       {"timestamp": pd.Timestamp("2017-11-30 12:18"), "count": 3}, 
+                       {"timestamp": pd.Timestamp("2017-11-30 12:19"), "count": 4}, 
+                       {"timestamp": pd.Timestamp("2017-11-30 12:20"), "count": 5}]
+            data = pd.DataFrame(entries)
+
+            # aes args can be positional, but I show them explicitly here
+            ggplot(data, aes(x="timestamp", y="count")) + geom_point() + scale_x_datetime(labels=date_format("%H:%M"))
+            
+            ```
+            END
+        end
+        entry do
             name 'Import and links'
             notes <<-'END'
             Docs: 
@@ -84,29 +106,6 @@ cheatsheet do
     end
     category do
         id 'Scatter plots'
-        entry do
-            name 'Scatter plot with dates'
-            notes <<-'END'
-
-            When doing `geom_point` with dates, the x-axis doesn't scale properly without a call to `scale_x_date`.
-            The label format uses [strftime][1] syntax.
-
-            [1]: https://docs.python.org/3/library/time.html#time.strftime
-
-
-            ```python
-            from ggplot import *
-
-            ggplot(aes(x='date', y='widgets'), data=data) + geom_point() + scale_x_date(labels='%Y')
-            ```
-
-            Note that you can put conversion logic in there. For example, if "start" is in epoch time:
-
-            ```python
-            ggplot(aes(x='pd.to_datetime(start, unit="s")', y='widgets'), data=data) + geom_point() + scale_x_date(labels='%Y')
-            ```
-            END
-        end
         entry do
             name 'Color coded multiple series'
             notes <<-'END'
@@ -185,9 +184,21 @@ cheatsheet do
             name 'Vertical line with x axis is timestamps'
             notes <<-'END'
             ```python
-            # Workaround for https://github.com/has2k1/plotnine/issues/97
-            from matplotlib.dates import date2num
+            # Workarounds for https://github.com/has2k1/plotnine/issues/97
+            #
+            # 1.
+            class my_scale_x_datetime(scale_x_datetime):
+                aesthetics = ['x', 'xmin', 'xmax', 'xend', 'xintercept']
 
+             ...
+             + my_scale_x_datetime(labels=date_format("%H:%M"))
+
+            #2. 
+             ...
+             + scale_x_datetime(aesthetics= ['x', 'xintercept'], labels=date_format("%H:%M"))
+           
+            # 3.
+            from matplotlib.dates import date2num
             geom_vline(xintercept=date2num(ts))
             ```
             END
