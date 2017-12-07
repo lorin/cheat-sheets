@@ -120,4 +120,18 @@ cheatsheet do
             END
         end
     end
+    category do
+        id 'Python'
+        entry do
+            name 'Time zones'
+            notes <<-'END'
+            ```
+            import pytz
+
+            utc = pytz.timezone('UTC')
+            pst = pytz.timezone('America/Los_Angeles')
+            ```
+            END
+        end
+    end
 end
