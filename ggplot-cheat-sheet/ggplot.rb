@@ -55,12 +55,14 @@ cheatsheet do
 
             Don't do this:
 
+
             ```
             |time|control|experiment|
             |----|-------|----------|
             |0   |     12|        24|
             |1   |     13|        25|
             ```
+
 
             Instead, do this:
 

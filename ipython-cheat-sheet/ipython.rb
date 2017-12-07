@@ -73,6 +73,15 @@ cheatsheet do
     category do
         id 'Jupyter'
         entry do
+            name 'Change from code to markdown'
+            notes <<-'END'
+            ```
+            CMD 1 code
+            CMD 2 markdown
+            ```
+            END
+        end
+        entry do
             name 'VIM bindings'
             notes <<-'END'
             See [lambdalisue/jupyter-vim-binding](https://github.com/lambdalisue/jupyter-vim-binding/wiki/Installation)
