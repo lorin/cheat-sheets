@@ -3,6 +3,26 @@ cheatsheet do
     docset_file_name 'cassandra'
     keyword 'cassandra'
     category do
+        id 'Basics'
+        entry do
+            name 'Shell'
+            notes <<-'END'
+            ```
+            cqlsh
+            
+            ```
+            END
+        end
+        entry do
+            name 'Keyspaces'
+            notes <<-'END'
+            ```
+            describe keyspaces
+            ```
+            END
+        end
+    end
+    category do
         id 'CQL queries'
         entry do
             name 'Delete rows'
