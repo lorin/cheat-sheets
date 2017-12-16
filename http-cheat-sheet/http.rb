@@ -19,6 +19,46 @@ cheatsheet do
             END
         end
         entry do
+            name 'Sessions'
+            notes <<-'END'
+            ```
+            http --session=./session.json https://www.google.com
+            ```
+
+            Session file contents:
+
+            ```
+            {
+                "__meta__": {
+                    "about": "HTTPie session file",
+                    "help": "https://httpie.org/docs#sessions",
+                    "httpie": "0.9.9"
+                },
+                "auth": {
+                    "password": null,
+                    "type": null,
+                    "username": null
+                },
+                "cookies": {
+                    "1P_JAR": {
+                        "expires": 1516046115,
+                        "path": "/",
+                        "secure": false,
+                        "value": "2017-12-16-19"
+                    },
+                    "NID": {
+                        "expires": 1529265315,
+                        "path": "/",
+                        "secure": false,
+                        "value": "119=BKgnu5GADVpZiGa6UvtClJvpT84j4aAtmJsWLBqEY36nEN5MZizty5j8dJ0oAQzUoqMeI45fLUO2dxk3dD0qH7i8UmVjlGVwZ6bqCV-9ZAMb2ri17jYQOJ3vi7P1xJHk"
+                    }
+                },
+                "headers": {}
+            }
+            ```
+            END
+        end
+        entry do
             name 'form urlencoded'
             notes <<-'END'
             ```
