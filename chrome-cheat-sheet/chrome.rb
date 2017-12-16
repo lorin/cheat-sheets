@@ -5,6 +5,14 @@ cheatsheet do
     category do
         id ''
         entry do
+            name 'Examine cookies'
+            notes <<-'END'
+            1. Open Developer Tools
+            2. Click Application tab
+            3. In the left-hand pane, under Storage, click "Cookies"
+            END
+        end
+        entry do
             name 'Disable PDF viewer'
             notes <<-'END'
             1. Open `chrome://settings/content`
