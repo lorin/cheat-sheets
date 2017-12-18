@@ -59,6 +59,22 @@ cheatsheet do
         end
     end
     category do
+        id 'Typescript'
+        entry do
+            name 'Simple case (no props)'
+            notes <<-'END'
+            ```typescript
+            import * as React from 'react';
+
+            const Widget = () => <h1>Widget</h1>;
+
+            export default Widget;
+            
+            ```
+            END
+        end
+    end
+    category do
         id 'Forms'
         entry do
             name 'Simple example (bootstrap form)'
