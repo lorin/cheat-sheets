@@ -73,6 +73,40 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Simple case (with props)'
+            notes <<-'END'
+            From [typescript docs](https://www.typescriptlang.org/docs/handbook/react-&-webpack.html)
+
+            ```typescript
+            import * as React from "react";
+
+            export interface HelloProps { compiler: string; framework: string; }
+
+            export const Hello = (props: HelloProps) => <h1>Hello from {props.compiler} and {props.framework}!</h1>;
+            ```
+            END
+        end
+        entry do
+            name 'Class-based'
+            notes <<-'END'
+            From [typescript docs](https://www.typescriptlang.org/docs/handbook/react-&-webpack.html)
+
+            ```typescript
+            import * as React from "react";
+
+            export interface HelloProps { compiler: string; framework: string; }
+
+            // 'HelloProps' describes the shape of props.
+            // State is never set so we use the '{}' type.
+            export class Hello extends React.Component<HelloProps, {}> {
+                render() {
+                    return <h1>Hello from {this.props.compiler} and {this.props.framework}!</h1>;
+                }
+            }
+            ```
+            END
+        end
     end
     category do
         id 'Forms'
