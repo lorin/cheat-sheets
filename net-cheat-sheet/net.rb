@@ -13,4 +13,24 @@ cheatsheet do
             END
         end
     end
+    category do
+        id 'DNS'
+        entry do
+            name 'Do a DNS lookup'
+            notes <<-'END'
+            On macOS, you can use `host` or `dig`, but
+            to replicate app behavior, do something like:
+
+            ```python
+            #!/usr/bin/env python3
+            import sys
+            from socket import gethostbyname
+
+            hostname = sys.argv[1]
+            result = gethostbyname(hostname)
+            print(result)
+            ```
+            END
+        end
+    end
 end
