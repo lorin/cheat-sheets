@@ -63,7 +63,7 @@ cheatsheet do
         entry do
             name 'Simple case (no props)'
             notes <<-'END'
-            ```typescript
+            ```tsx
             import * as React from 'react';
 
             const Widget = () => <h1>Widget</h1>;
@@ -78,7 +78,7 @@ cheatsheet do
             notes <<-'END'
             From [typescript docs](https://www.typescriptlang.org/docs/handbook/react-&-webpack.html)
 
-            ```typescript
+            ```tsx
             import * as React from "react";
 
             export interface HelloProps { compiler: string; framework: string; }
@@ -92,7 +92,7 @@ cheatsheet do
             notes <<-'END'
             From [typescript docs](https://www.typescriptlang.org/docs/handbook/react-&-webpack.html)
 
-            ```typescript
+            ```tsx
             import * as React from "react";
 
             export interface HelloProps { compiler: string; framework: string; }
