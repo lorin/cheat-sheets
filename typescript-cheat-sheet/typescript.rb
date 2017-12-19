@@ -7,7 +7,7 @@ cheatsheet do
         entry do
             name 'Define a type for an object'
             notes <<-'END'
-            ```typescript
+            ```tsx
             interface Widget {sku: string, description: string};
 
             const row = (widget: Widget) => 
