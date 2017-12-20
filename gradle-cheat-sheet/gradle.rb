@@ -35,6 +35,19 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Directory relative to parent'
+            notes <<-'END'
+            Use `rootProject.projectDir.absolutePath`. For example:
+
+            ```groovy
+            asciidoctor {
+                sourceDir = file('src/docs')
+                attributes = ['snippets': rootProject.projectDir.absolutePath + '/build/generated-snippets']
+            }
+            ```
+            END
+        end
     end
     category do
         id ''
@@ -66,7 +79,19 @@ cheatsheet do
         end
     end
     category do
-        id 'Obscure'
+        id 'Less common'
+        entry do
+            name 'Add a test directory not called "test"'
+            notes <<-'END'
+            ```groovy
+            facets {
+                docTest {
+                    parentSourceSet = 'test'
+                }
+            }
+            ```
+            END
+        end
         entry do
             name 'Override source sets'
             notes <<-'END'
