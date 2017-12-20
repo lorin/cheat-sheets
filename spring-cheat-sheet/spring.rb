@@ -9,7 +9,7 @@ cheatsheet do
             notes <<-'END'
             Add thymeleaf to build.gradle:
 
-            ```
+            ```groovy
             dependencies {
                 compile "org.springframework.boot:spring-boot-starter-thymeleaf"
             }
@@ -17,7 +17,7 @@ cheatsheet do
 
             Create a controller that returns the name of the template
 
-            ```
+            ```java
             import org.springframework.stereotype.Controller;
             import org.springframework.web.bind.annotation.RequestMapping;
 
