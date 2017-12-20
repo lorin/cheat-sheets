@@ -37,6 +37,15 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Lists'
+            notes <<-'END'
+            ```kotlin
+            val items = listOf(1, 2, 3)
+            val mut = mutableListOf(1,2,3)
+            ```
+            END
+        end
     end
     category do
         id 'Annotations'
