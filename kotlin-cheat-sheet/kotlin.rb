@@ -48,6 +48,33 @@ cheatsheet do
         end
     end
     category do
+        id 'Properties'
+        entry do
+            name 'Read-only'
+            notes <<-'END'
+            ```kotlin
+            class WidgetService construtor (private val provider : WidgetProvider) {
+                val all: List<Widget>
+                    get() = this.provider.getAllWidgets()
+            }
+            ```
+            END
+        end
+    end
+    category do
+        id 'Constructors'
+        entry do
+            name 'Simple case'
+            notes <<-'END'
+            ```
+            class Widget(provider : WidgetProvider) {
+                ...
+            }
+            ```
+            END
+        end
+    end
+    category do
         id 'Annotations'
         entry do
             name 'Annotate constructor'
