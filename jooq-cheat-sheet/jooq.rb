@@ -7,7 +7,7 @@ cheatsheet do
         entry do
             name 'Gradle setup'
             notes <<-'END'
-            See <https://github.com/etiennestuder/gradle-jooq-plugin> for mroe details
+            See <https://github.com/etiennestuder/gradle-jooq-plugin> for more details
 
             Assumes database is named "foo", postgres as backend
 
