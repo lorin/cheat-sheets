@@ -13,7 +13,7 @@ cheatsheet do
         entry do
             name 'Basics'
             notes <<-'END'
-            ```
+            ```groovy
             buildscript {
                 dependencies {
                     classpath "org.flywaydb:flyway-gradle-plugin:4.2.0"
@@ -23,16 +23,14 @@ cheatsheet do
             flyway {
                 url = 'jdbc:postgresql://localhost:5432/mydatabase'
             }
-        
             ```
             END
         end
         entry do
             name 'Manual invocation'
             notes <<-'END'
-            ```
-            ./gradlew flywayMigrate  -Dflyway.url=jdbc:postgresql://localhost:5432/mydatabase
-            
+            ```bash
+            ./gradlew flywayMigrate  -Dflyway.url=jdbc:postgresql://localhost:5432/mydatabase -Dflyway.user=`whoami`
             ```
             END
         end
