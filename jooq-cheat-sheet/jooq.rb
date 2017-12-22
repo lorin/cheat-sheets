@@ -36,13 +36,16 @@ cheatsheet do
                     }
                     generator {
                         database {
+                            // H2: "db.jooq.name=org.jooq.util.h2.H2Database"
                             name = "org.jooq.util.postgres.PostgresDatabase"
+                            // With H2, use "PUBLIC" instead
                             inputSchema = 'public'
                         }
 
                         target {
                             packageName = 'com.example.foo.jooq'
-                            directory = 'generated/src/main/java'
+                            // directory defaults to: build/generated-src/jooq
+                            // directory = 'generated/src/main/java'
                         }
                     }
 
