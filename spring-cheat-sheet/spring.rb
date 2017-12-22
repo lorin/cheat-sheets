@@ -37,6 +37,30 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Read a property'
+            notes <<-'END'
+            From <https://stackoverflow.com/questions/30528255/how-to-access-a-value-defined-in-the-application-properties-file-in-spring-boot>
+
+            ```java
+            @Autowired
+            private Environment env;
+            ....
+
+            public void method() {
+                .....  
+                String path = env.getProperty("userBucket.path");
+                .....
+            }
+            ```
+
+            ```java
+            @Value("${userBucket.path}")
+            private String userBucketPath;
+            ```
+
+            END
+        end
     end
     category do
         id 'Controllers'
