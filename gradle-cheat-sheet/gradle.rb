@@ -5,7 +5,7 @@ cheatsheet do
     category do
         id ''
         entry do
-            name 'Custom variable'
+            name 'Custom variable in build.gradle'
             notes <<-'END'
             You can create [extra user-defined properties][1] with an "ext" block.
 
@@ -33,6 +33,35 @@ cheatsheet do
                }
             }
             ```
+            END
+        end
+        entry do
+            name 'Custom variables in gradle.properties'
+            notes <<-'END'
+            You can create a `gradle.properties` file and those variables are acessible, e.g.:
+
+            ```properties
+            db.url=jdbc:h2:./test
+            db.user=sa
+            db.jooq.name=org.jooq.util.h2.H2Database
+            db.jooq.inputSchema=PUBLIC
+            ```
+
+            Then you can do:
+
+            ```groovy
+            jooq {
+                foo(sourceSets.main) {
+                    jdbc {
+                        url = db.url
+                        user = db.user
+                        ...
+                    }
+                   ... 
+               }
+            }
+            ```
+
             END
         end
         entry do
