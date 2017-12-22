@@ -3,6 +3,42 @@ cheatsheet do
     docset_file_name 'spring'
     keyword 'spring'
     category do
+        id 'Config'
+        entry do
+            name 'Custom config file for test'
+            notes <<-'END'
+            Use the `@ActiveProfiles` annotation.
+
+            Example: src/main/resources/application-smoketest.yml
+
+            ```yaml
+            spring:
+              datasource:
+                url: jdbc:h2:mem:test
+            ```
+
+            Invoked like this:
+
+            ```java
+            import org.junit.Test;
+            import org.junit.runner.RunWith;
+            import org.springframework.boot.test.context.SpringBootTest;
+            import org.springframework.test.context.ActiveProfiles;
+            import org.springframework.test.context.junit4.SpringRunner;
+
+            @RunWith(SpringRunner.class)
+            @SpringBootTest
+            @ActiveProfiles("smoketest")
+            public class SmokeTest {
+
+                @Test
+                public void mytest() { ... }
+            }
+            ```
+            END
+        end
+    end
+    category do
         id 'Controllers'
         entry do
             name 'Serve index.html from a rendered template'
