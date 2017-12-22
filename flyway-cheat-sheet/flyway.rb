@@ -5,7 +5,13 @@ cheatsheet do
     category do
         id 'gradle'
         entry do
-            name ''
+            name 'Docs'
+            notes <<-'END'
+            <https://flywaydb.org/documentation/gradle/>
+            END
+        end
+        entry do
+            name 'Basics'
             notes <<-'END'
             ```
             buildscript {
@@ -18,6 +24,15 @@ cheatsheet do
                 url = 'jdbc:postgresql://localhost:5432/mydatabase'
             }
         
+            ```
+            END
+        end
+        entry do
+            name 'Manual invocation'
+            notes <<-'END'
+            ```
+            ./gradlew flywayMigrate  -Dflyway.url=jdbc:postgresql://localhost:5432/mydatabase
+            
             ```
             END
         end
