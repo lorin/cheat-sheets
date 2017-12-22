@@ -84,9 +84,14 @@ cheatsheet do
             name 'Add a test directory not called "test"'
             notes <<-'END'
             ```groovy
+
+            apply plugin: 'nebula.facet'
+
             facets {
                 docTest {
                     parentSourceSet = 'test'
+                    // Don't run it for gradlew check
+                    includeInCheckLifecycle = false
                 }
             }
             ```
