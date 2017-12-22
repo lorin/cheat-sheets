@@ -51,6 +51,15 @@ cheatsheet do
 
                 }
             }
+
+
+            // Set up task dependencies, assumes flywyay which isn't shown above
+            // See the flyway cheat sheet for details there
+
+            // Migrate
+            generatefooJooqSchemaSource.dependsOn flywayMigrate
+            compileKotlin.dependsOn generatefooJooqSchemaSource
+            compileJava.dependsOn generatefooJooqSchemaSource
             ```
             END
         end
