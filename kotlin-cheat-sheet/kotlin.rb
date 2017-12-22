@@ -66,7 +66,7 @@ cheatsheet do
         entry do
             name 'Simple case'
             notes <<-'END'
-            ```
+            ```kotlin
             class Widget(provider : WidgetProvider) {
                 ...
             }
