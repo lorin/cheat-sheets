@@ -113,5 +113,21 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Path parameter'
+            notes <<-'END'
+            ```kotlin
+            @RestController
+            class DebugController constructor () {
+
+                @GetMapping("/debug/{arg}")
+                fun param(@PathVariable arg : String) : String {
+                    System.out.println(arg)
+                    return arg
+                }
+            }
+            ```
+            END
+        end
     end
 end
