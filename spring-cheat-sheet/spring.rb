@@ -5,6 +5,33 @@ cheatsheet do
     category do
         id 'Config'
         entry do
+            name 'Read a property'
+            notes <<-'END'
+            From <https://stackoverflow.com/questions/30528255/how-to-access-a-value-defined-in-the-application-properties-file-in-spring-boot>
+
+            By injection:
+
+            ```java
+            @Value("${userBucket.path}")
+            private String userBucketPath;
+            ```
+
+            By method call:
+
+            ```java
+            @Autowired
+            private Environment env;
+            ....
+
+            public void method() {
+                .....  
+                String path = env.getProperty("userBucket.path");
+                .....
+            }
+            ```
+            END
+        end
+        entry do
             name 'Custom config file for test'
             notes <<-'END'
             Use the `@ActiveProfiles` annotation.
@@ -35,34 +62,6 @@ cheatsheet do
                 public void mytest() { ... }
             }
             ```
-            END
-        end
-        entry do
-            name 'Read a property'
-            notes <<-'END'
-            From <https://stackoverflow.com/questions/30528255/how-to-access-a-value-defined-in-the-application-properties-file-in-spring-boot>
-
-            By injection:
-
-            ```java
-            @Value("${userBucket.path}")
-            private String userBucketPath;
-            ```
-
-            By method call:
-
-            ```java
-            @Autowired
-            private Environment env;
-            ....
-
-            public void method() {
-                .....  
-                String path = env.getProperty("userBucket.path");
-                .....
-            }
-            ```
-
             END
         end
     end
