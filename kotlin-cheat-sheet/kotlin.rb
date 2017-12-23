@@ -75,6 +75,34 @@ cheatsheet do
         end
     end
     category do
+        id 'Non-obvious conversions from Java to Kotlin'
+        entry do
+            name 'main function'
+            notes <<-'END'
+            This is package-level scope, so not inside of a class.
+
+            ```kotlin
+            fun main(args: Array<String>) {
+                // ...
+            }
+            ```
+            END
+        end
+    end
+    category do
+        id 'Spring application invocation of main'
+        entry do
+            name ''
+            notes <<-'END'
+            ```kotlin
+            fun main(args: Array<String>) {
+                SpringApplication.run(MyClass::class.java, *args)
+            }
+            ```
+            END
+        end
+    end
+    category do
         id 'Annotations'
         entry do
             name 'Annotate constructor'
