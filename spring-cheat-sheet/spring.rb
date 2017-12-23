@@ -134,6 +134,63 @@ cheatsheet do
         end
     end
     category do
+        id 'Rest clients'
+        entry do
+            name 'Deserializing JSON into a POJO'
+            notes <<-'END'
+            ```java
+
+            public class OuterClass {
+
+                void makeRestCall(RestTemplate restTemplate) {
+                    Foo foo = restTemplate.getForObject("http://foo.example.com/v1/foos/123", Foo.class);
+                    ...
+                }
+
+                @JsonIgnoreProperties
+                public static class Foo {
+                    public String key;
+                    public String value;
+
+                    @JsonProperty("weird_custom_field_name")
+                    public String happiness;
+                }
+            }
+            ```
+            END
+        end
+        entry do
+            name 'Basic auth'
+            notes <<-'END'
+            ```java
+            @Value("${credentials.foo.user}")
+            String fooUser;
+
+
+            @Value("${credentials.foo.pass}")
+            String fooPassword;
+
+            //
+            // Configuration
+            //
+
+            @Bean
+            RestTemplate fooRestClient(RestTemplateBuilder restTemplateBuilder) {
+                return restTemplateBuilder.basicAuthorization(fooUser, fooPassword).build();
+            }
+
+            //
+            // Usage
+            //
+
+            public methatThatMakesRestCall(@Qualifier("fooRestClient") RestTemplate restTemplate) {
+                Foo foo = restTemplate.getForObject("http://foo.example.com/v1/foos/123", Foo.class);
+            }
+            ```
+            END
+        end
+    end
+    category do
         id 'Miscellaneous'
         entry do
             name 'Run something on startup'
