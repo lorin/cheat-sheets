@@ -14,8 +14,30 @@ cheatsheet do
         entry do
             name 'Connect by host'
             notes <<-'END'
+            pgcli:
+
             ```
-            psql -h localhost -U mezzanine
+            pgcli -h hostname dbname username
+            ```
+
+            psql:
+
+            ```
+            psql -h hostname -U username
+            ```
+            END
+        end
+    end
+    category do
+        id 'User management'
+        entry do
+            name 'Create a user with all permissions for a database, and set passsword'
+            notes <<-'END'
+            ```postgres
+            create user myuser;
+            alter user myuser with encrypted password 'password goes here';
+            grant all privileges on database mydatabase to myuser;
+            
             ```
             END
         end
