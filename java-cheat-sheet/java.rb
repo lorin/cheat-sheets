@@ -722,6 +722,23 @@ cheatsheet do
         end
     end
     category do
+        id 'Logging'
+        entry do
+            name 'Create a logger'
+            notes <<-'END'
+            ```java
+            import org.slf4j.Logger;
+            import org.slf4j.LoggerFactory;
+
+            class MyClass {
+                private final Logger logger = LoggerFactory.getLogger(this.getClass());
+            }
+            
+            ```
+            END
+        end
+    end
+    category do
         id 'JUnit theories'
         entry do
             name 'Docs'
