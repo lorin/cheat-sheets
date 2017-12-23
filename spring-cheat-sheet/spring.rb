@@ -133,4 +133,21 @@ cheatsheet do
             END
         end
     end
+    category do
+        id 'Miscellaneous'
+        entry do
+            name 'Run something on startup'
+            notes <<-'END'
+            Create a bean that returns a CommandLineRunner, have the code just return
+            a lambda with the desired code.
+
+            ```java
+            @Bean
+            public CommandLineRunner helloWorld() {
+                return args -> System.out.println("Hello, world!!!");
+            }
+            ```
+            END
+        end
+    end
 end
