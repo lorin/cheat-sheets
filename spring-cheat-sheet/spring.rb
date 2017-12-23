@@ -42,6 +42,15 @@ cheatsheet do
             notes <<-'END'
             From <https://stackoverflow.com/questions/30528255/how-to-access-a-value-defined-in-the-application-properties-file-in-spring-boot>
 
+            By injection:
+
+            ```java
+            @Value("${userBucket.path}")
+            private String userBucketPath;
+            ```
+
+            By method call:
+
             ```java
             @Autowired
             private Environment env;
@@ -52,11 +61,6 @@ cheatsheet do
                 String path = env.getProperty("userBucket.path");
                 .....
             }
-            ```
-
-            ```java
-            @Value("${userBucket.path}")
-            private String userBucketPath;
             ```
 
             END
