@@ -356,6 +356,12 @@ cheatsheet do
             ```
             @@
             ```
+
+            I have this aliased to `Q`;
+
+            ```
+            nnoremap Q @@
+            ```
             END
         end
         entry do
@@ -365,6 +371,23 @@ cheatsheet do
 
             ```
             :normal @q
+            ```
+            END
+        end
+        entry do
+            name 'Undoing a mistake'
+            notes <<-'END'
+            From <https://www.hillelwayne.com/post/vim-macro-trickz/>
+
+            1. Undo and keep going normally
+            2. `"qp` to paste macro `q` to an empty line
+            3. Remove the mistaken keystrokes and the undo
+            4. `"qy$` to copy it back in.
+
+            I've aliased `Y` to `y$` so can do `"qY` instead:
+
+            ```
+            nnoremap Y y$
             ```
             END
         end
