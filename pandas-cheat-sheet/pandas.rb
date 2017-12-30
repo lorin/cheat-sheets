@@ -2,6 +2,19 @@ cheatsheet do
     title 'Pandas'
     docset_file_name 'Pandas'
     keyword 'pandas'
+    category do
+        id 'Resources'
+        entry do
+            name 'Links'
+            notes <<-'END'
+            * [Official docs][0]
+            * [Learn Pandas][1] example notebooks
+
+            [0]: http://pandas.pydata.org/pandas-docs/stable
+            [1]: https://github.com/tdpetrou/Learn-Pandas
+            END
+        end
+    end
 
     category do
         id 'Creating a data frame'
