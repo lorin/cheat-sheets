@@ -30,6 +30,23 @@ cheatsheet do
         end
     end
     category do
+        id 'Module stuff'
+        entry do
+            name 'Tests don\'t see proper dependencies'
+            notes <<-'END'
+            I fixed this once by going into 
+            
+            ```
+            File -> Project Structure -> Modules -> Dependencies 
+            ```
+
+            and then removing a "test" module that had spuriously appeared (I already had a different test module previously).
+
+            See [Working with module dependencies](https://www.jetbrains.com/help/idea/configuring-projects.html#working-with-module-dependencies).
+            END
+        end
+    end
+    category do
         id 'Keyboard shortcuts'
         entry do
             name 'Hide bottom pane'
