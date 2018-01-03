@@ -18,5 +18,16 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Javascript array'
+            notes <<-'END'
+            Two ways:
+
+            ```
+            number[]
+            Array<number>
+            ```
+            END
+        end
     end
 end

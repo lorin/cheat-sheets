@@ -26,6 +26,17 @@ cheatsheet do
         end
     end
     category do
+        id 'Moving lines around'
+        entry do
+            name 'Copy line 23 to current location'
+            notes <<-'END'
+            ```
+            :23t-
+            ```
+            END
+        end
+    end
+    category do
         id 'Invoking shell'
         entry do
             name 'Ignore failure'
