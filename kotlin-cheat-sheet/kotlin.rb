@@ -48,6 +48,37 @@ cheatsheet do
         end
     end
     category do
+        id 'Maps'
+        entry do
+            name 'Literal'
+            notes <<-'END'
+            ```kotlin
+            hashMapOf(
+                "foo" to "bar",
+                "baz" to "quux"
+            )
+            
+            ```
+            END
+        end
+        entry do
+            name 'Access'
+            notes <<-'END'
+            ```kotlin
+            mymap["foo"]
+            ```
+            END
+        end
+        entry do
+            name 'Membership'
+            notes <<-'END'
+            ```kotlin
+            if("foo" in mymap) { ... }
+            ```
+            END
+        end
+    end
+    category do
         id 'Properties'
         entry do
             name 'Read-only'
@@ -119,7 +150,9 @@ cheatsheet do
             import org.springframework.web.bind.annotation.RestController
 
             @RestController
-            class WidgetController @Autowired constructor (private val widgetService : WidgetService) {
+            class WidgetController
+            @Autowired
+            constructor (private val widgetService : WidgetService) {
                 @RequestMapping("api/widgets")
                 fun widgets() : List<Map<String, String>> {
                     return widgetService.all.map{
