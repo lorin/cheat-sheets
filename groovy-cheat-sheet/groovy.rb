@@ -23,4 +23,27 @@ cheatsheet do
             END
         end
     end
+    category do
+        id 'Lists'
+        entry do
+            name 'Literal'
+            notes <<-'END'
+            ```groovy
+            def lst = ["one", "two", "three"]
+            ```
+            END
+        end
+        entry do
+            name 'Adding elements'
+            notes <<-'END'
+            [Official docs][1]
+
+            ```groovy
+            lst << "four"
+            ```
+
+            [1]: http://groovy-lang.org/groovy-dev-kit.html#_adding_or_removing_elements
+            END
+        end
+    end
 end
