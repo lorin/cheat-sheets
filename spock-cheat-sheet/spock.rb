@@ -77,6 +77,30 @@ cheatsheet do
             END
         end
         entry do
+            name 'Checking invocation with return value'
+            notes <<-'END'
+            If your mock needs to return a value, you 
+            must specify it in the "then" section, not "given" or "when"
+
+            For example, do this:
+
+            ```groovy
+            then:
+            1 * foo.bar(3,4) >> 12
+            ```
+
+            Don't do this:
+
+            ```groovy
+            when:
+            foo.bar(3,4) >> 12
+
+            then:
+            1 * foo.bar(3,4)
+            ```
+            END
+        end
+        entry do
             name 'Never called with any args'
             notes <<-'END'
             ```groovy
