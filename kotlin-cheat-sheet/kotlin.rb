@@ -129,6 +129,20 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'A class reference'
+            notes <<-'END'
+            ```kotlin
+            MyClass::class.java
+            ```
+
+            For example:
+
+            ```kotlin
+            private val logger = LoggerFactory.getLogger(MyClass::class.java)
+            ```
+            END
+        end
     end
     category do
         id 'Spring application invocation of main'
