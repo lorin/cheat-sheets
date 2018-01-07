@@ -22,6 +22,16 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'for loop'
+            notes <<-'END'
+            ```kotlin
+            for(widget in widgets) { 
+                ...
+            }
+            ```
+            END
+        end
     end
     category do
         id 'Literals'
