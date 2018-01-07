@@ -121,4 +121,21 @@ cheatsheet do
             END
         end
     end
+    category do
+        id 'Kotlin'
+        entry do
+            name 'Mocking Kotlin classes'
+            notes <<-'END'
+            Mocked classes and methods must be marked `open`
+
+            ```kotlin
+            open class Foo {
+                open fun bar(s : String) {
+                    ...
+                }
+            }
+            ```
+            END
+        end
+    end
 end
