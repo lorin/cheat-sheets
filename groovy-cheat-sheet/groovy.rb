@@ -45,5 +45,13 @@ cheatsheet do
             [1]: http://groovy-lang.org/groovy-dev-kit.html#_adding_or_removing_elements
             END
         end
+        entry do
+            name 'Convert to set'
+            notes <<-'END'
+            ```groovy
+            def st = ["one", "two", "three"] as Set
+            ```
+            END
+        end
     end
 end
