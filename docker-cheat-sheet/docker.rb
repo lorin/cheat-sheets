@@ -101,6 +101,16 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Override the entrypoint with args'
+            notes <<-'END'
+            ```
+            docker run --entrypoint /bin/echo myimage hello world
+            ```
+
+            Note that the args go *after* the image name.
+            END
+        end
     end
     category do
         id 'Cleanup'
