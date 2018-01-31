@@ -187,6 +187,37 @@ cheatsheet do
         end
     end
     category do
+        id 'Line wrapping'
+        entry do
+            name 'Docs for formatoptions'
+            notes <<-'END'
+            It's called `formatoptions` or `fo` for short. For details on the different values:
+
+            ```
+            help fo-table
+            ```
+            END
+        end
+        entry do
+            name 'Set line width'
+            notes <<-'END'
+            ```
+            :set textwidth=79
+            ```
+            END
+        end
+        entry do
+            name 'Break long lines in insert mode'
+            notes <<-'END'
+            ```
+            set fo-=l
+            ```
+
+            (If this is set, it won't break long lines as you type).
+            END
+        end
+    end
+    category do
         id 'Search and replace'
         entry do
             name 'Interactive'
