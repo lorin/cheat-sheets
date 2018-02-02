@@ -35,6 +35,14 @@ cheatsheet do
             END
         end
         entry do
+            name 'delete all rows'
+            notes <<-'END'
+            ```
+            TRUNCATE mykeyspace.mytable
+            ```
+            END
+        end
+        entry do
             name 'Update'
             notes <<-'END'
             ```
