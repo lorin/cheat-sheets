@@ -46,6 +46,34 @@ cheatsheet do
             END
         end
         entry do
+            name 'Filter'
+            notes <<-'END'
+            ```groovy
+            lst.findAll { it.startsWith("t") }
+            ```
+            END
+        end
+        entry do
+            name 'map'
+            notes <<-'END'
+            ```groovy
+            [1,2,3].collect{it+1}
+
+            // -> [2,3,4]
+            ```
+            END
+        end
+        entry do
+            name 'flatMap'
+            notes <<-'END'
+            ```groovy
+            // split returns primitive array which can't be casted to collection
+            ["foo bar", "baz quux"].collectMany { it.split() as ArrayList }
+            // -> ["foo", "bar", "baz", "quux"]
+            ```
+            END
+        end
+        entry do
             name 'Convert to set'
             notes <<-'END'
             ```groovy
