@@ -117,10 +117,28 @@ cheatsheet do
             END
         end
         entry do
-            name 'Complex assertion on argument passed'
+            name 'Complex assertion on argument passed (argument capture)'
             notes <<-'END'
             ```groovy
             1 * foo.bar({ it.getCount() == 12 })
+            ```
+
+            The weakness of the above method is that you don't get a meaningful
+            message if the assertion fails, you just get "it didn't get called".
+            See below for even better.
+            END
+        end
+        entry do
+            name 'Even better assertions on argument capture'
+            notes <<-'END'
+            ```groovy
+            1 * foo.baz(*_) >> { args ->
+                // destructure
+                // you can also do args[0], args[1]
+                def (x,y) = args
+                assert x.getCount() == 12
+                assert y == "quux"
+            }
             ```
             END
         end
