@@ -68,6 +68,14 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Date range'
+            notes <<-'END'
+            ```
+            git log --after=2017-12-01 --until=2017-12-31
+            ```
+            END
+        end
     end
     category do
         id 'stash'
