@@ -3,6 +3,38 @@ cheatsheet do
     docset_file_name 'clojure'
     keyword 'clojure'
     category do
+        id 'lein'
+        entry do
+            name 'New project'
+            notes <<-'END'
+            ```
+            lein new app my-appname
+            ```
+
+            Note: this will create a new directory named my-appname
+            and put the files in there.
+
+            The main file is: `myappname/src/myap_appname/core.clj`
+            END
+        end
+        entry do
+            name 'Run'
+            notes <<-'END'
+            ```
+            lein run
+            ```
+            END
+        end
+        entry do
+            name 'repl'
+            notes <<-'END'
+            ```
+            lein repl
+            ```
+            END
+        end
+    end
+    category do
         id 'Basics'
         entry do
             name 'Size/length of a collection'
@@ -144,38 +176,6 @@ cheatsheet do
 
             ; alternately
             (client/get "url" :basic-auth ["user:pass"])
-            ```
-            END
-        end
-    end
-    category do
-        id 'lein'
-        entry do
-            name 'New project'
-            notes <<-'END'
-            ```
-            lein new app my-appname
-            ```
-
-            Note: this will create a new directory named my-appname
-            and put the files in there.
-
-            The main file is: `myappname/src/myap_appname/core.clj`
-            END
-        end
-        entry do
-            name 'Run'
-            notes <<-'END'
-            ```
-            lein run
-            ```
-            END
-        end
-        entry do
-            name 'repl'
-            notes <<-'END'
-            ```
-            lein repl
             ```
             END
         end
