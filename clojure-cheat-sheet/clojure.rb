@@ -45,86 +45,6 @@ cheatsheet do
         end
     end
     category do
-        id 'spacemacs'
-        entry do
-            name 'Docs'
-            notes <<-'END'
-            <http://spacemacs.org/layers/+lang/clojure/README.html>
-            END
-        end
-        entry do
-            name 'Jump back from doc buffer'
-            notes <<-'END'
-            ```
-            SPC 1
-            ```
-            END
-        end
-        entry do
-          name 'Connect to existing repl'
-          notes <<-'END'
-          ```
-          SPC m s c
-          localhost
-          9999
-          ```
-          END
-        end
-        entry do
-            name 'Open repl'
-            notes <<-'END'
-            ```
-            SPC m s s
-            ```
-            END
-        end
-        entry do
-            name 'Start new repl'
-            notes <<-'END'
-            ```
-            SPC m s i
-            ```
-
-            Note: expects the file to be in a lein project (see above).
-            END
-        end
-        entry do
-            name 'Evaluate buffer'
-            notes <<-'END'
-            ```
-            SPC m e b
-            ```
-            END
-        end
-        entry do
-            name 'Evaluate expression'
-            notes <<-'END'
-            ```
-            SPC m e e
-            ```
-            END
-        end
-        entry do
-            name 'Evaluate region'
-            notes <<-'END'
-            ```
-            <space> m e r
-            ```
-            END
-        end
-        entry do
-            name 'Help on function'
-            notes <<-'END'
-            ```
-            <space> m h h 
-            ```
-
-            * `SPC 1` to switch buffers 
-            * `q` to close help
-            END
-        end
-    end
-    category do
         id 'Basic stuff'
         entry do
             name 'zip'
@@ -449,6 +369,86 @@ cheatsheet do
             ```
             lein deps
             ```
+            END
+        end
+    end
+    category do
+        id 'spacemacs'
+        entry do
+            name 'Docs'
+            notes <<-'END'
+            <http://spacemacs.org/layers/+lang/clojure/README.html>
+            END
+        end
+        entry do
+            name 'Jump back from doc buffer'
+            notes <<-'END'
+            ```
+            SPC 1
+            ```
+            END
+        end
+        entry do
+          name 'Connect to existing repl'
+          notes <<-'END'
+          ```
+          SPC m s c
+          localhost
+          9999
+          ```
+          END
+        end
+        entry do
+            name 'Open repl'
+            notes <<-'END'
+            ```
+            SPC m s s
+            ```
+            END
+        end
+        entry do
+            name 'Start new repl'
+            notes <<-'END'
+            ```
+            SPC m s i
+            ```
+
+            Note: expects the file to be in a lein project (see above).
+            END
+        end
+        entry do
+            name 'Evaluate buffer'
+            notes <<-'END'
+            ```
+            SPC m e b
+            ```
+            END
+        end
+        entry do
+            name 'Evaluate expression'
+            notes <<-'END'
+            ```
+            SPC m e e
+            ```
+            END
+        end
+        entry do
+            name 'Evaluate region'
+            notes <<-'END'
+            ```
+            <space> m e r
+            ```
+            END
+        end
+        entry do
+            name 'Help on function'
+            notes <<-'END'
+            ```
+            <space> m h h 
+            ```
+
+            * `SPC 1` to switch buffers 
+            * `q` to close help
             END
         end
     end
