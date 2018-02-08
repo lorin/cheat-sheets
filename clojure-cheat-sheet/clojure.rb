@@ -35,6 +35,57 @@ cheatsheet do
         end
     end
     category do
+        id 'vim-fireplace'
+        entry do
+            name 'Prereq: start a repl'
+            notes <<-'END'
+            ```
+            lein repl
+            ```
+            END
+        end
+        entry do
+            name 'Evaluate at cursor'
+            notes <<-'END'
+            ```
+            cqq
+            ```
+            END
+        end
+        entry do
+            name 'Blank input'
+            notes <<-'END'
+            ```
+            cqc
+            ```
+            END
+        end
+        entry do
+            name 'Evaluate a range'
+            notes <<-'END'
+            ```
+            :Eval
+            ```
+            END
+        end
+        entry do
+            name 'Doc lookup under cursor'
+            notes <<-'END'
+            ```
+            K
+            ```
+            END
+        end
+        entry do
+            name 'Doc lookup supplying arg'
+            notes <<-'END'
+            ```
+            :Doc <arg>
+            ```
+            END
+        end
+    end
+    category do
         id 'Basics'
         entry do
             name 'Size/length of a collection'
