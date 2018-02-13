@@ -82,4 +82,18 @@ cheatsheet do
             END
         end
     end
+    category do
+        id 'Strings'
+        entry do
+            name 'String interpolation'
+            notes <<-'END'
+            ```
+            def name = 'Guillaume' // a plain string
+            def greeting = "Hello ${name}"
+
+            assert greeting.toString() == 'Hello Guillaume'
+            ```
+            END
+        end
+    end
 end
