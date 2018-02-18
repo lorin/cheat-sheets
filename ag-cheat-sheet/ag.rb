@@ -12,5 +12,15 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'File names only'
+            notes <<-'END'
+            Use `-l`, e.g.:
+
+            ```
+            ag -l foo | xargs sed -i '' s/foo/bar/g
+            ```
+            END
+        end
     end
 end
