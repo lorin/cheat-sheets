@@ -450,21 +450,20 @@ cheatsheet do
     category do
         id 'AssertJ matchers'
         entry do
+            name 'Docs / examples'
+            notes <<-'END'
+            * <http://joel-costigliola.github.io/assertj/index.html>
+            * <https://github.com/joel-costigliola/assertj-examples/blob/master/assertions-examples/src/test/java/org/assertj/examples/IterableAssertionsExamples.java>
+            END
+        end
+        entry do
             name 'Basics'
             notes <<-'END'
             ```java
             import static org.assertj.core.api.Assertions.*;
 
             assertThat(frodo.getName()).isEqualTo("Frodo");
-
             ```
-            END
-        end
-        entry do
-            name 'Docs / examples'
-            notes <<-'END'
-            * <http://joel-costigliola.github.io/assertj/index.html>
-            * <https://github.com/joel-costigliola/assertj-examples/blob/master/assertions-examples/src/test/java/org/assertj/examples/IterableAssertionsExamples.java>
             END
         end
         entry do
@@ -473,10 +472,19 @@ cheatsheet do
             ```java
             import static org.assertj.core.api.Assertions.assertThat;
 
-
             assertThat(result).isEmpty();
             assertThat(result).isNotEmpty();
             assertThat(result).hasSize(1);
+            ```
+            END
+        end
+        entry do
+            name 'Check an optional'
+            notes <<-'END'
+            ```java
+            Optional<String> result = Optional.of("foo");
+
+            assertThat(result).get().isEqualTo("foo");
             ```
             END
         end
