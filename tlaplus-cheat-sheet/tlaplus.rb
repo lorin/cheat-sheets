@@ -192,6 +192,14 @@ cheatsheet do
             END
         end
         entry do
+            name 'No-op'
+            notes <<-'END'
+            ```
+            skip
+            ```
+            END
+        end
+        entry do
             name 'Don\'t proceed until condition is met'
             notes <<-'END'
             ```
