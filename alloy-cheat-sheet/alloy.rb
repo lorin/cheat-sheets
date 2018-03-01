@@ -3,31 +3,39 @@ cheatsheet do
     docset_file_name 'alloy'
     keyword 'alloy'
     category do
-        id 'Sig declarations'
+        id 'Basics'
         entry do
-            name 'Simple'
+            name 'Sig declarations'
             notes <<-'END'
             Set of atoms
 
-            ```
+            ```alloy
+            // basic
             sig A {}
-            ```
-            END
-        end
-        entry do
-            name 'Disjoint subjsets'
-            notes <<-'END'
-            ```
+
+            // disjoint
             sig B, C extends A {}
+
+            // non-disjoint
+            sig D in A {}
+            sig E in A {}
+
+            sig Foo {
+              foo : A, // one(?)
+              bar : lone B, // zero or one
+              baz : set C
+            }
             ```
             END
         end
         entry do
-            name 'Non-disjoint subsets'
+            name 'Quantifiers'
             notes <<-'END'
             ```
-            sig B in A {}
-            sig C in A {}
+            all
+            some
+            one
+            lone
             ```
             END
         end
