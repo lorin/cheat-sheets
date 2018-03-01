@@ -179,7 +179,19 @@ cheatsheet do
         end
     end
     category do
-        id 'other'
+        id 'Ancestry'
+        entry do
+            name 'Is sha1 an ancestor of sha2?'
+            notes <<-'END'
+            From <https://stackoverflow.com/a/13526591/742>
+
+            ```
+            git merge-base --is-ancestor <maybe-ancestor-commit> <descendant-commit>
+            ```
+
+            It doesn't produce any output, but returns 0 on success, 1 on failure.
+            END
+        end
         entry do
             name 'Most recent common ancestor'
             notes <<-'END'
