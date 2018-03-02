@@ -30,4 +30,15 @@ cheatsheet do
             END
         end
     end
+    category do
+        id 'Packages'
+        entry do
+            name 'Downloading types'
+            notes <<-'END'
+            ```
+            yarn add --dev @types/react @types/react-dom
+            ```
+            END
+        end
+    end
 end
