@@ -37,16 +37,16 @@ cheatsheet do
                 }
 
                 def "when it foos then it should bar"() {
-                    given:
+                    given: "something"
                     this.something()
                     
-                    and:
+                    and: "something else"
                     that.somethingElse()
 
-                    when:
+                    when: "thing does a foos"
                     def result = thing.foos()
 
-                    then:
+                    then: "the result is bar"
                     result == "bar"
 
                 }
