@@ -38,12 +38,14 @@ cheatsheet do
             END
         end
         entry do
-            name 'Convert from epoch milis to UTC'
+            name 'Convert from epoch milis to UTC or PT'
             notes <<-'END'
             ```java
             long timestamp = ...;
             Instant i = Instant.ofEpochMilli(timestamp);
             ZonedDateTime t = i.atZone(ZoneOffset.UTC);
+
+            ZonedDateTime pt = i.atZone(ZoneId.of("US/Pacific"));
             ```
             END
         end
