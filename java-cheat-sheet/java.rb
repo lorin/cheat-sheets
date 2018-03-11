@@ -61,12 +61,14 @@ cheatsheet do
             END
         end
         entry do
-            name 'Convert from epoch millis to HH:mm:ss string in local time'
+            name 'strftime: Convert from epoch millis to HH:mm:ss string in local time'
             notes <<-'END'
             ```java
             long timestamp = ...; LocalDateTime dateTime = Instant.ofEpochMilli(timestamp).atZone(ZoneId.systemDefault()).toLocalDateTime();
             DateTimeFormatter df = DateTimeFormatter.ofPattern("HH:mm:ss");
             String hoursMinSec = dateTime.format(df);
+
+            // Another example: MM/dd/yyyy HH:mm a
             ```
             END
         end
