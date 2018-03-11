@@ -55,6 +55,17 @@ cheatsheet do
         end
     end
     category do
+        id 'Spotlight'
+        entry do
+            name 'Search from command-line'
+            notes <<-'END'
+            ```
+            mdfind myfile.json
+            ```
+            END
+        end
+    end
+    category do
         id 'System stuff'
         entry do
             name 'Restart mDNSResponder'
