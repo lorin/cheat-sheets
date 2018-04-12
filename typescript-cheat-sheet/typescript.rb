@@ -83,6 +83,12 @@ cheatsheet do
             // 'HelloProps' describes the shape of props.
             // State is never set so we use the '{}' type.
             export class Hello extends React.Component<HelloProps, {}> {
+                constructor(props : HelloProps) {
+                    super(props);
+                    ...
+                }
+
+
                 render() {
                     return <h1>Hello from {this.props.compiler} and {this.props.framework}!</h1>;
                 }
