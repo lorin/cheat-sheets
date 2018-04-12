@@ -91,4 +91,17 @@ cheatsheet do
             END
         end
     end
+    category do
+        id 'Imports'
+        entry do
+            name 'Import with "export =" syntax'
+            notes <<-'END'
+            ```
+            import keyMirror = require('keymirror');
+            ```
+
+            See <https://www.typescriptlang.org/docs/handbook/modules.html>
+            END
+        end
+    end
 end
