@@ -96,6 +96,15 @@ cheatsheet do
         entry do
             name 'Import with "export =" syntax'
             notes <<-'END'
+            Example: the keymirror package has the following index.d.ts
+
+            ```
+            declare function KeyMirror<T>(obj: T): {[K in keyof T]: K};
+            export = KeyMirror;
+            ```
+
+            You import it like htis:
+
             ```
             import keyMirror = require('keymirror');
             ```
