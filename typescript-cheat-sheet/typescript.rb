@@ -96,6 +96,29 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Children'
+            notes <<-'END'
+            ```tsx
+            const Row = (props : {children: JSX.Element}) => <div className="row">{props.children}</div>
+            ```
+            END
+        end
+        entry do
+            name 'Inline styles'
+            notes <<-'END'
+            ```tsx
+            const myStyles : React.CSSProperties {
+                "top": "10px",
+                "fontSize": "20px"
+            }
+
+            ...
+            <span style={myStyles}>Stuff goes here</span>
+            
+            ```
+            END
+        end
     end
     category do
         id 'Imports'
