@@ -72,6 +72,14 @@ cheatsheet do
             END
         end
         entry do
+            name 'Cross product'
+            notes <<-'END'
+            ```
+            pairs == {1..3} \X {1..2}
+            ```
+            END
+        end
+        entry do
             name 'Map & filter'
             notes <<-'END'
             Map (E is an expression):
@@ -347,9 +355,9 @@ cheatsheet do
             END
         end
         entry do
-            name 'Initialize a function'
+            name 'Define all values of a function'
             notes <<-'END'
-            This initializes all of the values to "init"
+            This sets all of the values to "init"
 
             ```
             f = [x \in S |->"init"]
@@ -429,10 +437,11 @@ cheatsheet do
         entry do
             name 'Set of sequences'
             notes <<-'END'
-            Set of sequences where each element in the sequence is also an element of the set S.
+            Given a set of elements S, create the (infinite) set of all
+            sequences made up of those elements.
 
             ```
-            Seq(S)
+            Seq(S) == UNION {[1..n -> S] : n \in Nat}
             ```
             END
         end
@@ -492,6 +501,16 @@ cheatsheet do
             ```
 
             This is `[2, 8]` (inclusive).
+            END
+        end
+        entry do
+            name 'Subsequence by filtering'
+            notes <<-'END'
+            ```
+            SelectSeq(seq, pred)
+            ```
+
+            where pred is a one arg operator that takes an element of seq
             END
         end
     end
