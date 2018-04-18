@@ -185,4 +185,13 @@ cheatsheet do
             END
         end
     end
+    category do
+        id 'Database'
+        entry do
+            name 'Show a table'
+            notes <<-'END'
+            Double click on the table in the right-hand pane
+            END
+        end
+    end
 end
