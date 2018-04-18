@@ -89,4 +89,30 @@ cheatsheet do
             END
         end
     end
+    category do
+        id 'Mappings'
+        entry do
+            name 'MySQL: map BOOLEAN to boolean'
+            notes <<-'END'
+
+            In the build.gradle job, you can specify that types that start with is_ or has_ should be mapped to Java booleans by doing:
+
+            ```
+            def jooqWriter = new StringWriter()
+            def jooqXml = new groovy.xml.MarkupBuilder(jooqWriter).configuration('xmlns': 'http://www.jooq.org/xsd/jooq-codegen-3.10.0.xsd') {
+                ...
+                generator() {
+                    database() {
+                        ...
+                        forcedTypes(){
+                            forcedType() {
+                                name('BOOLEAN')
+                                expression('.*\\.is_.*|.*\\.has_.*')
+                                types('.*')
+                        }
+                
+            ```
+            END
+        end
+    end
 end
