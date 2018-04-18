@@ -471,14 +471,20 @@ cheatsheet do
             END
         end
         entry do
-            name 'Check list size/emptiness'
+            name 'Check list'
             notes <<-'END'
+            <https://github.com/joel-costigliola/assertj-examples/blob/master/assertions-examples/src/test/java/org/assertj/examples/IterableAssertionsExamples.java>
+
             ```java
             import static org.assertj.core.api.Assertions.assertThat;
 
             assertThat(result).isEmpty();
             assertThat(result).isNotEmpty();
             assertThat(result).hasSize(1);
+
+            assertThat(result).hasOnlyOneElementSatisfying(object -> {
+                assertThat(object)...;
+            });
             ```
             END
         end
