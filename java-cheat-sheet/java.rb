@@ -457,7 +457,7 @@ cheatsheet do
             name 'Docs / examples'
             notes <<-'END'
             * <http://joel-costigliola.github.io/assertj/index.html>
-            * <https://github.com/joel-costigliola/assertj-examples/blob/master/assertions-examples/src/test/java/org/assertj/examples/IterableAssertionsExamples.java>
+            * <https://github.com/joel-costigliola/assertj-examples/blob/master/assertions-examples/src/test/java/org/assertj/examples>
             END
         end
         entry do
@@ -485,8 +485,13 @@ cheatsheet do
         entry do
             name 'Check an optional'
             notes <<-'END'
+
+            See  <https://github.com/joel-costigliola/assertj-examples/blob/master/assertions-examples/src/test/java/org/assertj/examples/OptionalAssertionsExamples.java>
+
             ```java
             Optional<String> result = Optional.of("foo");
+
+            assertThat(result).isPresent();
 
             assertThat(result).get().isEqualTo("foo");
             ```
