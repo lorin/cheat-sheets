@@ -493,7 +493,12 @@ cheatsheet do
 
             assertThat(result).isPresent();
 
-            assertThat(result).get().isEqualTo("foo");
+            assertThat(result).isPresent()
+                              .contains("foo");
+
+            assertThat(result).hasValueSatisfying(x -> {
+                assertThat(x).isEqualTo("foo");
+            });
             ```
             END
         end
