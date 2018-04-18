@@ -47,6 +47,18 @@ cheatsheet do
         end
     end
     category do
+        id 'Contextual help'
+        entry do
+            name 'Show args in function'
+            notes <<-'END'
+            ```
+            CMD P (pops up)
+            F1 (right-hand pane)
+            ```
+            END
+        end
+    end
+    category do
         id 'Keyboard shortcuts'
         entry do
             name 'Hide bottom pane'
@@ -61,6 +73,14 @@ cheatsheet do
             notes <<-'END'
             ```
             Tab
+            ```
+            END
+        end
+        entry do
+            name 'Show arguments'
+            notes <<-'END'
+            ```
+            CMD P
             ```
             END
         end
