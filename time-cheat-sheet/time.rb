@@ -84,6 +84,20 @@ cheatsheet do
     category do
         id 'Epoch time'
         entry do
+            name 'Now in epoch time (macOS terminal)'
+            notes <<-'END'
+            ```bash
+            date "+%s"
+            ```
+
+            I have this zsh alias for epoch to show epoch millis
+
+            ```
+            alias epoch="echo -n `date '+%s'`000 | tee >(pbcopy) && echo"
+            ```
+            END
+        end
+        entry do
             name 'Millis to local time (pandas)'
             notes <<-'END'
             ```python
