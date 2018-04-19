@@ -701,6 +701,35 @@ cheatsheet do
         end
     end
     category do
+        id 'Miscellaneous stuff'
+        entry do
+            name 'Load a resource'
+            notes <<-'END'
+            ```java
+            import com.google.common.io.Resources;
+            import java.io.IOException;
+            import java.net.URL;
+            import java.nio.charset.Charset;
+
+            public class TestClass {
+
+                ...
+
+                /**
+                 * Load a fixture file from "/src/test/resources"
+                 * @param fname name of the file to load
+                 * @return contents of the file
+                 */
+                String loadFixture(String fname) throws IOException {
+                    URL url = this.getClass().getResource("/" + fname);
+                    return Resources.toString(url, Charset.forName("UTF-8"));
+                }
+            }
+            ```
+            END
+        end
+    end
+    category do
         id 'Enums'
         entry do
             name 'Declare an enum'
