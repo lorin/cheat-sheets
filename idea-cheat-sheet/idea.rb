@@ -61,12 +61,16 @@ cheatsheet do
     category do
         id 'Keyboard shortcuts'
         entry do
-            name 'Hide bottom pane'
-            command 'shift-escape'
+            name 'Open terminal tool window'
+            notes <<-'END'
+            ```
+            Alt-F12
+            ```
+            END
         end
         entry do
-            name 'Toggle bottom pane'
-            command 'command-4'
+            name 'Hide bottom pane'
+            command 'shift-escape'
         end
         entry do
             name 'Emmet expansion'
