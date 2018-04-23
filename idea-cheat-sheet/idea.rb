@@ -197,5 +197,13 @@ cheatsheet do
             Double click on the table in the right-hand pane
             END
         end
+        entry do
+            name 'Modify data graphically'
+            notes <<-'END'
+            1. Double click on the table.
+            1. Edit the desired rows.
+            1. Click CMD-Enter or right-click and choose "Submit"
+            END
+        end
     end
 end
