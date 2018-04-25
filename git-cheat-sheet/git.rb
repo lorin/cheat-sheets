@@ -57,6 +57,18 @@ cheatsheet do
             See <https://stackoverflow.com/a/1330097/742>
             END
         end
+        entry do
+            name 'Ignore all untracked files'
+            notes <<-'END'
+            I have a `git ignore` alias from [Stack Overflow](https://stackoverflow.com/a/15142010/742):
+
+
+            ```
+            [alias]
+                ignore = "!echo \"$(git status --porcelain | grep '^??' | cut -c4-)\" >> .gitignore"
+            ```
+            END
+        end
     end
     category do
         id 'log'
