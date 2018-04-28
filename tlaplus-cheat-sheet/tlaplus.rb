@@ -219,7 +219,7 @@ cheatsheet do
             name 'Wait until a value is present in a set'
             notes <<-'END'
             ```
-            with (x \in S) begin
+            with x \in S do
             ...
             end with;
             ```
