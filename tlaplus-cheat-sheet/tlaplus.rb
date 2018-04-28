@@ -373,6 +373,14 @@ cheatsheet do
             END
         end
         entry do
+            name 'Update a record'
+            notes <<-'END'
+            ```
+            [e EXCEPT !.value=value]
+            ```
+            END
+        end
+        entry do
             name 'Invoke a function'
             notes <<-'END'
             ```
