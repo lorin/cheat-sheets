@@ -221,7 +221,7 @@ cheatsheet do
             ```
             with (x \in S) begin
             ...
-            end if;
+            end with;
             ```
 
             Also use this to randomly select an element in a set
