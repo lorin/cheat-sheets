@@ -134,6 +134,14 @@ cheatsheet do
             END
         end
         entry do
+            name 'Assertions'
+            notes <<-'END'
+            ```
+            assert x>0
+            ```
+            END
+        end
+        entry do
             name 'Overall structure (p-version)'
             notes <<-'END'
             ```
