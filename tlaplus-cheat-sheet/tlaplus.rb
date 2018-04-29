@@ -72,6 +72,17 @@ cheatsheet do
             END
         end
         entry do
+            name 'CASE'
+            notes <<-'END'
+            ```
+            CASE x = 1 -> TRUE
+              [] x = 2 -> TRUE
+              [] x = 3 -> 7
+              [] OTHER -> FALSE
+            ```
+            END
+        end
+        entry do
             name 'Cross product'
             notes <<-'END'
             ```
