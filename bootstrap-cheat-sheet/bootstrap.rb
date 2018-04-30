@@ -47,9 +47,12 @@ cheatsheet do
         entry do
             name 'New Button'
             notes <<-'END'
+            glyphicons are gone in Bootstrap 4, one alternative is Open Iconic
+
+
             ```
             <button type="button" className="btn btn-default active">
-                <span className="glyphicon glyphicon-plus"></span> New
+                <span className="oi oi-plus"></span> New
             </button>
             ```
             END
