@@ -47,14 +47,19 @@ cheatsheet do
         entry do
             name 'New Button'
             notes <<-'END'
-            glyphicons are gone in Bootstrap 4, one alternative is Open Iconic
+            [Bootstrap button docs](https://getbootstrap.com/docs/4.0/components/buttons/)
 
+            Glyphicons are gone in Bootstrap 4, one alternative is [Open Iconic](https://useiconic.com/open),
+            npm package [open-iconic](https://www.npmjs.com/package/open-iconic).
 
-            ```
-            <button type="button" className="btn btn-default active">
+            This creates a link that looks like a button labelled "+ New".
+
+            ```html
+            <a href="/widgets/new" className="btn btn-dark" role="button">
                 <span className="oi oi-plus"></span> New
-            </button>
+            </a>
             ```
+
             END
         end
     end
