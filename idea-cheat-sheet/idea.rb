@@ -206,4 +206,19 @@ cheatsheet do
             END
         end
     end
+    category do
+        id 'Editor behaviour'
+        entry do
+            name 'Change attribute quote/brace autocompletion in JSX '
+            notes <<-'END'
+            ```
+            Settings > Editor > Code Style > HTML > Other > Add for JSX attributes
+            ```
+
+            You can choose brace, quotes, or by type.
+
+            See [WEB-28689](https://youtrack.jetbrains.com/issue/WEB-28689)
+            END
+        end
+    end
 end
