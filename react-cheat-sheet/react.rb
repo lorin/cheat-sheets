@@ -111,21 +111,24 @@ cheatsheet do
     category do
         id 'Forms'
         entry do
-            name 'Simple example (bootstrap form)'
+            name 'Simple example (bootstrap form, typescript)'
             notes <<-'END'
-            ```jsx
-            export default class MyForm extends Component {
+            ```tsx
+            interface Props {};
+            interface State {name: string};
+            
+            export class MyForm extends React.Component<Props, State> {
                 constructor(props) {
                     super(props);
                     this.state = {
                         name: '',
                     };
-
-                    this.handleChangeName = this.handleChangeName.bind(this);
                 }
 
-                handleChangeName(event) {
-                    this.setState({name: event.target.value});
+
+                handleChangeName(event : SyntheticEvent<HTMLInputElement>) {
+                    // js does event.target.value instead
+                    this.setState({name: event.currentTarget.value});
                 }
             
                 render() {
@@ -134,7 +137,7 @@ cheatsheet do
                             <div className="form-group">
                                 <label htmlFor="name" className="col-sm-2 control-label">Name</label>
                                 <div className="col-sm-10">
-                                    <input type="text" value={this.state.name} onChange={this.handleChangeName} className="form-control" id="name" />
+                                    <input type="text" value={this.state.name} onChange={this.handleChangeName.bind(this)} className="form-control" id="name" />
                                 </div>
                             </div>
                             <div className="form-group">
