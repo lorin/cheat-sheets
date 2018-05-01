@@ -49,6 +49,28 @@ cheatsheet do
         end
     end
     category do
+        id 'URL redirection'
+        entry do
+            name 'History docs'
+            notes <<-'END'
+            See [Manipuatling the browser hsitory](https://developer.mozilla.org/en-US/docs/Web/API/History_API).
+
+            In particular:
+            * [pushState](https://developer.mozilla.org/en-US/docs/Web/API/History_API#The_pushState()_method) when you want "back" to go back
+            * [replaceState](https://developer.mozilla.org/en-US/docs/Web/API/History_API#The_replaceState()_method) when you don't
+            END
+        end
+        entry do
+            name 'Examples of how to use pushState and replaceState'
+            notes <<-'END'
+            ```
+            history.pushState({}, "/new/path");
+            history.replaceState({}, "/new/path");
+            ```
+            END
+        end
+    end
+    category do
         id 'Keyboard events'
         entry do
             name 'Example handling events'
