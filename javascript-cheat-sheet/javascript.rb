@@ -117,9 +117,13 @@ cheatsheet do
         entry do
             name 'Checking for modifier key'
             notes <<-'END'
-            ```js
-            if(event.metaKey) {
-               ... 
+            ```ts
+
+            // Save on Cmd-Enter
+            handleKey(event : KeyboardEvent) {
+                if(event.key === 'Enter' && event.metaKey) {
+                    this.handleSave();
+                }
             }
             ```
 
