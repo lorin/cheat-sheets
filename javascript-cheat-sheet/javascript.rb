@@ -18,14 +18,6 @@ cheatsheet do
             ```
             END
         end
-        entry do
-            name 'Visit a different page'
-            notes <<-'END'
-            ```
-            window.location="/new/path/goes/here";
-            ```
-            END
-        end
     end
     category do
         id 'Arrays'
@@ -51,6 +43,15 @@ cheatsheet do
     category do
         id 'URL redirection'
         entry do
+            name 'Visit a different page (programmatically redirect url)'
+            notes <<-'END'
+            ```
+            // typescript needs the .href, js does not
+            window.location.href="/new/path/goes/here";
+            ```
+            END
+        end
+        entry do
             name 'History docs'
             notes <<-'END'
             See [Manipuatling the browser hsitory](https://developer.mozilla.org/en-US/docs/Web/API/History_API).
@@ -64,6 +65,8 @@ cheatsheet do
         entry do
             name 'Examples of how to use pushState and replaceState'
             notes <<-'END'
+            Note: these just change the URL, they don't cause any other behavior change.
+
             ```
             history.pushState({}, "", "/new/path");
             history.replaceState({}, "", "/new/path");
