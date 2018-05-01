@@ -56,6 +56,7 @@ cheatsheet do
             See [Manipuatling the browser hsitory](https://developer.mozilla.org/en-US/docs/Web/API/History_API).
 
             In particular:
+
             * [pushState](https://developer.mozilla.org/en-US/docs/Web/API/History_API#The_pushState()_method) when you want "back" to go back
             * [replaceState](https://developer.mozilla.org/en-US/docs/Web/API/History_API#The_replaceState()_method) when you don't
             END
