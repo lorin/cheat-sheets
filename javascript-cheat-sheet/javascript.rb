@@ -65,8 +65,8 @@ cheatsheet do
             name 'Examples of how to use pushState and replaceState'
             notes <<-'END'
             ```
-            history.pushState({}, "/new/path");
-            history.replaceState({}, "/new/path");
+            history.pushState({}, "", "/new/path");
+            history.replaceState({}, "", "/new/path");
             ```
             END
         end
