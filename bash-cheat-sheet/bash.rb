@@ -3,17 +3,30 @@ cheatsheet do
     docset_file_name 'bash'
     keyword 'bash'
     category do
-        id 'Special variables'
+        id 'Command-line args'
         entry do
-            name 'Docs'
+            name 'First, second, third, etc.'
             notes <<-'END'
-            [Special parameters](https://www.gnu.org/software/bash/manual/html_node/Special-Parameters.html)
+            ```
+            first=$1
+            second=$2
+            third=$3
+            ```
             END
         end
         entry do
             name '$@'
             notes <<-'END'
-            String that contains all of the positoinal parameters.
+            String that contains all of the positional parameters.
+            END
+        end
+    end
+    category do
+        id 'Special variables'
+        entry do
+            name 'Docs'
+            notes <<-'END'
+            [Special parameters](https://www.gnu.org/software/bash/manual/html_node/Special-Parameters.html)
             END
         end
     end
