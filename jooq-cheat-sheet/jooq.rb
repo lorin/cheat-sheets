@@ -90,6 +90,21 @@ cheatsheet do
         end
     end
     category do
+        id 'Insert'
+        entry do
+            name 'Insert longs'
+            notes <<-'END'
+            ```
+            create
+                .insertInto(MYTABLE, FIELD1, FIELD2)
+                .values(ULong.valueOf(1), ULong.valueOf(2))
+                .values(ULong.valueOf(3), ULong.valueOf(4))
+                .execute();
+            ```
+            END
+        end
+    end
+    category do
         id 'Mappings'
         entry do
             name 'MySQL: map BOOLEAN to boolean'
