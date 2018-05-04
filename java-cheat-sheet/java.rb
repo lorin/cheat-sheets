@@ -471,7 +471,7 @@ cheatsheet do
             END
         end
         entry do
-            name 'Check list'
+            name 'Lists'
             notes <<-'END'
             <https://github.com/joel-costigliola/assertj-examples/blob/master/assertions-examples/src/test/java/org/assertj/examples/IterableAssertionsExamples.java>
 
@@ -481,6 +481,11 @@ cheatsheet do
             assertThat(result).isEmpty();
             assertThat(result).isNotEmpty();
             assertThat(result).hasSize(1);
+
+            assertThat(result).contains("foo");
+
+            // Must contain them all, and only those, but order doesn't matter
+            assertThat(result).containsOnly("foo", "bar")
 
             assertThat(result).hasOnlyOneElementSatisfying(object -> {
                 assertThat(object)...;
