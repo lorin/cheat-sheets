@@ -3,12 +3,36 @@ cheatsheet do
     docset_file_name 'quiver'
     keyword 'quiver'
     category do
-        id ''
+        id 'Keyboard shortcuts'
+        entry do
+            name 'Code'
+            notes <<-'END'
+            ```
+            CMD OPT 2
+            ```
+            END
+        end
+        entry do
+            name 'Markdown'
+            notes <<-'END'
+            ```
+            CMD OPT 3
+            ```
+            END
+        end
+        entry do
+            name 'Single pane'
+            notes <<-'END'
+            ```
+            CMD 1
+            ```
+            END
+        end
         entry do
             name 'Find note'
             notes <<-'END'
             ```
-            Opt Cmd F
+            CMD OPT F
             ```
             END
         end
