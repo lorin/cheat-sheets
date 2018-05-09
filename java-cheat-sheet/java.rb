@@ -713,7 +713,6 @@ cheatsheet do
             ```java
             import com.google.common.io.Resources;
             import java.io.IOException;
-            import java.net.URL;
             import java.nio.charset.Charset;
 
             public class TestClass {
@@ -726,9 +725,9 @@ cheatsheet do
                  * @return contents of the file
                  */
                 String loadFixture(String fname) throws IOException {
-                    URL url = this.getClass().getResource("/" + fname);
-                    return Resources.toString(url, Charset.forName("UTF-8"));
+                    return Resources.toString(Resources.getResource(fname), Charset.forName("UTF-8"));
                 }
+
             }
             ```
             END
