@@ -3,6 +3,27 @@ cheatsheet do
     docset_file_name 'sql'
     keyword 'sql'
     category do
+        id 'Selections'
+        entry do
+            name 'Inner join'
+            notes <<-'END'
+            ```sql
+            SELECT count(*) FROM widgets INNER JOIN widgets_colors r on widgets.id = r.widget_id;
+            ```
+
+            You can also leave out the `INNER`.
+            END
+        end
+        entry do
+            name 'Number of colors that each widget comes in'
+            notes <<-'END'
+            ```sql
+            SELECT id, count(r.color_id) as colors FROM widgets INNER JOIN widgets_colors r on widgets.id = r.widget_id GROUP BY id;
+            ```
+            END
+        end
+    end
+    category do
         id 'Insertions'
         entry do
             name 'Specify columns'
