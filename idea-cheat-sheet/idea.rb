@@ -30,6 +30,34 @@ cheatsheet do
         end
     end
     category do
+        id 'Database'
+        entry do
+            name 'Ad-hoc queries'
+            notes <<-'END'
+            1. Open the Database tab on the left
+            2. Click on the "console" icon (next to funnel)
+
+            This will open a terminal where you can type SQL. 
+
+            Hit CMD-Enter and the result will appear at the bottom.
+            END
+        end
+        entry do
+            name 'Show a table'
+            notes <<-'END'
+            Double click on the table in the right-hand pane
+            END
+        end
+        entry do
+            name 'Modify data graphically'
+            notes <<-'END'
+            1. Double click on the table.
+            1. Edit the desired rows.
+            1. Click CMD-Enter or right-click and choose "Submit"
+            END
+        end
+    end
+    category do
         id 'Module stuff'
         entry do
             name 'Tests don\'t see proper dependencies'
@@ -186,23 +214,6 @@ cheatsheet do
             For details see:
             * [this post](https://intellij-support.jetbrains.com/hc/en-us/community/posts/115000125290-Indexing-https-plugins-gradle-org-m2?page=1#community_comment_115000160950)
             * [IDEA-148753](https://youtrack.jetbrains.com/issue/IDEA-148753)
-            END
-        end
-    end
-    category do
-        id 'Database'
-        entry do
-            name 'Show a table'
-            notes <<-'END'
-            Double click on the table in the right-hand pane
-            END
-        end
-        entry do
-            name 'Modify data graphically'
-            notes <<-'END'
-            1. Double click on the table.
-            1. Edit the desired rows.
-            1. Click CMD-Enter or right-click and choose "Submit"
             END
         end
     end
