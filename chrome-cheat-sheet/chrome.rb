@@ -29,4 +29,17 @@ cheatsheet do
             END
         end
     end
+    category do
+        id 'Video player'
+        entry do
+            name 'Skip to beginning'
+            notes <<-'END'
+            ```
+            0
+            ```
+
+            Other numbers seem to work as percentages (e.g., `2` jumps to 20%).
+            END
+        end
+    end
 end
