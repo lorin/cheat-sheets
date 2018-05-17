@@ -95,11 +95,15 @@ cheatsheet do
             ```tsx
             import * as React from "react";
 
-            export interface HelloProps { compiler: string; framework: string; }
+            export interface Props { compiler: string; framework: string; }
 
-            // 'HelloProps' describes the shape of props.
             // State is never set so we use the '{}' type.
-            export class Hello extends React.Component<HelloProps, {}> {
+            export interface State {}
+
+
+            // 'Props' describes the shape of props.
+            // We could have inlined {} for State
+            export class Hello extends React.Component<Props, State> {
                 render() {
                     return <h1>Hello from {this.props.compiler} and {this.props.framework}!</h1>;
                 }
