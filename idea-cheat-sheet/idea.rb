@@ -28,6 +28,14 @@ cheatsheet do
             Under "Other": Strip trailing spaces on Save"
             END
         end
+        entry do
+            name 'Re-do the indexing'
+            notes <<-'END'
+            ```
+            File -> Invalidate Caches / Restart ... -> Invalidate and Restart
+            ```
+            END
+        end
     end
     category do
         id 'Database'
