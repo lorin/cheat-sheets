@@ -25,6 +25,17 @@ cheatsheet do
               bar : lone B, // zero or one
               baz : set C
             }
+
+            sig EventId {}
+            sig Op {}
+
+            sig HistoryEvent {
+                id: EventId,
+                op: Op
+            }{
+                // event ids are unique
+                all h : HistoryEvent | (h.@id = id) => h = this
+            }
             ```
             END
         end
