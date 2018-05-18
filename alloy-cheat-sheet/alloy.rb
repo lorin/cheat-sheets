@@ -118,6 +118,24 @@ cheatsheet do
             END
         end
         entry do
+            name 'Box join example'
+            notes <<-'END'
+            ```
+            sig H {
+                id: EventId,
+                op: Op
+            }
+
+            sig HEvent {
+                x: Obj -> set H
+            }
+
+            // To get all of the ops
+            HEvent.x[Obj].op 
+            ```
+            END
+        end
+        entry do
             name 'Arrow producct'
             notes <<-'END'
             Form a relation with all pairs from p,q
