@@ -93,7 +93,7 @@ cheatsheet do
             no po & ~po
 
             // total
-            e in po.e + po[e]
+            all e1, e2 : e | e1!=e2 => e1->e2 in po or e2->e1 in po
             ```
             END
         end
