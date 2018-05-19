@@ -21,7 +21,7 @@ cheatsheet do
             sig E in A {}
 
             sig Foo {
-              foo : A, // one(?)
+              foo : A, // one
               bar : lone B, // zero or one
               baz : set C
             }
@@ -74,6 +74,26 @@ cheatsheet do
             notes <<-'END'
             ```
             all a : A | a->a in foo
+            ```
+            END
+        end
+    end
+    category do
+        id 'Relational examples'
+        entry do
+            name 'Total ordering'
+            notes <<-'END'
+            ```
+            // po is a relation
+
+            // irreflexive
+            no iden & po
+
+            // antisymmetric
+            no po & ~po
+
+            // total
+            e in po.e + po[e]
             ```
             END
         end
