@@ -269,6 +269,12 @@ cheatsheet do
     category do
         id 'Other'
         entry do
+            name 'Markdown syntax'
+            notes <<-'END'
+            See <https://github.com/AlloyTools/org.alloytools.alloy/wiki/5.0.0-Change-List#markdown-syntax>
+            END
+        end
+        entry do
             name 'Let'
             notes <<-'END'
             ```
