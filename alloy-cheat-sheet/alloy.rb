@@ -3,30 +3,22 @@ cheatsheet do
     docset_file_name 'alloy'
     keyword 'alloy'
     category do
-        id 'Basics'
+        id 'External cheat sheets'
         entry do
-            name 'Sig declarations'
+            name 'Thomas A. Alspaugh'
             notes <<-'END'
-            Set of atoms
-
+            <https://www.ics.uci.edu/~alspaugh/cls/shr/alloy.html#quick>
+            END
+        end
+    end
+    category do
+        id 'Signatures'
+        entry do
+            name 'Simple case'
+            notes <<-'END'
             ```alloy
-            // basic
-            sig A {}
-
-            // disjoint
-            sig B, C extends A {}
-
-            // non-disjoint
-            sig D in A {}
-            sig E in A {}
-
-            sig Foo {
-              foo : A, // one
-              bar : lone B, // zero or one
-              baz : set C
-            }
-
             sig EventId {}
+
             sig Op {}
 
             sig HistoryEvent {
@@ -40,9 +32,72 @@ cheatsheet do
             END
         end
         entry do
-            name 'Quantifiers'
+            name 'Disjoint, total subsets'
+            notes <<-'END'
+            ```alloy
+            abstract sig Op {
+                obj: Obj,
+                val: Int
+            }
+
+            sig Read,Write extends Op {}
+            ```
+            END
+        end
+        entry do
+            name 'Specifying disjoint subsets with multiple declarations'
+            notes <<-'END'
+            ```alloy
+            abstract sig HEvent {
+                id: EventId,
+                op: Op,
+            }{
+                // event ids are distinct
+                all h : HEvent | (h.@id = id) => h = this
+            }
+
+            sig REvent extends HEvent {
+            }{
+                op in Read
+            }
+
+            sig WEvent extends HEvent {
+            }{
+                op in Write
+            }
+            ```
+            END
+        end
+        entry do
+            name 'Specifying non-disjoint subsets'
+            notes <<-'END'
+            ```alloy
+            sig A {}
+
+            sig D in A {}
+            sig E in A {}
+            ```
+            END
+        end
+        entry do
+            name 'Multiplicity of relations'
             notes <<-'END'
             ```
+            sig Foo {
+              foo : A, // one
+              bar : lone B, // zero or one
+              baz : set C // many
+            }
+            ```
+            END
+        end
+    end
+    category do
+        id 'Sets and operations'
+        entry do
+            name 'Quantifiers'
+            notes <<-'END'
+            ```alloy
             all
             some
             one
@@ -50,56 +105,6 @@ cheatsheet do
             ```
             END
         end
-    end
-    category do
-        id 'Predicate calculus'
-        entry do
-            name 'Build a set'
-            notes <<-'END'
-            ```
-            r' = {b: B, a:A, c: C | a->b->c in r}
-            ```
-            END
-        end
-        entry do
-            name 'One-to-one'
-            notes <<-'END'
-            ```
-            all a : A | lone foo.a
-            ```
-            END
-        end
-        entry do
-            name 'Reflexive'
-            notes <<-'END'
-            ```
-            all a : A | a->a in foo
-            ```
-            END
-        end
-    end
-    category do
-        id 'Relational examples'
-        entry do
-            name 'Total ordering'
-            notes <<-'END'
-            ```
-            // po is a relation
-
-            // irreflexive
-            no iden & po
-
-            // antisymmetric
-            no po & ~po
-
-            // total
-            all e1, e2 : e | e1!=e2 => e1->e2 in po or e2->e1 in po
-            ```
-            END
-        end
-    end
-    category do
-        id 'Set operations'
         entry do
             name 'Set-valued operators'
             notes <<-'END'
@@ -122,6 +127,75 @@ cheatsheet do
             * `none` - empty set
             * `univ` - universal set
             * `iden` - identity relation
+            END
+        end
+    end
+    category do
+        id 'Predicate calculus'
+        entry do
+            name 'Build a set'
+            notes <<-'END'
+            ```alloy
+            r' = {b: B, a:A, c: C | a->b->c in r}
+            ```
+            END
+        end
+        entry do
+            name 'One-to-one'
+            notes <<-'END'
+            ```alloy
+            all a : A | lone R.a
+            ```
+            END
+        end
+        entry do
+            name 'Reflexive'
+            notes <<-'END'
+            ```alloy
+            all a : A | a->a in R
+            ```
+            END
+        end
+        entry do
+            name 'Irreflexive'
+            notes <<-'END'
+            ```alloy
+            no iden & R
+            ```
+            END
+        end
+        entry do
+            name 'Anti-symmettric'
+            notes <<-'END'
+            ```alloy
+            no R & ~R
+            ```
+            END
+        end
+        entry do
+            name 'Total'
+            notes <<-'END'
+            ```alloy
+            all e1, e2 : E | e1!=e2 => e1->e2 in R or e2->e1 in R
+            ```
+            END
+        end
+    end
+    category do
+        id 'Relational examples'
+        entry do
+            name 'Total ordering'
+            notes <<-'END'
+            ```
+            // po is a relation
+
+            // irreflexive
+
+            // antisymmetric
+            no po & ~po
+
+            // total
+            ```
             END
         end
     end
@@ -188,6 +262,17 @@ cheatsheet do
 
             ```
             #s
+            ```
+            END
+        end
+    end
+    category do
+        id 'Other'
+        entry do
+            name 'Let'
+            notes <<-'END'
+            ```
+            let x = foo | ...
             ```
             END
         end
