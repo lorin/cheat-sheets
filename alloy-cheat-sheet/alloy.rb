@@ -439,7 +439,7 @@ cheatsheet do
             notes <<-'END'
             `seq Foo` is shorthand for `Int -> Foo`
 
-            See <http://alloy.mit.edu/alloy/documentation/quickguide/seq.html>
+            See <http:/alloytools.org/quickguide/seq.html>
             
             ```
             sig Book { }
