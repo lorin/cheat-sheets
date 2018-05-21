@@ -291,6 +291,7 @@ cheatsheet do
             ```
             pred show() {}
             run show for 3 but 1 Book
+            run show for 3 but exactly 1 Book
             ```
             END
         end
