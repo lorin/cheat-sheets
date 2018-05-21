@@ -308,9 +308,9 @@ cheatsheet do
         end
     end
     category do
-        id 'Indenting, wrapping, columns'
+        id 'Tabs, indenting, wrapping, columns'
         entry do
-            name 'Show tabs'
+            name 'Show tabs (whitespace)'
             command ':set list'
         end
         entry do
@@ -334,7 +334,7 @@ cheatsheet do
             name 'Convert tabs to spaces'
             notes <<-'END'
             ```
-            %retab!
+            :retab
             ```
             END
         end
