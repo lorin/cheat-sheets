@@ -31,5 +31,23 @@ cheatsheet do
             1. Click on "Dev Tools"
             END
         end
+        entry do
+            name 'Find the query for a Kibana graph'
+            notes <<-'END'
+            1. Select the graph
+            2. Click on the little circle at the bottom with a caret (up-arrow thing) in it.
+            3. Click "Request" button
+
+            You'll now see query. 
+
+            To get more real estate:
+
+            1. Maximize the graph (double arrows on a graph)
+            2. Click edit at the top
+            3. Click the pencil at the top right
+            4. Click the circle with the caret/up-arrow at the bottom of the screen
+            5. Click the "Request" button
+            END
+        end
     end
 end
