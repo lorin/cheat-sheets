@@ -3,6 +3,64 @@ cheatsheet do
     docset_file_name 'r'
     keyword 'r'
     category do
+        id 'Basics'
+        entry do
+            name 'Constant vector'
+            notes <<-'END'
+            ```
+            rep(1,20)
+            ```
+            END
+        end
+        entry do
+            name 'Introspect an object'
+            notes <<-'END'
+            ```
+            typeof(x)
+            str(x)
+            ```
+            END
+        end
+    end
+    category do
+        id 'Table manipulation'
+        entry do
+            name 'Schema examples'
+            notes <<-'END'
+            Let's say you have a table with three columns:
+            * group (control, experiment)
+            * color (red, green, blue, ...)
+            * count (count for each (group, color) pair)
+            END
+        end
+        entry do
+            name 'Sum count by groups'
+            notes <<-'END'
+
+            ```r
+            counts <- ...
+            library(data.table)
+            dt <- data.table(counts)
+            groups <- dt[,list(count=sum(count)), by=group]
+            ```
+            END
+        end
+        entry do
+            name 'Make the table wide'
+            notes <<-'END'
+            Sort descending by "control", put NAs at the end
+
+            ```r
+            library(data.table)
+            x <- dcast(counts, color ~ group, value.var="count")
+            setorder(x, -control, na.last = TRUE)
+            ```
+            END
+        end
+
+        
+    end
+    category do
         id 'R notebook'
         entry do
             name 'Insert code chunk'
