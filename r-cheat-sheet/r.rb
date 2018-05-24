@@ -34,6 +34,24 @@ cheatsheet do
             END
         end
         entry do
+            name 'Filter by color'
+            notes <<-'END'
+            ```
+            counts.blue <- counts[counts$color == "blue", ]
+            ```
+            END
+        end
+        entry do
+            name 'Outer join'
+            notes <<-'END'
+            You can use "merge" with an unrelated table:
+
+            ```
+            merge(counts, data.frame(p=seq(0,1,.01))
+            ```
+            END
+        end
+        entry do
             name 'Sum count by groups'
             notes <<-'END'
 
