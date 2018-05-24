@@ -23,6 +23,25 @@ cheatsheet do
         end
     end
     category do
+        id 'Categorical data (factors)'
+        entry do
+            name 'Get the levels (values) of a factor'
+            notes <<-'END'
+            ```
+            levels(x$color)
+            ```
+            END
+        end
+        entry do
+            name 'Reorder factors'
+            notes <<-'END'
+            ```
+            x$color <- factor(x$color, levels(x$color)[c(2,3,1)])
+            ```
+            END
+        end
+    end
+    category do
         id 'Table manipulation'
         entry do
             name 'Schema examples'
