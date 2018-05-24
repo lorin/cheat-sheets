@@ -137,5 +137,21 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Facet plot: dot plots side-by-side'
+            notes <<-'END'
+            Assuemes group, color, count
+
+            ```r
+            ggplot(x, aes(count, color)) + geom_point() + facet_grid(. ~ group)
+            ```
+            END
+        end
+        entry do
+            name 'Better labeling of points'
+            notes <<-'END'
+            See: geom_label_repel
+            END
+        end
     end
 end
