@@ -5,6 +5,17 @@ cheatsheet do
     category do
         id 'Basics'
         entry do
+            name 'Data frame'
+            notes <<-'END'
+            ```
+            x <- data.frame(
+                foo=c(1,2,3),
+                bar=c(4,5,6)
+            )
+            ```
+            END
+        end
+        entry do
             name 'Constant vector'
             notes <<-'END'
             ```
@@ -133,7 +144,8 @@ cheatsheet do
             library(ggplot2)
             p_grid = seq(from=0, to=1, length.out=20)
             likelihood = dbinom(6, size=9, prob=p_grid)
-            ggplot(mapping=aes(x=p_grid, y=likelihood))+geom_line()
+            ggplot(mapping=aes(x=p_grid, y=likelihood)) + geom_line() +
+            ggtitle("Title here") + xlab("x-axis label") + ylab("y-axis label")
             ```
             END
         end
@@ -151,6 +163,20 @@ cheatsheet do
             name 'Better labeling of points'
             notes <<-'END'
             See: geom_label_repel
+            END
+        end
+    end
+    category do
+        id 'distributions'
+        entry do
+            name 'binomial'
+            notes <<-'END'
+            ```
+            N.heads <- 6
+            N.flips <- 10
+            p.heads <- 0.5
+            likelihood <- dbinom(N.heads, N.flips, p.heads)
+            ```
             END
         end
     end
