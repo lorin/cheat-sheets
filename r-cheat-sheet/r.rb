@@ -169,6 +169,14 @@ cheatsheet do
             END
         end
         entry do
+            name 'Histogram from vector'
+            notes <<-'END'
+            ```r
+            ggplot(mapping = aes(samples)) + geom_histogram()
+            ```
+            END
+        end
+        entry do
             name 'Better labeling of points'
             notes <<-'END'
             See: geom_label_repel
