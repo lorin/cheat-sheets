@@ -7,7 +7,7 @@ cheatsheet do
         entry do
             name 'Data frame'
             notes <<-'END'
-            ```
+            ```r
             x <- data.frame(
                 foo=c(1,2,3),
                 bar=c(4,5,6)
@@ -18,8 +18,17 @@ cheatsheet do
         entry do
             name 'Constant vector'
             notes <<-'END'
-            ```
+            ```r
             rep(1,20)
+            ```
+            END
+        end
+        entry do
+            name 'Counting sequence'
+            notes <<-'END'
+            ```r
+            seq(from=0, to=1, length.out=100)
+            seq(from=0, to=1, by=0.01)
             ```
             END
         end
@@ -38,7 +47,7 @@ cheatsheet do
         entry do
             name 'Get the levels (values) of a factor'
             notes <<-'END'
-            ```
+            ```r
             levels(x$color)
             ```
             END
