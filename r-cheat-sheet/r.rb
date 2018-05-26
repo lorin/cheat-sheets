@@ -182,6 +182,16 @@ cheatsheet do
             See: geom_label_repel
             END
         end
+        entry do
+            name 'Area under part of the curve'
+            notes <<-'END'
+            ```r
+            globe <- data.frame(p=p_grid, posterior=posterior)
+            domain <- p_grid<=0.4
+            ggplot(globe, aes(p, posterior)) + geom_line() + geom_area(data=globe[domain, ], mapping = aes(p, posterior))
+            ```
+            END
+        end
     end
     category do
         id 'distributions'
