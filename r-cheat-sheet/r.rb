@@ -179,7 +179,7 @@ cheatsheet do
         entry do
             name 'Better labeling of points'
             notes <<-'END'
-            See: geom_label_repel
+            See: `geom_label_repel`
             END
         end
         entry do
