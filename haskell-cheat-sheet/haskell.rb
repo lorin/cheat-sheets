@@ -15,6 +15,33 @@ cheatsheet do
         end
     end
     category do
+        id 'ghci'
+        entry do
+            name 'Load a script'
+            notes <<-'END'
+            ```
+            :load "script.hs"
+            ```
+            END
+        end
+        entry do
+            name 'Show types'
+            notes <<-'END'
+            ```
+            :set +t
+            ```
+            END
+        end
+        entry do
+            name 'Show function'
+            notes <<-'END'
+            ```
+            :m +Text.Show.Functions
+            ```
+            END
+        end
+    end
+    category do
         id 'Functors'
         entry do
             name 'Define a functor'
