@@ -203,6 +203,18 @@ cheatsheet do
             N.flips <- 10
             p.heads <- 0.5
             likelihood <- dbinom(N.heads, N.flips, p.heads)
+            samples <- rbinom(1e4, N.flips, p.heads)
+            ```
+            END
+        end
+    end
+    category do
+        id 'Odds & ends'
+        entry do
+            name 'Integral (cumulative)'
+            notes <<-'END'
+            ```
+            cumsum(x)
             ```
             END
         end
