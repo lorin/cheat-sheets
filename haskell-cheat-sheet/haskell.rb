@@ -25,10 +25,11 @@ cheatsheet do
             END
         end
         entry do
-            name 'Show types'
+            name 'Show/hide types'
             notes <<-'END'
             ```
             :set +t
+            :unset +t
             ```
             END
         end
@@ -37,6 +38,114 @@ cheatsheet do
             notes <<-'END'
             ```
             :m +Text.Show.Functions
+            ```
+            END
+        end
+        entry do
+            name 'Change the prompt'
+            notes <<-'END'
+            ```
+            :set prompt  "λ "
+            ```
+            END
+        end
+    end
+    category do
+        id 'Lists'
+        entry do
+            name 'cons'
+            notes <<-'END'
+            ```
+            3:[4]
+            ```
+            END
+        end
+        entry do
+            name 'Concat'
+            notes <<-'END'
+            ```
+            [3] ++ [4]
+            ```
+            END
+        end
+        entry do
+            name 'Range (finite)'
+            notes <<-'END'
+            ```
+            [1..5]
+            ```
+            END
+        end
+        entry do
+            name 'Range (infinite)'
+            notes <<-'END'
+            ```
+            [1..]
+            ```
+            END
+        end
+        entry do
+            name 'Reverse'
+            notes <<-'END'
+            ```
+            reverse
+            ```
+            END
+        end
+        entry do
+            name 'First n'
+            notes <<-'END'
+            ```
+            take 5 
+            ```
+            END
+        end
+        entry do
+            name 'First'
+            notes <<-'END'
+            ```
+            head
+            ```
+            END
+        end
+        entry do
+            name 'Last'
+            notes <<-'END'
+            ```
+            tail
+            ```
+            END
+        end
+        entry do
+            name 'Destructuring (with guards, and as syntax)'
+            notes <<-'END'
+            From Richard Bird's Thinking Functionally with Haskell:
+
+            ```haskell
+            merge xs'@(x:xs) ys'@(y:ys)
+            | x <= y    = x:merge xs ys'
+            | otherwise = y:merge xs' ys
+            ```
+
+            Note how `x:xs` destructures a list, and `xs'` is the non-destructured version of it.
+            END
+        end
+    end
+    category do
+        id 'Pairs'
+        entry do
+            name 'Left'
+            notes <<-'END'
+            ```
+            fst
+            ```
+            END
+        end
+        entry do
+            name 'Right'
+            notes <<-'END'
+            ```
+            snd
             ```
             END
         end
