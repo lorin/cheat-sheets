@@ -29,6 +29,15 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Casting (as)'
+            notes <<-'END'
+            ```tsx
+            let subject = shallow(<MyContainer />);
+            let instance = subject.instance() as MyContainer;
+            ```
+            END
+        end
     end
     category do
         id 'Packages'
