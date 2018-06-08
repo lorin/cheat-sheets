@@ -97,13 +97,17 @@ cheatsheet do
 
             export interface Props { compiler: string; framework: string; }
 
-            // State is never set so we use the '{}' type.
-            export interface State {}
+            export interface State {active_row: number}
 
-
-            // 'Props' describes the shape of props.
-            // We could have inlined {} for State
             export class Hello extends React.Component<Props, State> {
+                constructor() {
+                    super(props)
+
+                    this.state = {
+                        active_row: 0
+                    }
+                }
+
                 render() {
                     return <h1>Hello from {this.props.compiler} and {this.props.framework}!</h1>;
                 }
@@ -253,7 +257,7 @@ cheatsheet do
                     this.state = {active_row: 0};
                 }
 
-                componentWillMount() {
+                componentDidMount() {
                     document.addEventListener("keydown", this.handleKey.bind(this));
                 }
                 
