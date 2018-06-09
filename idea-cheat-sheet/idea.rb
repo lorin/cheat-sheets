@@ -36,6 +36,14 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Show typescript error messages in a window'
+            notes <<-'END'
+            ```
+            View -> Tool Windows -> TypeScript -> Errors
+            ```
+            END
+        end
     end
     category do
         id 'Database'
