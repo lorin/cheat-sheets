@@ -5,6 +5,16 @@ cheatsheet do
     category do
         id ''
         entry do
+            name 'Dev tools keyboard shortcut'
+            notes <<-'END'
+            ```
+            ⌘  ⌥  I
+
+            CMD ALT I
+            ```
+            END
+        end
+        entry do
             name 'Examine cookies'
             notes <<-'END'
             1. Open Developer Tools
