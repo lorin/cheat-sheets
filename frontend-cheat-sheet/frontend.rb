@@ -29,6 +29,16 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Rebuild a module after a node change'
+            notes <<-'END'
+            ```
+            yarn install
+            ```
+
+            (node-sass needs this)
+            END
+        end
     end
     category do
         id 'webpack'
