@@ -151,4 +151,25 @@ cheatsheet do
             END
         end
     end
+    category do
+        id 'Declaration files'
+        entry do
+            name 'Github repo'
+            notes <<-'END'
+            <https://github.com/DefinitelyTyped/DefinitelyTyped>
+            END
+        end
+        entry do
+            name 'Definitely Typed Website'
+            notes <<-'END'
+            <http://definitelytyped.org/>
+            END
+        end
+        entry do
+            name 'TypeScript Docs'
+            notes <<-'END'
+            <http://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html>
+            END
+        end
+    end
 end
