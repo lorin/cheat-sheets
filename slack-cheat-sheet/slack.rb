@@ -12,6 +12,14 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'React from keyboard'
+            notes <<-'END'
+            ```
+            +:thumbsup:
+            ```
+            END
+        end
     end
     category do
         id 'Commands'
