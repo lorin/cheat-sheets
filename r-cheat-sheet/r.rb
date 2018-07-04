@@ -3,9 +3,9 @@ cheatsheet do
     docset_file_name 'r'
     keyword 'r'
     category do
-        id 'Basics'
+        id 'Data frames'
         entry do
-            name 'Data frame'
+            name 'Create a data frame'
             notes <<-'END'
             ```r
             x <- data.frame(
@@ -15,6 +15,28 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Summarize a data frame'
+            notes <<-'END'
+            ```r
+            str(d)
+            ```
+
+            Output looks like:
+
+            ```
+            'data.frame':	544 obs. of  4 variables:
+             $ height: num  152 140 137 157 145 ...
+             $ weight: num  47.8 36.5 31.9 53 41.3 ...
+             $ age   : num  63 63 65 41 51 35 32 27 19 54 ...
+             $ male  : int  1 0 0 1 0 1 0 1 0 1 ...
+            ```
+            END
+        end
+
+    end
+    category do
+        id 'Basics'
         entry do
             name 'Constant vector'
             notes <<-'END'
