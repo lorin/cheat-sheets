@@ -33,7 +33,14 @@ cheatsheet do
             ```
             END
         end
-
+        entry do
+            name 'Get a column'
+            notes <<-'END'
+            ```r
+            d$height
+            ```
+            END
+        end
     end
     category do
         id 'Basics'
