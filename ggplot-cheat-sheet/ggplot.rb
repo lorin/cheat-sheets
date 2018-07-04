@@ -3,6 +3,21 @@ cheatsheet do
     docset_file_name 'ggplot'
     keyword 'ggplot'
     category do
+        id 'Basics (R)'
+        entry do
+            name 'simple line plot'
+            notes <<-'END'
+            ```r
+            w<-6; n<-9;
+            p_grid <- seq(from=0,to=1,length.out = 100)
+            posterior <- dbinom(w,n,p_grid)*dunif(p_grid,0,1)
+            posterior <- posterior/sum(posterior)
+            ggplot(mapping=aes(x=p_grid,y=posterior)) + geom_line()
+            ```
+            END
+        end
+    end
+    category do
         id 'Basics'
         entry do
             name 'Overview'
