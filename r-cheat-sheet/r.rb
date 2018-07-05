@@ -3,7 +3,7 @@ cheatsheet do
     docset_file_name 'r'
     keyword 'r'
     category do
-        id 'Data frames'
+        id 'Data frame basics'
         entry do
             name 'Create a data frame'
             notes <<-'END'
@@ -38,6 +38,14 @@ cheatsheet do
             notes <<-'END'
             ```r
             d$height
+            ```
+            END
+        end
+        entry do
+            name 'Filter rows'
+            notes <<-'END'
+            ```r
+            d2 <- d[d$age >= 18, ]
             ```
             END
         end
@@ -91,7 +99,7 @@ cheatsheet do
         end
     end
     category do
-        id 'Table manipulation'
+        id 'Data frame manipulation'
         entry do
             name 'Schema examples'
             notes <<-'END'
