@@ -12,5 +12,11 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Drink item'
+            notes <<-'END'
+            Right mouse button
+            END
+        end
     end
 end
