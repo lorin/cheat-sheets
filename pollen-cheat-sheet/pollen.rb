@@ -3,7 +3,16 @@ cheatsheet do
     docset_file_name 'pollen'
     keyword 'pollen'
     category do
-        id ''
+        id 'Basics'
+        entry do
+            name 'Markdown'
+            notes <<-'END'
+            ```
+            file.html.pmd
+            ```
+            END
+        end
+
         entry do
             name 'Render'
             notes <<-'END'
