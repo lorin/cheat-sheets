@@ -132,6 +132,14 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Complete is block'
+            notes <<-'END'
+            ```
+            CMD Shift Enter
+            ```
+            END
+        end
     end
     category do
         id 'vim emulation'
