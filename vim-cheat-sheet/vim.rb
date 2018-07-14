@@ -3,6 +3,25 @@ cheatsheet do
     docset_file_name 'vim'
     keyword 'vim'
     category do
+        id 'Saving files'
+        entry do
+            name 'Save as new file and switch'
+            notes <<-'END'
+            ```
+            :saveas newfile
+            ```
+            END
+        end
+        entry do
+            name 'Save as new file and stay with old'
+            notes <<-'END'
+            ```
+            :w newfile
+            ```
+            END
+        end
+    end
+    category do
         id 'Inserting characters'
         entry do
             name 'Em-dash'
