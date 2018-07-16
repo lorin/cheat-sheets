@@ -16,13 +16,20 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'No x tick marks'
+            notes <<-'END'
+            ```r
+            ggplot(...) + ... + theme(axis.text.x=element_blank())
+            ```
+            END
+        end
     end
     category do
         id 'Basics'
         entry do
-            name 'Overview'
+            name 'Overview python'
             notes <<-'END'
-            Transitioning from yhat's port to plotnine. Some stuff here may be out of date.
             END
         end
         entry do
@@ -187,7 +194,6 @@ cheatsheet do
             notes <<-'END'
             ```
             ggplot(...) + ... + theme(axis_text_x=element_blank())
-            
             ```
             END
         end
