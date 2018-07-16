@@ -35,10 +35,13 @@ cheatsheet do
             name 'Extract part of an input'
             notes <<-'END'
             Let's say myfile.log contains lines like the following and you just want to extract the apps:
+
             ```
             [20922] 2016/09/02 12:00:04 app=foo account=test region=us-east-1
             ```
+
             Perl oneliner looks like this:
+
             ```bash
             cat myfile.log | perl -nle '/app=(.*?) /; print "$1"'
             ```
