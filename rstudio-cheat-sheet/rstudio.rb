@@ -21,6 +21,14 @@ cheatsheet do
             END
         end
         entry do
+            name 'HTML preview'
+            notes <<-'END'
+            ```
+            Cmd+Shift+K
+            ```
+            END
+        end
+        entry do
             name 'Jump to R Console window'
             notes <<-'END'
             ```

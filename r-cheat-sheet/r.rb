@@ -151,32 +151,22 @@ cheatsheet do
             ```
             END
         end
-
-        
     end
     category do
-        id 'R notebook'
+        id 'Dates'
         entry do
-            name 'Insert code chunk'
+            name 'Convert integers to dates'
             notes <<-'END'
+            ```r
+            # year-month as integer
+            ints <- c(201501, 201502, 201503)
+            dates.str <- paste(ints, "01", sep="")
+            dates <- as.Date(dates.str, format="%Y%m%d",tz="America/Los_Angeles")
             ```
-            Cmd+Option+I
-            ```
-            END
-        end
-        entry do
-            name 'Evaluate code chunk'
-            notes <<-'END'
-            You need to put `{r}` after the code fence.
 
-            To evaluate: Cmd+Shift+Enter
-            END
-        end
-        entry do
-            name 'HTML preview'
-            notes <<-'END'
             ```
-            Cmd+Shift+K
+            > dates
+            [1] "2015-01-01" "2015-02-01" "2015-03-01"
             ```
             END
         end
