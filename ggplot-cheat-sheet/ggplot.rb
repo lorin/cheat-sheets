@@ -26,12 +26,7 @@ cheatsheet do
         end
     end
     category do
-        id 'Basics'
-        entry do
-            name 'Overview python'
-            notes <<-'END'
-            END
-        end
+        id 'Python (plotnine, likely some yhat leftovers)'
         entry do
             name 'Simple plot'
             notes <<-'END'
