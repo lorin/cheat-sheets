@@ -98,6 +98,16 @@ cheatsheet do
     category do
         id 'Nebula stuff'
         entry do
+            name 'Update dependency lock file'
+            notes <<-'END'
+            ```
+            ./gradlew generateLock saveLock
+            ```
+
+            See [depenendency lock plugin](https://github.com/nebula-plugins/gradle-dependency-lock-plugin)
+            END
+        end
+        entry do
             name 'Override recommended dependency version'
             notes <<-'END'
             ```groovy
