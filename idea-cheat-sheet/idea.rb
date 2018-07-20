@@ -44,6 +44,14 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Run code gen (e.g., jooq) task automatically'
+            notes <<-'END'
+            1. Open the Gradle sidebar
+            1. Find the task you want to run
+            1. Right-click on it and select "Execute before build" and "Execute before rebuild"
+            END
+        end
     end
     category do
         id 'Database'
