@@ -79,11 +79,19 @@ cheatsheet do
         end
     end
     category do
-        id ''
+        id 'jars'
         entry do
             name 'Find jars'
             notes <<-'END'
             <https://search.maven.org>
+            END
+        end
+        entry do
+            name 'Jar dependency tree'
+            notes <<-'END'
+            ```
+            ./gradlew dependencies
+            ```
             END
         end
     end
