@@ -254,6 +254,14 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Save to csv'
+            notes <<-'END'
+            ```python
+            df.to_csv(path_or_buf='data.csv', index=False)
+            ```
+            END
+        end
     end
 
     category do
@@ -411,4 +419,15 @@ cheatsheet do
             END
         end
     end
+    category do
+        id "db.py"
+        entry do
+            name "Table schema"
+            notes <<-'END'
+             ```python
+             db.tables.tablename
+             ```
+             END
+        end
+    end 
 end
