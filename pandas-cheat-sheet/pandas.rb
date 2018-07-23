@@ -136,6 +136,15 @@ cheatsheet do
         end
 
         entry do
+            name 'Sort by columns'
+            notes <<-'END'
+            ```python
+            df.sort(['date', 'id'], inplace=True)
+            ```
+            END
+        end
+
+        entry do
             name 'Access a specific cell'
             notes <<-'END'
             Do .loc[ind, column]:
@@ -197,6 +206,15 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name "Convert a column to panda Timestamps"
+            notes <<-'END'
+             ```python
+             import numpy as np
+             dfdate = df.date.apply(np.datetime64)
+             ```
+             END
+        end
     end
     category do
         id 'Common things I do'
@@ -226,6 +244,14 @@ cheatsheet do
 
             The reset_index at the end flattens the columns.
 
+            END
+        end
+        entry do
+            name 'Change NA to 0'
+            notes <<-'END'
+            ```python
+            df.fillna(0, inplace=True)
+            ```
             END
         end
     end
