@@ -64,6 +64,16 @@ cheatsheet do
             END
         end
         entry do
+            name 'map a dictionary'
+            notes <<-'END'
+            ```groovy
+            [foo:"bar", baz:"quux"].collectEntries{k,v -> [k, v.length()]}
+            
+            // -> [foo:3, baz:4]
+            ```
+            END
+        end
+        entry do
             name 'flatMap'
             notes <<-'END'
             ```groovy
