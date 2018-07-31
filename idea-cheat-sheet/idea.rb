@@ -113,6 +113,14 @@ cheatsheet do
     category do
         id 'Keyboard shortcuts'
         entry do
+            name 'Add constructor parameter as instance variable'
+            notes <<-'END'
+            ```
+            Option-Enter
+            ```
+            END
+        end
+        entry do
             name 'Open terminal tool window'
             notes <<-'END'
             ```
