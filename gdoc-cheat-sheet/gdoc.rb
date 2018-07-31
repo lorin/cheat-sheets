@@ -3,7 +3,22 @@ cheatsheet do
     docset_file_name 'gdoc'
     keyword 'gdoc'
     category do
-        id 'Google docs'
+        id 'Keyboard shortcuts'
+        entry do
+            name 'Link'
+            notes <<-'END'
+            <https://support.google.com/docs/answer/179738?co=GENIE.Platform%3DDesktop&hl=en&oco=1>
+            END
+        end
+        entry do
+            name 'Set header level'
+            notes <<-'END'
+            ⌘ + Option + [1-6]
+            END
+        end
+    end
+    category do
+        id 'General'
         entry do
             name 'Strikethrough'
             notes <<-'END'
