@@ -46,6 +46,50 @@ cheatsheet do
         end
     end
     category do
+        id 'Admonitions'
+        entry do
+            name 'Docs'
+            notes <<-'END'
+            <https://squidfunk.github.io/mkdocs-material/extensions/admonition/>
+            END
+        end
+        entry do
+            name 'Syntax'
+            notes <<-'END'
+            ```
+            !!! note
+                This shows up as a note.
+                Has to be indented like this.
+            ```
+            END
+        end
+        entry do
+            name 'Change the title'
+            notes <<-'END'
+            ```
+            !!! warning "Show this text instead"
+                Warning goes here.
+            ```
+            END
+        end
+        entry do
+            name 'Types'
+            notes <<-'END'
+            * note
+            * warning
+            * danger
+            * info
+            * abstract
+            * tip
+            * success
+            * question
+            * failure
+            * bug
+            * quote
+            END
+        end
+    end
+    category do
         id 'Images'
         entry do
             name 'Image'
