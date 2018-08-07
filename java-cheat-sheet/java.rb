@@ -248,6 +248,46 @@ cheatsheet do
     category do
         id 'Mocking'
         entry do
+            name 'Check that a mock was called'
+            notes <<-'END'
+            ```java
+            import static org.mockito.Mockito.mock;
+            import static org.mockito.Matchers.any;
+
+            MyClass x = mock(MyClass.class);
+            ...
+            verify(x).foo(any());
+
+            ```
+            END
+        end
+        entry do
+            name 'Check that a mock was never called'
+            notes <<-'END'
+            ```java
+            import static org.mockito.Matchers.any;
+            import static org.mockito.Mockito.mock;
+            import static org.mockito.Mockito.never;
+
+            MyClass x = mock(MyClass.class);
+            ...
+            verify(x, never()).foo(any());
+
+            ```
+            END
+        end
+        entry do
+            name 'Mock out a void method in a spy'
+            notes <<-'END'
+            ```java
+            import static org.mockito.Mockito.*;
+
+            // Mock out obj.foo(x)
+            doAnswer((arg) -> null).when(obj).foo(any());
+            ```
+            END
+        end
+        entry do
             name 'Deep mocking'
             notes <<-'END'
             ```
@@ -300,20 +340,6 @@ cheatsheet do
             END
         end
         entry do
-            name 'Check that a mock was called'
-            notes <<-'END'
-            ```java
-            import static org.mockito.Mockito.mock;
-            import static org.mockito.Matchers.any;
-
-            MyClass x = mock(MyClass.class);
-            ...
-            verify(x).foo(any());
-
-            ```
-            END
-        end
-        entry do
             name 'Check some arguments but not all'
             notes <<-'END'
             If you want to use `any()` on some args,
@@ -321,21 +347,6 @@ cheatsheet do
 
             ```
             verify(x).foo(eq("one"), any());
-            ```
-            END
-        end
-        entry do
-            name 'Check that a mock was never called'
-            notes <<-'END'
-            ```java
-            import static org.mockito.Matchers.any;
-            import static org.mockito.Mockito.mock;
-            import static org.mockito.Mockito.never;
-
-            MyClass x = mock(MyClass.class);
-            ...
-            verify(x, never()).foo(any());
-
             ```
             END
         end
