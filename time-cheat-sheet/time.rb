@@ -98,6 +98,17 @@ cheatsheet do
             END
         end
         entry do
+            name 'Date to epoch millis (macOS terminal)'
+            notes <<-'END'
+            ```
+            $ gdate -d "08-Aug-2018 09:00" +%s%3N
+            1533744000000
+            ```
+
+            You need to `brew install coreutils` to get gdate
+            END
+        end
+        entry do
             name 'Millis to local time (pandas)'
             notes <<-'END'
             ```python
