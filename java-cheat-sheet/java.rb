@@ -482,7 +482,7 @@ cheatsheet do
             END
         end
         entry do
-            name 'Lists'
+            name 'Assert on Lists'
             notes <<-'END'
             <https://github.com/joel-costigliola/assertj-examples/blob/master/assertions-examples/src/test/java/org/assertj/examples/IterableAssertionsExamples.java>
 
@@ -501,6 +501,19 @@ cheatsheet do
             assertThat(result).hasOnlyOneElementSatisfying(object -> {
                 assertThat(object)...;
             });
+            ```
+            END
+        end
+        entry do
+            name 'Assert on Maps'
+            notes <<-'END'
+            <https://github.com/joel-costigliola/assertj-examples/blob/master/assertions-examples/src/test/java/org/assertj/examples/MapAssertionsExamples.java>
+
+            ```java
+            import static org.assertj.core.api.Assertions.assertThat;
+            import static org.assertj.core.api.Assertions.entry;
+
+            assertThat(map).contains(entry("foo", "bar"));
             ```
             END
         end
