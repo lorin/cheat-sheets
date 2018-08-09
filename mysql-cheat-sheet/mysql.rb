@@ -16,6 +16,14 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Tables'
+            notes <<-'END'
+            ```
+            mysql> show tables;
+            ```
+            END
+        end
     end
     category do
         id 'Docker'
