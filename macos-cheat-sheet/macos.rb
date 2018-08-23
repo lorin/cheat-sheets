@@ -3,6 +3,19 @@ cheatsheet do
     docset_file_name 'macOS'
     keyword 'mac'
     category do
+        id 'File browsing'
+        entry do
+            name 'Open /usr in file browser'
+            notes <<-'END'
+            ```
+            shift + command + g
+            ```
+
+            This will prompt you for the directory.
+            END
+        end
+    end
+    category do
         id ''
         entry do
             name 'Mute iMessage'
