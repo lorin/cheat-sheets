@@ -310,6 +310,27 @@ cheatsheet do
         end
     end
     category do
+        id 'Loading libraries / modules'
+        entry do
+            name 'View a module'
+            notes <<-'END'
+            File -> Open Sample Models ... 
+
+            Look in the "util" directory.
+            END
+        end
+        entry do
+            name 'Import a module'
+            notes <<-'END'
+            ```
+            private open util/natural as nat
+            ```
+
+            The private isn't strictly necessary, and I don't actually use it in other examples here.
+            END
+        end
+    end
+    category do
         id 'Ordering'
         entry do
             name ''
@@ -348,6 +369,22 @@ cheatsheet do
 
             StateOrd/first
             
+            ```
+            END
+        end
+    end
+    category do
+        id 'Integers'
+        entry do
+            name 'Range of integers'
+            notes <<-'END'
+            By default, the bit width of an integer is 4, which means that
+            if you specify a value as an `int`, it can only take on values [-8,7].
+
+            To increase the bit width, specify in the `run`:
+
+            ```
+            run {} for 6 Int
             ```
             END
         end
