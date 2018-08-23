@@ -82,6 +82,21 @@ cheatsheet do
         end
     end
     category do
+        id 'Go'
+        entry do
+            name 'Set the GOROOT'
+            notes <<-'END'
+            ```
+            IntelliJ IDEA -> Preferences... -> Languages & Frameorks -> Go -> GOROOT
+            ```
+
+            If you installed Go via homebrew, set this to: /usr/local/opt/go/libexec
+
+            MacOS file dialog doesn't let you browse to /usr. However, if you hit `shift + command + g`, you can specify the directory.
+            END
+        end
+    end
+    category do
         id 'Module stuff'
         entry do
             name 'Tests don\'t see proper dependencies'
