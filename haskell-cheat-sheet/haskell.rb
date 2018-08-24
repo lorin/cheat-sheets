@@ -49,6 +49,48 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Define a multi-line function'
+            notes <<-'END'
+            ```haskell
+            let {different [] = True; different (x:xs) = not (elem x xs) && different xs}
+            ```
+            END
+        end
+    end
+    category do
+        id 'Booleans'
+        entry do
+            name 'The basics'
+            notes <<-'END'
+            ```haskell
+            True
+            False
+            True && True
+            True || False
+            not False
+            ```
+            END
+        end
+    end
+    category do
+        id 'Imports'
+        entry do
+            name 'Unqualified (all functions)'
+            notes <<-'END'
+            ```
+            import Control.Monad
+            ```
+            END
+        end
+        entry do
+            name 'Unqualified (some functions)'
+            notes <<-'END'
+            ```
+            import Data.Set (size, fromList)
+            ```
+            END
+        end
     end
     category do
         id 'Lists'
@@ -57,6 +99,15 @@ cheatsheet do
             notes <<-'END'
             ```
             3:[4]
+            ```
+            END
+        end
+        entry do
+            name 'Check presence of element'
+            notes <<-'END'
+            ```haskell
+            elem x xs
+            
             ```
             END
         end
@@ -117,6 +168,16 @@ cheatsheet do
             END
         end
         entry do
+            name 'Pattern match'
+            notes <<-'END'
+            ```haskell
+            different :: Eq a => [a] -> Bool
+            different     [] = True
+            different (x:xs) = not (elem x xs) && different xs
+            ```
+            END
+        end
+        entry do
             name 'Destructuring (with guards, and as syntax)'
             notes <<-'END'
             From Richard Bird's Thinking Functionally with Haskell:
@@ -167,17 +228,6 @@ cheatsheet do
                 fmap f (RAddF x y) = RAddF (f x) (f y)
                 fmap f (RMulF x y) = RMulF (f x) (f y)
                 fmap f (RNegF a)   = RNegF (f a)
-            ```
-            END
-        end
-    end
-    category do
-        id 'Lists'
-        entry do
-            name 'Pattern match on car/cdr'
-            notes <<-'END'
-            ```haskell
-            (x:xs)
             ```
             END
         end
