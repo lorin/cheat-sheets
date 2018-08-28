@@ -7,8 +7,16 @@ cheatsheet do
         entry do
             name 'Generate random instance id'
             notes <<-'END'
+            ```bash
+            printf 'i-%s' "$(xxd -l 9 -p /dev/urandom | head -c17)"
             ```
-            
+            END
+        end
+        entry do
+            name 'Filter out characters'
+            notes <<-'END'
+            ```bash
+            echo "Only hex allowed" | tr -dc '0-9a-f'
             ```
             END
         end
