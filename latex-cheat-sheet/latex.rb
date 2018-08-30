@@ -73,6 +73,25 @@ cheatsheet do
         end
     end
     category do
+        id 'TeX Live'
+        entry do
+            name 'Binary location'
+            notes <<-'END'
+            ```
+            /usr/local/texlive/2016basic/bin/x86_64-darwin
+            ```
+            END
+        end
+        entry do
+            name 'Install a package'
+            notes <<-'END'
+            ```
+            tlmgr install algorithmic
+            ```
+            END
+        end
+    end
+    category do
         id 'Building'
         entry do
             name 'Simplest appraoch'
