@@ -86,7 +86,7 @@ cheatsheet do
             name 'Install a package'
             notes <<-'END'
             ```
-            tlmgr install algorithmic
+            tlmgr install algorithms
             ```
             END
         end
