@@ -47,6 +47,18 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Two column width width sized figure'
+            notes <<-'END'
+            ```
+            \begin{figure*}[tbp]
+            \includegraphics[width=\textwidth]{img/myimage}
+            \caption{My image}
+            \label{fig-myimage}
+            \end{figure*}
+            ```
+            END
+        end
     end
     category do
         id 'Formatting'
@@ -86,6 +98,7 @@ cheatsheet do
             name 'Install a package'
             notes <<-'END'
             ```
+            tlmgr install latexmk
             tlmgr install algorithms
             ```
             END
@@ -110,7 +123,7 @@ cheatsheet do
             Install LaTeX-Mk:
 
             ```
-            brew install latex-mk
+            tlmgr install latexmk
             ```
 
             Set up a makefile like this:
