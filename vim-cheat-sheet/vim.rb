@@ -77,6 +77,30 @@ cheatsheet do
     category do
         id 'Registers'
         entry do
+            name 'Show all registers'
+            notes <<-'END'
+            ```
+            :reg
+            ```
+            END
+        end
+        entry do
+            name 'Yank line to register a'
+            notes <<-'END'
+            ```
+            "ayy
+            ```
+            END
+        end
+        entry do
+            name 'Paste from register a'
+            notes <<-'END'
+            ```
+            "ap
+            ```
+            END
+        end
+        entry do
             name 'Last yank'
             notes <<-'END'
             ```
