@@ -3,6 +3,21 @@ cheatsheet do
     docset_file_name 'latex'
     keyword 'latex'
     category do
+        id 'TODO notes'
+        entry do
+            name 'Simple macro that renders in dred'
+            notes <<-'END'
+            ```latex
+            \newcommand\todo[1]{\textcolor{red}{#1}}
+            \begin{document}
+            ...
+
+            \todo{This will appear in red.}
+            ```
+            END
+        end
+    end
+    category do
         id 'Citations & References'
         entry do
             name 'Cite a paper'
@@ -48,7 +63,7 @@ cheatsheet do
             END
         end
         entry do
-            name 'Two column width width sized figure'
+            name 'Two column width sized figure'
             notes <<-'END'
             ```
             \begin{figure*}[tbp]
