@@ -68,6 +68,15 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Get indexes of array'
+            notes <<-'END'
+            ```
+            jq '. | to_entries[] | {index: .key, data: .value}'
+            
+            ```
+            END
+        end
     end
     category do
         id 'Fancy'
