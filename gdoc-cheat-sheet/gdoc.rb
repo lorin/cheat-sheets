@@ -43,4 +43,24 @@ cheatsheet do
             END
         end
     end
+    category do
+        id 'Google sheets'
+        entry do
+            name 'Pivot table, simple'
+            notes <<-'END'
+            If you want each row to correspond to one row in your dataset,
+            and you want columns to show one of the categorical data values
+
+            For example, if you have a spreadsheet where the rows are tickets,
+            and the columns have categorical data about the tickets.
+
+            1. Highlight the data 
+            2. Data -> Pivot table...
+            3. Rows, click "ADD", choose "Ticket number" as the field
+            4. Columns, click "ADD", choose the field you want to look at
+            5. Values, click "ADD", summarize by COUNTA
+
+            END
+        end
+    end
 end
