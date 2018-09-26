@@ -7,11 +7,11 @@ cheatsheet do
         entry do
             name 'Text in title (summary)'
             notes <<-'END'
-            ```
-            project = FOO AND summary ~ bar ORDER BY key DESC
-            ```
+            Issues -> Search for issues
 
-            Look for the text "bar" in the FOO project.
+            ```
+            project = FOO AND summary ~ bar AND text ~ "baz quux" ORDER BY key DESC
+            ```
             END
         end
     end

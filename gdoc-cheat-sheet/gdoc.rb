@@ -62,5 +62,16 @@ cheatsheet do
 
             END
         end
+        entry do
+            name 'Reference columns from another table'
+            notes <<-'END'
+            ```
+            =query(Responses!A:C, "")
+            ```
+
+            Above is the simplest thing you can do, it grabs columns A:C from the "Responses" tab,
+            and does no filtering. You can filter using the [Query Language syntax](https://developers.google.com/chart/interactive/docs/querylanguage).
+            END
+        end
     end
 end
