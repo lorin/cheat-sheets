@@ -32,4 +32,13 @@ cheatsheet do
             END
         end
     end
+    category do
+        id 'API'
+        entry do
+            name 'channels.history API'
+            notes <<-'END'
+            <https://api.slack.com/methods/channels.history>
+            END
+        end
+    end
 end
