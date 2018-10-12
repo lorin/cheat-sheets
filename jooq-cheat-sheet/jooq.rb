@@ -88,6 +88,29 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'JOIN'
+            notes <<-'END'
+            ```java
+            context.select(FOO.LABEL, FOO_BAR.NAME)
+                    .from(FOO_BAR)
+                    .join(FOO).on(FOO_BAR.FOO_ID.eq(FOO.ID))
+                    .fetch()
+                    .stream()
+                    .collect(toMap(
+                            r -> r.getValue(FOO.LABEL),
+                            r -> Stream.of(r.getValue(FOO_BAR.NAME)),
+                            Stream::concat
+                    ))
+                    .entrySet()
+                    .stream()
+                    .collect(toMap(
+                            Map.Entry::getKey,
+                            e -> e.getValue().collect(toList())
+                    ));
+            ```
+            END
+        end
     end
     category do
         id 'Insert'
