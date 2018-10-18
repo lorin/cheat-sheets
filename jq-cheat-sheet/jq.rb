@@ -79,6 +79,57 @@ cheatsheet do
         end
     end
     category do
+        id 'String interpolation and variables'
+        entry do
+            name 'String interpolation'
+            notes <<-'END'
+            ```bash
+            jq -r '.[] | "\(.name) is awesome"'
+            ```
+            END
+        end
+        entry do
+            name 'defining a variable'
+            notes <<-'END'
+            ```bash
+            jq -r '.[] | . as $item | "\($item.name) is awesome"'
+            ```
+            END
+        end
+        entry do
+            name 'Keys and list of values to a formatted table'
+            notes <<-'END'
+
+            ```bash
+            jq -r '.[] | "\(.name): \(reduce .values[] as $item (""; . + $item + " ") )"'
+            ```
+
+            Assumes your input looks like this:
+
+            ```json
+            [
+              {
+                "name": "foo",
+                "values": ["a","b","c"]
+              },
+              {
+                "name": "bar",
+                "values": ["d","e","f"]
+              }
+            ]
+            ```
+
+            Generates output like this:
+
+            ```
+            foo: a b c
+            bar: d e f
+            ```
+
+            END
+        end
+    end
+    category do
         id 'Fancy'
         entry do
             name 'Unique list of tags in jsonl input'

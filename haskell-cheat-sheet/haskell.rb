@@ -45,7 +45,7 @@ cheatsheet do
             name 'Change the prompt'
             notes <<-'END'
             ```
-            :set prompt  "λ "
+            :set prompt  "λ> "
             ```
             END
         end
