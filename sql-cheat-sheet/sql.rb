@@ -35,6 +35,17 @@ cheatsheet do
         end
     end
     category do
+        id 'Updates'
+        entry do
+            name 'Basic update'
+            notes <<-'END'
+            ```sql
+            update tags_tickets set tag_id=15 where tag_id=35;
+            ```
+            END
+        end
+    end
+    category do
         id 'Deletions'
         entry do
             name 'Delete all entries'
