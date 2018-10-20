@@ -91,6 +91,16 @@ cheatsheet do
             END
         end
         entry do
+            name 'More complex stuff with pairs of indexes'
+            notes <<-'END'
+            ```
+            N == Len(H)
+            mn == {x \in (1..N) \X (1..N) : x[2] >= x[1]}
+            S == {SubSeq(H,m,n) : << m, n >> \in mn }
+            ```
+            END
+        end
+        entry do
             name 'Map & filter'
             notes <<-'END'
             Map (E is an expression):
