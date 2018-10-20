@@ -63,6 +63,16 @@ cheatsheet do
             END
         end
         entry do
+            name 'Count unique values'
+            notes <<-'END'
+            Use a pivot table. Just pick the one column you care about for the data.
+
+            Rows: The one column.
+
+            Values: The one column, summarize by COUNTA
+            END
+        end
+        entry do
             name 'Reference columns from another table'
             notes <<-'END'
             ```
