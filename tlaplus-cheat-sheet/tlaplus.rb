@@ -780,10 +780,10 @@ cheatsheet do
         entry do
             name 'Checking with TLC'
             notes <<-'END'
-            Check the following temporal property:
+            Simulate spec and check the following temporal property:
 
             ```
-            [](Spec => Q!Spec)
+            Q!Spec
             ```
             END
         end
