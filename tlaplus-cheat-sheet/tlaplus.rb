@@ -767,4 +767,25 @@ cheatsheet do
             END
         end
     end
+    category do
+        id 'Refinement mapping'
+        entry do
+            name 'Defining a refinement mapping'
+            notes <<-'END'
+            ```
+            Q == INSTANCE Queue WITH items<-rep.items
+            ```
+            END
+        end
+        entry do
+            name 'Checking with TLC'
+            notes <<-'END'
+            Check the following temporal property:
+
+            ```
+            [](Spec => Q!Spec)
+            ```
+            END
+        end
+    end
 end
