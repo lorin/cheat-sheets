@@ -402,6 +402,17 @@ cheatsheet do
             END
         end
         entry do
+            name 'Update a function, referencing previous value'
+            notes <<-'END'
+            ```
+            r' = [r EXCEPT !.next = @+1]
+            ```
+
+            * `@` refers to previous value
+            * You can use `.field` instead of `!["field"]`
+            END
+        end
+        entry do
             name 'Update a record'
             notes <<-'END'
             ```
