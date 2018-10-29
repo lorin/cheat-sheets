@@ -5,7 +5,25 @@ cheatsheet do
     category do
         id 'tla+ basics'
         entry do
-            name 'Keyboard shortcuts'
+            name 'Docs on keyboard shortcuts'
+            notes <<-'END'
+            ```
+            Help -> Dynamic Help -> Editing Modules 
+            ```
+            END
+        end
+        entry do
+            name 'Keyboard shortcuts related to comments'
+            notes <<-'END'
+            * ⌘-O ⌘-S - begin comment
+            * ⌘-O ⌘-B - box comment
+            * ⌘-O ⌘-U - unbox comment
+            * ⌘-O ⌘-F - format comment
+            * ⌘-O ⌘-O - format and box comment
+            END
+        end
+        entry do
+            name 'Other Keyboard shortcuts'
             notes <<-'END'
             * ⌘ Shift A - Switch between specs and models
             * ⌘-G - Bring up TLAPS menu
