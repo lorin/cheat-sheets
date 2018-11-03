@@ -464,6 +464,14 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Merge two functions'
+            notes <<-'END'
+            ```
+            f @@ g
+            ```
+            END
+        end
     end
     category do
         id 'Natural numbers'
