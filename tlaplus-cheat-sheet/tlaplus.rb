@@ -621,6 +621,28 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Print a value without boolean eval'
+            notes <<-'END'
+            ```
+            EXTENDS TLC
+
+            Print(expr, label)
+            
+            ```
+            END
+        end
+        entry do
+            name 'Assert'
+            notes <<-'END'
+            ```
+            EXTENDS TLC
+
+            /\ Assert(condition, "Error message")
+            
+            ```
+            END
+        end
     end
     category do
         id 'TLA+ temporal syntax'
