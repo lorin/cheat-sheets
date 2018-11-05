@@ -832,5 +832,18 @@ cheatsheet do
             END
         end
     end
+    category do
+        id 'Installing JDKs locally'
+        entry do
+            name 'SDKMAN!'
+            notes <<-'END'
+            ```bash
+            $ curl -s "https://get.sdkman.io" | bash
+            $ sdk list java 
+            $ sdk install java <version>
+            ```
+            END
+        end
+    end
 end
 
