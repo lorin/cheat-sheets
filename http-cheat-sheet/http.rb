@@ -109,7 +109,22 @@ cheatsheet do
         end
     end
     category do
-        id 'url encoding and decoding'
+        id 'url quoting, encoding and decoding'
+        entry do
+            name 'Quote a string'
+            notes <<-'END'
+            ```python
+            from urllib.parse import quote
+            quote("This is a string")
+            ```
+
+            Output:
+
+            ```
+            'This%20is%20a%20string'
+            ```
+            END
+        end
         entry do
             name 'encode: Python 3'
             notes <<-'END'
