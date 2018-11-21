@@ -59,6 +59,31 @@ cheatsheet do
         end
     end
     category do
+        id 'Functional programming'
+        entry do
+            name 'reduce'
+            notes <<-'END'
+            ```python
+            from functools import reduce
+
+            # reduce(lambda acc,val:..., iterable, [optional init])
+            #
+            # Example:
+            reduce(lambda acc,val:acc+1, (pixel for pixel in im.getdata() if is_black(pixel)), 0)
+
+            def reducer(count, pixel):
+                if is_black(pixel):
+                    return count+1
+                else:
+                    return count
+
+            reduce(reducer, im.getdata(), 0)
+
+            ```
+            END
+        end
+    end
+    category do
         id 'flake8'
         entry do
             name 'Ignore line length'
@@ -68,6 +93,45 @@ cheatsheet do
             ```
             [flake8]
             ignore = E501
+            ```
+            END
+        end
+    end
+    category do
+        id 'Image processing'
+        entry do
+            name 'Library'
+            notes <<-'END'
+            ```python
+            pip install Pillow
+            ```
+            END
+        end
+        entry do
+            name 'Load a file'
+            notes <<-'END'
+            ```python
+            from PIL import Image
+            im = Image.open("filename.png")
+            ```
+            END
+        end
+        entry do
+            name 'Size'
+            notes <<-'END'
+            ```python
+            [w, h] = im.size
+            ```
+            END
+        end
+        entry do
+            name 'Pixels'
+            notes <<-'END'
+            ```python
+            # Pixels are (R,G,B,A) tuples
+            for pixel in im.getdata():
+                ...
+            
             ```
             END
         end
