@@ -16,11 +16,20 @@ cheatsheet do
         end
     end
     category do
-        id ''
+        id 'Keyboard shortcuts'
         entry do
             name 'bcc'
             notes <<-'END'
             Shift ⌘ B
+            END
+        end
+        entry do
+            name 'Previous/next message in thread'
+            notes <<-'END'
+            ```
+            P
+            N
+            ```
             END
         end
     end
