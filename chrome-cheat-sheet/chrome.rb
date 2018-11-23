@@ -5,6 +5,15 @@ cheatsheet do
     category do
         id ''
         entry do
+            name 'Next / previous tab'
+            notes <<-'END'
+            ```
+            ⌘  ⌥  →
+            ⌘  ⌥  ←
+            ```
+            END
+        end
+        entry do
             name 'Dev tools keyboard shortcut'
             notes <<-'END'
             ```
