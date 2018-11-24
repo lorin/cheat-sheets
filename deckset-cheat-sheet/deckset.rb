@@ -5,6 +5,15 @@ cheatsheet do
     category do
         id ''
         entry do
+            name 'Metadata'
+            notes <<-'END'
+            ```
+            slidenumbers: false
+            theme: work
+            ```
+            END
+        end
+        entry do
             name 'One line'
             notes <<-'END'
             ```
