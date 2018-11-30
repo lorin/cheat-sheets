@@ -14,6 +14,16 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Search by owner'
+            notes <<-'END'
+            Issues -> Search for issues
+
+            ```
+            project = FOO AND assignee = lhochstein ORDER BY key DESC
+            ```
+            END
+        end
     end
     category do
         id 'Formatting'
