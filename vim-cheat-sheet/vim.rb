@@ -480,6 +480,17 @@ cheatsheet do
     category do
         id 'Omni Completion'
         entry do
+            name 'Suggest autocomplete'
+            notes <<-'END'
+            ```
+            C-n
+            C-p
+            ```
+
+            In edit mode
+            END
+        end
+        entry do
             name 'Choose the current option'
             command 'ESC'
         end
