@@ -32,5 +32,13 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Move cursor to email list'
+            notes <<-'END'
+            ```
+            u
+            ```
+            END
+        end
     end
 end
