@@ -763,6 +763,56 @@ cheatsheet do
             END
         end
         entry do
+            name 'General advice'
+            notes <<-'END'
+            You often need `BY DEF TypeOK` because some step will require
+            knowledge that a variable is a natural number, and without TypeOK the
+            proof system doesn't know.
+            END
+        end
+        entry do
+            name 'Prove a step with sub-steps'
+            notes <<-'END'
+            ```
+            <3>2. (\E prefix \in Seq({c}) : output = prefix \o s)'
+                <4>1. ...
+                <4>4. QED BY <4>1,<4>2,<4>3
+            ```
+
+            It has to end with `QED BY ...`
+            END
+        end
+        entry do
+            name 'IFs or ors'
+            notes <<-'END'
+            ```
+            <3>3. (Len(output) = Len(s) \/ Len(output) <= n)'
+                <4>1. IF i<pad THEN output' = <<c>> \o output ELSE UNCHANGED output
+                <4>2. CASE i<pad
+                    ...
+                <4>3. CASE ~(i<pad)
+                    ...
+                <4>4. QED
+                    BY <4>1,<4>2,<4>3
+            ```
+
+            Do CASEs to show that all cases lead to what you're trying to prove.
+            END
+        end
+        entry do
+            name 'Proof by contradiction'
+            notes <<-'END'
+            ```
+            <6>1. i=0
+                <7> SUFFICES ASSUME ~(i=0)
+                             PROVE FALSE
+                    OBVIOUS
+                ...
+                <7> QED
+            ```
+            END
+        end
+        entry do
             name 'Checking inductive invariant with TLC'
             notes <<-'END'
             * Choose: Initial predicate and next-state relation to check
