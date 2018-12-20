@@ -22,6 +22,22 @@ cheatsheet do
         end
     end
     category do
+        id 'Functions'
+        entry do
+            name 'One argument'
+            notes <<-'END'
+            ```
+            # date to epoch millis
+            epoch() {
+                gdate -d "$1" +%s%3N
+            }
+
+            millis=`epoch "19-Oct-2018 09:00"`
+            ```
+            END
+        end
+    end
+    category do
         id 'Special variables'
         entry do
             name 'Docs'
