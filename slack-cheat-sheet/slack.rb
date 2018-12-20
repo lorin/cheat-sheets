@@ -47,7 +47,7 @@ cheatsheet do
             1. Click "Basic Information" on the left.
             1. Click "Add features and functionality".
             1. Click "Permissions".
-            1. Under "Scopes", choose "channels:history" and "channels:read"
+            1. Under "Scopes", choose "channels:history", "channels:read", "users::read"
             1. Click "Install app"
 
             That will create the bot in your Slack.
@@ -110,6 +110,34 @@ cheatsheet do
             {
               "id": "CEYBVB85Q",
               "name": "stuff"
+            }
+            ```
+            END
+        end
+        entry do
+            name 'Get user names: users.list'
+            notes <<-'END'
+            Documented at: <https://api.slack.com/methods/users.list>
+
+            ```bash
+            http https://slack.com/api/users.list token==$SLACK_TOKEN | jq '.members[] | {id: .id, name: .name, real_name: .real_name}'
+            ```
+
+            ```json
+            {
+              "id": "USLACKBOT",
+              "name": "slackbot",
+              "real_name": "slackbot"
+            }
+            {
+              "id": "UEY700U76",
+              "name": "conversation_grabber",
+              "real_name": "Conversation Grabber"
+            }
+            {
+              "id": "UEYHRCKRB",
+              "name": "lhochstein",
+              "real_name": "Lorin Hochstein"
             }
             ```
             END
