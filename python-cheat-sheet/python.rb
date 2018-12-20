@@ -20,15 +20,23 @@ cheatsheet do
         entry do
             name "No trailing newline or space"
             notes <<-'END'
-            ```
+            ```python
             print(s, end="")
             ```
             END
         end
         entry do
-            name "String interpolation"
+            name "String interpolation (template strings)"
             notes <<-'END'
+            ```python
+            f"foo:{foo} bar:{bar}"
             ```
+            END
+        end
+        entry do
+            name "String interpolation (old)"
+            notes <<-'END'
+            ```python
             "foo:{} bar:{}".format(foo, bar)
             ```
             END
