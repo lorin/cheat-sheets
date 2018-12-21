@@ -61,4 +61,13 @@ cheatsheet do
             END
         end
     end
+    category do
+        id 'Plugins'
+        entry do
+            name 'Epoch time converter'
+            notes <<-'END'
+            [Timely](https://chrome.google.com/webstore/detail/timely/phpkahchjodmhmckibejeafoflafljma)
+            END
+        end
+    end
 end
