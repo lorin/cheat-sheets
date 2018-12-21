@@ -478,6 +478,26 @@ cheatsheet do
         end
     end
     category do
+        id 'Make'
+        entry do
+            name 'Invoke make'
+            notes <<-'END'
+            ```
+            :make run
+            ```
+            END
+        end
+        entry do
+            name 'Show output in window'
+            notes <<-'END'
+            ```
+            :make | copen
+            
+            ```
+            END
+        end
+    end
+    category do
         id 'Omni Completion'
         entry do
             name 'Suggest autocomplete'
