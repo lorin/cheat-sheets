@@ -69,5 +69,19 @@ cheatsheet do
             [Timely](https://chrome.google.com/webstore/detail/timely/phpkahchjodmhmckibejeafoflafljma)
             END
         end
+        entry do
+            name 'Video speed controller'
+            notes <<-'END'
+            [Video speed controller](https://chrome.google.com/webstore/detail/video-speed-controller/nffaoalbilbmmfgbnbgppjihopabppdk)
+
+            ```
+            z - back 10s
+            s - slow down
+            d - speed up
+            x - ahead 10 s
+            v - show controller
+            ```
+            END
+        end
     end
 end
