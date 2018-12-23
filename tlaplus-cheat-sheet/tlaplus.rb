@@ -589,6 +589,21 @@ cheatsheet do
         end
     end
     category do
+        id 'Idioms'
+        entry do
+            name 'NIL object'
+            notes <<-'END'
+            ```
+            Nodes == 1..N
+
+            NIL == CHOOSE NIL : NIL \notin Nodes
+            ```
+            
+            See [this comment by Ron Pressler](https://lorinhochstein.wordpress.com/2017/10/16/the-tortoise-and-the-hare-in-tla/#comment-1080).
+            END
+        end
+    end
+    category do
         id 'Running and Debugging'
         entry do
             name 'Evaluate an expression'
