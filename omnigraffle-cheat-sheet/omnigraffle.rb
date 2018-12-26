@@ -32,4 +32,16 @@ cheatsheet do
             END
         end
     end
+
+
+    category do
+        id 'Layout'
+        entry do
+            name 'Auto-layout'
+            notes <<-'END'
+            1. Inspectors->Canvas ⌘-3
+            2. Diagram Layout and Style -> Auto layout
+            END
+        end
+    end
 end
