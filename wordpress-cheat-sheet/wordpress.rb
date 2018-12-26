@@ -5,12 +5,8 @@ cheatsheet do
     category do
         id ''
         entry do
+            command '^ ⌥ H'
             name 'Show keyboard shortcuts for visual editor'
-            notes <<-'END'
-            ```
-            ^ ⌥ H
-            ```
-            END
         end
     end
 end
