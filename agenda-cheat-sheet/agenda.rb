@@ -8,5 +8,9 @@ cheatsheet do
             name 'Create checkbox item'
             command '⇪ ⌘ C'
         end
+        entry do
+            name 'Check checkbox'
+            command '^ ⌘ C'
+        end
     end
 end
