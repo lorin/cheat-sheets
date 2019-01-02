@@ -3,6 +3,27 @@ cheatsheet do
     docset_file_name 'vim'
     keyword 'vim'
     category do
+        id 'vim anywhere'
+        entry do
+            name 'How it works'
+            notes <<-'END'
+            1. Hit keyboard shortcut: `^ ⌘ V`
+            2. MacVim pops up an empty buffer.
+            3. Type what you want
+            4. Quit MacVim
+            5. Focus returns to your app, text is in clipboard.
+
+            It writes to `/tmp/vim-anywhere`
+            END
+        end
+        entry do
+            name 'Installing it'
+            notes <<-'END'
+            See <https://github.com/cknadler/vim-anywhere>
+            END
+        end
+    end
+    category do
         id 'Saving files'
         entry do
             name 'Save as new file and switch'
