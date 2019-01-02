@@ -42,6 +42,20 @@ cheatsheet do
             4. Click "Downlad as..." and choose format
             END
         end
+        entry do
+            name 'Change owner'
+            notes <<-'END'
+            From <https://support.google.com/drive/answer/2494892>
+
+            1. Open the homescreen for Google Drive, Google Docs, Google Sheets, or Google Slides.
+            1. Click the file you want to transfer to someone else.
+            1. Click Share 
+            1. Click Advanced.
+            1. To the right of a person you've already shared the file with, click the Down arrow. 
+            1. Click Is owner.
+            1. Click Save changes.
+            END
+        end
     end
     category do
         id 'Google sheets'
