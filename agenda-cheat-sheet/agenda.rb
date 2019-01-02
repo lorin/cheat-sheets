@@ -12,5 +12,13 @@ cheatsheet do
             name 'Check checkbox'
             command '^ ⌘ C'
         end
+        entry do
+            name 'Put on the agenda'
+            command '⇪ ⌘ U'
+        end
+        entry do
+            name 'Mark as done'
+            command '⌘ ENTER'
+        end
     end
 end
