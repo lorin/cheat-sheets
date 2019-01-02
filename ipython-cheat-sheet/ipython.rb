@@ -12,6 +12,16 @@ cheatsheet do
             END
         end
         entry do
+            name 'HTML link'
+            notes <<-'END'
+            ```python
+            from IPython.core.display import HTML
+            url = ...
+            HTML(f'<a href="{url}">{url}</a>')
+            ```
+            END
+        end
+        entry do
             name 'Run a python script, bringing its vars in scope'
             notes <<-'END'
             ```
