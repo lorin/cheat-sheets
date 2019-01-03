@@ -44,7 +44,7 @@ cheatsheet do
                 if not request.json:
                     abort(400)
                 data = request.json
-                return jsonify("foo", data["foo")
+                return jsonify("foo", data["foo"])
             ```
             END
         end
