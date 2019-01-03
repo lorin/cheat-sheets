@@ -36,7 +36,7 @@ cheatsheet do
         entry do
             name 'Receive a json payload'
             notes <<-'END'
-            ```
+            ```python
             from flask import abort, request
 
             @app.route("/tasks", methods=["POST"])
