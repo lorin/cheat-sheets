@@ -757,6 +757,21 @@ cheatsheet do
         end
     end
     category do
+        id 'git'
+        entry do
+            name 'git status'
+            command ':Gst'
+        end
+        entry do
+            name 'Select files to commit'
+            command '-'
+        end
+        entry do
+            name 'Commit and show diff'
+            command 'cvc'
+        end
+    end
+    category do
         id 'vim-plug Plugin manager'
         entry do
             name 'Package location'
