@@ -15,6 +15,14 @@ cheatsheet do
             END
         end
         entry do
+            name 'Date/time'
+            notes <<-'END'
+            ```
+            project = FOO AND created >= "2018/01/01" ORDER BY key ASC
+            ```
+            END
+        end
+        entry do
             name 'Search by owner'
             notes <<-'END'
             Issues -> Search for issues
