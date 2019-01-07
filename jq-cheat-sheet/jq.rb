@@ -79,7 +79,7 @@ cheatsheet do
         end
     end
     category do
-        id 'String interpolation and variables'
+        id 'String manipulation, interpolation and variables'
         entry do
             name 'String interpolation'
             notes <<-'END'
@@ -126,6 +126,18 @@ cheatsheet do
             bar: d e f
             ```
 
+            END
+        end
+        entry do
+            name 'Split a string'
+            notes <<-'END'
+            ```bash
+            jq -r '.issues[] | (.fields.created | split("T") | .[0]) + " " + .key + " " + .fields.summary' 
+            ```
+
+            Here `.fields.created` is a timestamp in RFC3339 format (e.g., `2006-01-02T15:04:05Z07:00`).
+
+            To get the date, we're splitting on the "T", and just grabbing the first element of the resulting list.
             END
         end
     end
