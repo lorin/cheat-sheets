@@ -15,7 +15,6 @@ cheatsheet do
             END
         end
     end
-
     category do
         id 'Creating a data frame'
         entry do
@@ -94,7 +93,21 @@ cheatsheet do
         end
     end
     category do
-        id 'Filtering and indexing'
+        id 'Indexing and filtering'
+        entry do
+            name 'One column'
+            notes <<-'END'
+            ```python
+            data.colname
+            ```
+
+            or:
+
+            ```python
+            data['colname']
+            ```
+            END
+        end
         entry do
             name 'Filtering and indexing docs'
             notes <<-'END'
@@ -192,6 +205,16 @@ cheatsheet do
             notes <<-'END'
             ```python
             df.timestamp = df.timestamp.apply(lambda x: x.tz_convert('US/Pacific'))
+            ```
+            END
+        end
+        entry do
+            name 'String of timestamp to time'
+            notes <<-'END'
+            ```python
+            import pandas
+
+            df.timestamp.apply(lambda x: panads.to_datetime(x))
             ```
             END
         end
