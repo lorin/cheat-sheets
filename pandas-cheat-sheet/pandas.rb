@@ -16,6 +16,112 @@ cheatsheet do
         end
     end
     category do
+        id 'Indexing and filtering'
+        entry do
+            name 'One column'
+            notes <<-'END'
+            ```python
+            data.colname
+            ```
+
+            or:
+
+            ```python
+            data['colname']
+            ```
+            END
+        end
+        entry do
+            name 'Filtering and indexing docs'
+            notes <<-'END'
+            <http://pandas.pydata.org/pandas-docs/stable/indexing.html?#boolean-operators>
+            END
+        end
+        entry do
+            name 'First 10 rows'
+            notes <<-'END'
+            ```python
+                data.iloc[:10]
+            ```
+            END
+        end
+        entry do
+            name 'Filter by column value (query)'
+            notes <<-'END'
+            ```python
+            df.query('group == "control" and days >= 1')
+            ```
+            END
+        end
+        entry do
+            name 'Filter by column value (pure Python)'
+            notes <<-'END'
+            ```python
+            df[(df.group == 'control') & (df.days >= 1)]
+            ```
+            END
+        end
+
+        entry do
+            name 'Pick out columns'
+            notes <<-'END'
+            ```python
+                data[['name', 'quarter']]
+            ```
+            END
+        end
+
+        entry do
+            name 'Sort by columns'
+            notes <<-'END'
+            ```python
+            df.sort_values(['date', 'id'], inplace=True, ascending=False)
+            ```
+            END
+        end
+
+        entry do
+            name 'Access a specific cell'
+            notes <<-'END'
+            Do .loc[ind, column]:
+
+            ```python
+                df.loc['Subtotal', 'category'] = ''
+            ```
+            END
+        end
+
+        entry do
+            name 'Add the index to the data frame'
+            notes <<-'END'
+            ```python
+            df['index_col'] = df.index
+            ```
+            END
+        end
+
+        entry do
+            name 'Reset the index'
+            notes <<-'END'
+            Works for series as well as data frames
+
+            ```
+            df = pd.DataFrame(entries).sort_values(by='start',ascending=False)
+            df.index = range(len(df))  # fix index
+            ```
+            END
+        end
+
+        entry do
+            name 'Find row which has max column value'
+            notes <<-'END'
+            ```python
+            df['mycol'].idxmax()
+            ```
+            END
+        end
+    end
+    category do
         id 'Creating a data frame'
         entry do
             name 'Read from csv with date parsing'
@@ -89,112 +195,6 @@ cheatsheet do
 
                 data = pd.DataFrame(entries).sort_values(by='start',ascending=False)
                 data.index = range(len(data)) # fix index
-            END
-        end
-    end
-    category do
-        id 'Indexing and filtering'
-        entry do
-            name 'One column'
-            notes <<-'END'
-            ```python
-            data.colname
-            ```
-
-            or:
-
-            ```python
-            data['colname']
-            ```
-            END
-        end
-        entry do
-            name 'Filtering and indexing docs'
-            notes <<-'END'
-            <http://pandas.pydata.org/pandas-docs/stable/indexing.html?#boolean-operators>
-            END
-        end
-        entry do
-            name 'First 10 rows'
-            notes <<-'END'
-            ```python
-                data.iloc[:10]
-            ```
-            END
-        end
-        entry do
-            name 'Filter by column value (query)'
-            notes <<-'END'
-            ```python
-            df.query('group == 'control" and days >= 1")
-            ```
-            END
-        end
-        entry do
-            name 'Filter by column value (pure Python)'
-            notes <<-'END'
-            ```python
-            df[(df.group == 'control') & (df.days >= 1)]
-            ```
-            END
-        end
-
-        entry do
-            name 'Pick out columns'
-            notes <<-'END'
-            ```python
-                data[['name', 'quarter']]
-            ```
-            END
-        end
-
-        entry do
-            name 'Sort by columns'
-            notes <<-'END'
-            ```python
-            df.sort(['date', 'id'], inplace=True)
-            ```
-            END
-        end
-
-        entry do
-            name 'Access a specific cell'
-            notes <<-'END'
-            Do .loc[ind, column]:
-
-            ```python
-                df.loc['Subtotal', 'category'] = ''
-            ```
-            END
-        end
-
-        entry do
-            name 'Add the index to the data frame'
-            notes <<-'END'
-            ```python
-            df['index_col'] = df.index
-            ```
-            END
-        end
-
-        entry do
-            name 'Reset the index'
-            notes <<-'END'
-            Works for series as well as data frames
-
-            ```
-            df = pd.DataFrame(entries).sort_values(by='start',ascending=False)
-            df.index = range(len(df))  # fix index
-            ```
-            END
-        end
-
-        entry do
-            name 'Find row which has max column value'
-            notes <<-'END'
-            ```python
-            df['mycol'].idxmax()
-            ```
             END
         end
     end
