@@ -38,6 +38,14 @@ cheatsheet do
             I like to use Monosnap as an alternative
             END
         end
+        entry do
+            name 'Search menu items'
+            notes <<-'END'
+            ```
+            ⇧ ⌘ /
+            ```
+            END
+        end
     end
     category do
         id 'Text'
