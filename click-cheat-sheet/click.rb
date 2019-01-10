@@ -11,9 +11,9 @@ cheatsheet do
             import click
 
             @click.command()
-            @click.option('foo')
-            @click.option('bar')
-            @click.option('baz')
+            @click.argument('foo')
+            @click.argument('bar')
+            @click.argument('baz')
             @click.option('-q', '--quux')
             def main(foo, bar, baz, quux):
                 print(f"You passed: {foo}")
