@@ -242,6 +242,25 @@ cheatsheet do
     category do
         id 'Common things I do'
         entry do
+            name 'Count elements (data frame)'
+            notes <<-'END'
+            ```python
+            data.groupby('bar').agg(['count'])
+
+            # Might want to subset columns
+            data[['foo', 'bar']].groupby('bar').agg(['count'])
+            ```
+            END
+        end
+        entry do
+            name 'Count elements (series)'
+            notes <<-'END'
+            ```python
+            s.value_counts()
+            ```
+            END
+        end
+        entry do
             name 'Cumulative sum with columnwise data'
             notes <<-'END'
             Assuming you have data like this
