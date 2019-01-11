@@ -5,9 +5,8 @@ cheatsheet do
     category do
         id 'Keyboard shortcuts'
         entry do
-            name 'Command pallette'
+            name 'Command palette'
             command '⌘ ⇪ P'
-            END
         end
     end
 end
