@@ -55,4 +55,17 @@ cheatsheet do
             END
         end
     end
+    category do
+        id 'Integrations'
+        entry do
+            name 'Busycal'
+            notes <<-'END'
+            ```
+            busy event description here
+            ```
+
+            <https://github.com/LeEnno/alfred-add-to-busycal>
+            END
+        end
+    end
 end
