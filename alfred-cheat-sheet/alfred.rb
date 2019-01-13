@@ -7,7 +7,6 @@ cheatsheet do
         entry do
             name 'Home directory'
             command '~'
-            END
         end
         entry do
             name 'Top-level directory'
