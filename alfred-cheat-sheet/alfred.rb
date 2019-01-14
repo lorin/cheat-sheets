@@ -26,6 +26,14 @@ cheatsheet do
             If you preface your search with space, Alfred will search files.
             END
         end
+        entry do
+            name 'Focus on selected item'
+            notes <<-'END'
+            ```
+            OPT CMD \
+            ```
+            END
+        end
     end
     category do
         id 'Common tasks'
