@@ -199,6 +199,27 @@ cheatsheet do
         end
     end
     category do
+        id 'Manipulating a data frame'
+        entry do
+            name 'Set the column names'
+            notes <<-'END'
+            ```
+            df.columns = ['foo', 'bar', baz']
+            ```
+            END
+        end
+        entry do
+            name 'String of timestamp to time'
+            notes <<-'END'
+            ```python
+            import pandas as pd
+
+            df.timestamp = df.timestamp.apply(lambda x: pd.to_datetime(x))
+            ```
+            END
+        end
+    end
+    category do
         id 'Date & Time'
         entry do
             name 'Localize a time column'
