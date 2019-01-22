@@ -242,6 +242,14 @@ cheatsheet do
     category do
         id 'Common things I do'
         entry do
+            name 'Diff successive rows'
+            notes <<-'END'
+            ```pandas
+            df['diff'] = (df.start.shift(-1) - df.start)/timedelta(days=1)
+            ```
+            END
+        end
+        entry do
             name 'Count elements (data frame)'
             notes <<-'END'
             ```python
