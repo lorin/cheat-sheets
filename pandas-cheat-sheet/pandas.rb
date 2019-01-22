@@ -16,6 +16,17 @@ cheatsheet do
         end
     end
     category do
+        id 'Inspecting a data frame'
+        entry do
+            name 'Column types'
+            notes <<-'END'
+            ```python
+            df.dtypes
+            ```
+            END
+        end
+    end
+    category do
         id 'Indexing and filtering'
         entry do
             name 'One column'
@@ -258,6 +269,17 @@ cheatsheet do
              dfdate = df.date.apply(np.datetime64)
              ```
              END
+        end
+        entry do
+            name 'Convert from timedelta to numbres'
+            notes <<-'END'
+            ```python
+
+            from datetime import timedelta
+            days = df.duration / timedelta(days=1)
+            years=df.duration / timedelta(days=365)
+            ```
+            END
         end
     end
     category do
