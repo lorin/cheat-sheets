@@ -385,7 +385,7 @@ cheatsheet do
         entry do
             name 'Map a function over a series'
             notes <<-'END'
-            ```
+            ```python
             ser.apply(func)
             ```
             END
@@ -455,6 +455,17 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Check if datetimes are invalid (NaT)'
+            notes <<-'END'
+            ```python
+            import numpy as np
+
+            np
+            np.isnat(df.start)
+            ```
+            END
+        end
     end
     category do
         id 'Formatting'
@@ -487,6 +498,19 @@ cheatsheet do
             slope = params['xvals']
             yint = params['const']
             ```
+            END
+        end
+    end
+    category do
+        id 'Series'
+        entry do
+            name 'Negate a boolean seris'
+            notes <<-'END'
+            ```python
+            ~ np.isnat(df.start)
+            ```
+
+            Use `~`, not `not`
             END
         end
     end
