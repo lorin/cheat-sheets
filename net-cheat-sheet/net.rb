@@ -12,6 +12,24 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Who is listening on all ports (macOS)'
+            notes <<-'END'
+            ```
+            lsof -i -P
+            ```
+            END
+        end
+        entry do
+            name 'Who is listening on all ports (Linux)'
+            notes <<-'END'
+            ```
+            ss -tunapl
+            ```
+
+            From <https://twitter.com/b0rk/status/1090058524137345025>
+            END
+        end
     end
     category do
         id 'DNS'
