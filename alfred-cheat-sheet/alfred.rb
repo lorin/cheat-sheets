@@ -3,7 +3,7 @@ cheatsheet do
     docset_file_name 'alfred'
     keyword 'alfred'
     category do
-        id 'Keyboard shortcuts'
+        id ''
         entry do
             name 'Home directory'
             command '~'
@@ -31,6 +31,14 @@ cheatsheet do
             notes <<-'END'
             ```
             OPT CMD \
+            ```
+            END
+        end
+        entry do
+            name 'Quit a running app'
+            notes <<-'END'
+            ```
+            QUIT <APP NAME>
             ```
             END
         end
