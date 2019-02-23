@@ -378,6 +378,14 @@ cheatsheet do
             command ':set list'
         end
         entry do
+            name 'Info on formatoptions'
+            notes <<-'END'
+            ```
+            :help fo-table
+            ```
+            END
+        end
+        entry do
             name 'Enable word wrap'
             command ':set fo+=t'
         end
@@ -819,6 +827,17 @@ cheatsheet do
             notes <<-'END'
             ```
             :FZF
+            ```
+            END
+        end
+    end
+    category do
+        id 'Miscellaneous'
+        entry do
+            name 'Set file type on current file'
+            notes <<-'END'
+            ```
+            :set filetype=html
             ```
             END
         end
