@@ -20,5 +20,13 @@ cheatsheet do
             name 'Mark as done'
             command '⌘ ENTER'
         end
+        entry do
+            name 'Add link'
+            command '⌘ K'
+        end
+        entry do
+            name 'Mono-space-ify text in a sentence'
+            command '⌘ L'
+        end
     end
 end
