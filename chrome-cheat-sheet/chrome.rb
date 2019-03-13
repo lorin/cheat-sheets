@@ -42,6 +42,10 @@ cheatsheet do
         entry do
             name 'Custom search engine'
             notes <<-'END'
+            chrome://settings/searchEngines
+
+            Alternately:
+
             1. Chrome > Preferences
             2. Click "Manage search engines"
             3. Other search engines > ADD
