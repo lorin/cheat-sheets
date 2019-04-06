@@ -72,6 +72,15 @@ cheatsheet do
         end
     end
     category do
+    	id 'Custom workflows'
+	entry do
+	    name 'Menu search'
+	    notes <<-'END'
+	    [(faster) Menu Search](https://www.alfredforum.com/topic/10231-faster-menu-search/)
+	    END
+	end
+    end
+    category do
         id 'Integrations'
         entry do
             name 'Busycal'
