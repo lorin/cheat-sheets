@@ -14,6 +14,16 @@ cheatsheet do
             This will prompt you for the directory.
             END
         end
+        entry do
+            name 'Show hidden (dot files) files'
+            notes <<-'END'
+            ```
+            shift + command + .
+            ```
+
+            This will reveal hidden files.
+            END
+        end
     end
     category do
         id ''
