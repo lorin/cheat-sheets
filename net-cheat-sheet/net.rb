@@ -51,4 +51,13 @@ cheatsheet do
             END
         end
     end
+    category do
+        id 'Other'
+        entry do
+            name 'asnum lookup'
+            notes <<-'END'
+            <https://bgpview.io/>
+            END
+        end
+    end
 end
