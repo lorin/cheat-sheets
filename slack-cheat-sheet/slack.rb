@@ -22,6 +22,17 @@ cheatsheet do
         end
     end
     category do
+        id 'Search'
+        entry do
+            name 'For a person on a day'
+            notes <<-'END'
+            ```
+            from:lorin on:yesterday
+            ```
+            END
+        end
+    end
+    category do
         id 'Commands'
         entry do
             name 'Mute the channel'
