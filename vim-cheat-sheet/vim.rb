@@ -841,5 +841,17 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'confluence / jira synatx'
+            notes <<-'END'
+            Plugin: [vim-scripts/confluencewiki.vim](https://github.com/vim-scripts/confluencewiki.vim)
+
+            To activate:
+
+            ```
+            :set filetype=confluencewiki
+            ```
+            END
+        end
     end
 end
