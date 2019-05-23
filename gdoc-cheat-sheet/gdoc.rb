@@ -56,6 +56,14 @@ cheatsheet do
             1. Click Save changes.
             END
         end
+        entry do
+            name 'Subcscribe to comments'
+            notes <<-'END'
+            1. Click Comments icon
+            1. Click *Notifications*
+            1. Select "All"
+            END
+        end
     end
     category do
         id 'Google sheets'
