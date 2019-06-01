@@ -190,6 +190,7 @@ cheatsheet do
             // po is a relation
 
             // irreflexive
+            no iden & po
 
             // antisymmetric
             no po & ~po
