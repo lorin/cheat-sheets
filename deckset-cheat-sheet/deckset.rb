@@ -61,6 +61,25 @@ cheatsheet do
         end
     end
     category do
+        id 'Applescript'
+        entry do
+            name 'Export to PDF'
+            notes <<-'END'
+            ```
+            tell application "Deckset"
+                export document 1 to "/path/to/slides.pdf" as "PDF"
+            end tell
+            ```
+
+            One-liner
+
+            ```
+            osascript -e 'tell application "Deckset" to export document 1 to "/path/to/slides.pdf" as "PDF"'
+            ```
+            END
+        end
+    end
+    category do
         id 'Other'
         entry do
             name 'Smart copy and paste'
