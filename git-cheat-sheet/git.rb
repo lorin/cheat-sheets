@@ -1,6 +1,6 @@
 cheatsheet do
-    title 'Git'
-    docset_file_name 'Git'
+    title 'git'
+    docset_file_name 'git'
     keyword 'git'
     category do
         id ''
@@ -85,6 +85,17 @@ cheatsheet do
             notes <<-'END'
             ```
             git log --after=2017-12-01 --until=2017-12-31
+            ```
+            END
+        end
+    end
+    category do
+        id 'diff'
+        entry do
+            name 'Histogram'
+            notes <<-'END'
+            ```
+            git diff <branch> | diffstat
             ```
             END
         end
