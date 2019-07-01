@@ -65,6 +65,15 @@ cheatsheet do
             Edit -> Emoji & Symbols (^⌘ space)
             END
         end
+        entry do
+            name 'Inspect html clipboard'
+            notes <<-'END'
+            ```
+            pbv public.html
+            ```
+            Requires [macos-pasteboard](https://github.com/chbrown/macos-pasteboard)
+            END
+        end
     end
     category do
         id 'File system'
