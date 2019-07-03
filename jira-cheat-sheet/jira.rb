@@ -36,6 +36,14 @@ cheatsheet do
     category do
         id 'Formatting'
         entry do
+            name 'Monospace inline'
+            notes <<-'END'
+            ```
+            This is {{monospaced}}.
+            ```
+            END
+        end
+        entry do
             name 'Monospace (code) block'
             notes <<-'END'
             ```
