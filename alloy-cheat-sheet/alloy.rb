@@ -289,10 +289,11 @@ cheatsheet do
         entry do
             name 'Run'
             notes <<-'END'
+            You used to have declare a predicate but now you can just inline the predicate.
+
             ```
-            pred show() {}
-            run show for 3 but 1 Book
-            run show for 3 but exactly 1 Book
+            run {} for 3 but 1 Book
+            run {} for 3 but exactly 1 Book
             ```
             END
         end
