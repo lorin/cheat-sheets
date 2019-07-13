@@ -1,7 +1,7 @@
 cheatsheet do
-    title 'macOS'
-    docset_file_name 'macOS'
-    keyword 'macos'
+    title 'mac'
+    docset_file_name 'mac'
+    keyword 'mac'
     category do
         id 'File browsing'
         entry do
