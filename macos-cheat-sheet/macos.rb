@@ -1,7 +1,7 @@
 cheatsheet do
     title 'macOS'
     docset_file_name 'macOS'
-    keyword 'mac'
+    keyword 'macos'
     category do
         id 'File browsing'
         entry do
@@ -107,6 +107,33 @@ cheatsheet do
     end
     category do
         id 'System stuff'
+        entry do
+            name 'Set an environment variable'
+            notes <<-'END'
+            File: `~/Library/LaunchAgents/setenv.plist`
+
+            Contents:
+
+            ```xml
+            <?xml version="1.0" encoding="UTF-8"?>
+            <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+            <plist version="1.0">
+            <dict>
+              <key>Label</key>
+              <string>my.startup</string>
+              <key>ProgramArguments</key>
+              <array>
+                <string>sh</string>
+                <string>-c</string>
+                <string>launchctl setenv JAVA_HOME /Users/lhochstein/.sdkman/candidates/java/current</string>
+              </array>
+              <key>RunAtLoad</key>
+              <true/>
+            </dict>
+            </plist>
+            ```
+            END
+        end
         entry do
             name 'Restart mDNSResponder'
             notes <<-'END'
