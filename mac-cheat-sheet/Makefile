@@ -1,6 +1,6 @@
 .PHONY: deps
 
-macOS.docset: macos.rb
+mac.docset: mac.rb
 	cheatset generate $<
 	open $@
 
