@@ -182,20 +182,31 @@ cheatsheet do
         end
     end
     category do
-        id 'Relational examples'
+        id 'Relational'
         entry do
-            name 'Total ordering'
+            name 'Examples'
             notes <<-'END'
-            ```
-            // po is a relation
-
-            // irreflexive
-            no iden & po
+            ```alloy
+            // symmetric
+            rel=~rel
 
             // antisymmetric
-            no po & ~po
+            no rel & ~rel
+
+            // reflexive
+            (iden & A->A) in rel
+
+            // irreflexive
+            no iden & rel
+
+            // transitive
+            rel.rel in rel
+
+            // acyclic
+            no iden & ^rel
 
             // total
+            A->A in rel + ~rel + iden
             ```
             END
         end
