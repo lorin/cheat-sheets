@@ -296,6 +296,17 @@ cheatsheet do
         end
     end
     category do
+        id 'Boolean stuff'
+        entry do
+            name 'if-then-else'
+            notes <<-'END'
+            ```alloy
+            condition=>x else y
+            ```
+            END
+        end
+    end
+    category do
         id 'Running and verifying'
         entry do
             name 'Run'
