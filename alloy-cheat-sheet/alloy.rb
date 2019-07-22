@@ -279,6 +279,27 @@ cheatsheet do
         end
     end
     category do
+        id 'Set comprehensions'
+        entry do
+            name 'Book'
+            notes <<-'END'
+            Section 3.5.5
+            END
+        end
+        entry do
+            name 'Relation comprehension'
+            notes <<-'END'
+            If you specify multiple elements in the comprehension, you get a relation:
+
+            ```
+            fun arg[]: E->(V+Undef) {
+                {e : E, v:(V+Undef) | v=(e in op.Write => e.op.value else Undef)}
+            }
+            ```
+            END
+        end
+    end
+    category do
         id 'Other'
         entry do
             name 'Markdown syntax'
@@ -536,5 +557,32 @@ cheatsheet do
             END
         end
     end
-
+    category do
+        id 'Macros'
+        entry do
+            name 'Example macro'
+            notes <<-'END'
+            ```
+            let id[A] = A<:iden
+            ```
+            END
+        end
+    end
+    category do
+        id 'higher order quantification'
+        entry do
+            name 'In the book'
+            notes <<-'END'
+            Section 3.5.3
+            END
+        end
+        entry do
+            name 'Example'
+            notes <<-'END'
+            ```
+            some E' : set rval.NeverReturns  | vis = ar - (E'->E)
+            ```
+            END
+        end
+    end
 end

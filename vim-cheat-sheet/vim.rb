@@ -832,6 +832,29 @@ cheatsheet do
         end
     end
     category do
+        id 'Code folding'
+        entry do
+            name 'vimrc settings'
+            notes <<-'END'
+            ```
+            " Code folding
+            set foldmethod=syntax
+            set nofoldenable
+            " Set a high fold level so it doesn't fold by default
+            set foldlevel=10
+            ```
+            END
+        end
+        entry do
+            name 'Fold by indent for a certain file type'
+            notes <<-'END'
+            ```
+            autocmd BufNewFile,BufReadPost *.html setl foldmethod=indent nofoldenable
+            ```
+            END
+        end
+    end
+    category do
         id 'Miscellaneous'
         entry do
             name 'Set file type on current file'
