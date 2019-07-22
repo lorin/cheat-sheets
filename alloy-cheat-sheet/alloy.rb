@@ -212,6 +212,22 @@ cheatsheet do
         end
     end
     category do
+        id 'Boolean operations'
+        entry do
+            name 'Verbose and shorthand notations'
+            notes <<-'END'
+            ```
+            not      !
+            and      &&
+            or       ||
+            implies  =>
+            else     ,
+            iff      <=>
+            ```
+            END
+        end
+    end
+    category do
         id 'Relational operations'
         entry do
             name 'Combining relations'
@@ -242,7 +258,7 @@ cheatsheet do
             END
         end
         entry do
-            name 'Arrow producct'
+            name 'Arrow product'
             notes <<-'END'
             Form a relation with all pairs from p,q
 
