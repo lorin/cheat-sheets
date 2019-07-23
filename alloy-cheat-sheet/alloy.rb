@@ -106,6 +106,14 @@ cheatsheet do
             END
         end
         entry do
+            name 'Empty set'
+            notes <<-'END'
+            ```
+            none
+            ```
+            END
+        end
+        entry do
             name 'Set-valued operators'
             notes <<-'END'
             * `+` - union
