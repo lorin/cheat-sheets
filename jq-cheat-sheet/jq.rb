@@ -13,6 +13,14 @@ cheatsheet do
             END
         end
         entry do
+            name 'Syntax highlighting with less'
+            notes <<-'END'
+            ```
+            jq -C . file.json | less -R
+            ```
+            END
+        end
+        entry do
             name 'Get the list of keys'
             notes <<-'END'
             Here's an example that gets the list of libraries from a [Nebula dependencies.lock file](https://github.com/nebula-plugins/gradle-dependency-lock-plugin)
