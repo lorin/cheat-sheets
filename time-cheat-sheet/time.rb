@@ -109,6 +109,17 @@ cheatsheet do
             END
         end
         entry do
+            name 'Epoch millis to date (macOS terminal)'
+            notes <<-'END'
+            ```
+            MILLIS=...
+            date -r ${MILLIS%???}
+            ```
+
+            Thu Aug  1 15:42:22 PDT 2019
+            END
+        end
+        entry do
             name 'Millis to local time (pandas)'
             notes <<-'END'
             ```python
