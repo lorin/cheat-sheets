@@ -196,18 +196,20 @@ cheatsheet do
                 bar = "quux";
                 x;
 
-            define Helper(x) == E(x)
+            define
+              Helper(x) == E(x)
+              OtherHelper(x) == F(x)
             end define
 
             process Proc \in 1..N
                 variable baz;
             begin
-                l1: foo := {"hello"}
-                l2: bar := "done"
+                l1: foo := {"hello"};
+                l2: bar := "done";
             end process
 
             process OtherProc = N+1 begin
-                o1: x := self
+                o1: x := self;
                 o2: with y \in 1..N do
                         foo := y;
                         goto o1;
