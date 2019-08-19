@@ -639,6 +639,15 @@ cheatsheet do
             END
         end
         entry do
+            name 'Print out a value (PlusCal)'
+            notes <<-'END'
+            ```
+            print expr
+            
+            ```
+            END
+        end
+        entry do
             name 'Print a value without boolean eval'
             notes <<-'END'
             ```
