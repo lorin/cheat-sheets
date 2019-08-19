@@ -18,6 +18,17 @@ cheatsheet do
         end
     end
     category do
+        id 'URL shortcuts'
+        entry do
+            name 'Open a new doc'
+            notes <<-'END'
+            ```
+            docs.new
+            ```
+            END
+        end
+    end
+    category do
         id 'General'
         entry do
             name 'Strikethrough'
