@@ -67,7 +67,7 @@ cheatsheet do
             name 'Filter'
             notes <<-'END'
             ```
-            jq '.values[] | select(.id.name == "foo")'
+            jq '.values[] | select(.id.name == "foo" or .id.name == "bar")'
             ```
             END
         end
