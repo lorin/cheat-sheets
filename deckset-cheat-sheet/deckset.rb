@@ -9,7 +9,7 @@ cheatsheet do
             notes <<-'END'
             ```
             slidenumbers: false
-            theme: work
+            theme: Plain Jane
             ```
             END
         end
@@ -34,6 +34,17 @@ cheatsheet do
             notes <<-'END'
             ```
             [.footer: Text here]
+            ```
+            END
+        end
+        entry do
+            name 'Speaker notes'
+            notes <<-'END'
+            ```
+            # Text goes here
+            
+            ^ Speaker notes are here
+            
             ```
             END
         end
