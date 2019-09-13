@@ -3,6 +3,38 @@ cheatsheet do
     docset_file_name 'spring'
     keyword 'spring'
     category do
+        id 'Run on startup'
+        entry do
+            name 'Using an ApplicationListener'
+            notes <<-'END'
+            ```java
+            @Component
+            public class StartupApplicationListener implements ApplicationListener<ContextRefreshedEvent> {
+
+              @Override
+              public void onApplicationEvent(ContextRefreshedEvent event) {
+                // logic goes here
+              }
+            }
+            ```
+            END
+        end
+        entry do
+            name 'Using CommandLineRunner'
+            notes <<-'END'
+            Create a bean that returns a CommandLineRunner, have the code just return
+            a lambda with the desired code.
+
+            ```java
+            @Bean
+            public CommandLineRunner helloWorld() {
+                return args -> System.out.println("Hello, world!!!");
+            }
+            ```
+            END
+        end
+    end
+    category do
         id 'Config'
         entry do
             name 'Read a property'
