@@ -51,6 +51,16 @@ cheatsheet do
             3. Other search engines > ADD
             END
         end
+        entry do
+            name 'Make the page editable'
+            notes <<-'END'
+            In the console:
+
+            ```
+            document.designMode = 'on'
+            ```
+            END
+        end
     end
     category do
         id 'Video player'
