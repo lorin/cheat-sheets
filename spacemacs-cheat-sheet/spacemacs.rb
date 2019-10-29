@@ -3,7 +3,26 @@ cheatsheet do
     docset_file_name 'spacemacs'
     keyword 'spacemacs'
     category do
+        id 'Navigating'
+        entry do
+            name 'Last buffer'
+            notes <<-'END'
+            ```
+            SPC tab
+            ```
+            END
+        end
+    end
+    category do
         id ''
+        entry do
+            name 'Escape shortcut'
+            notes <<-'END'
+            ```
+            fd
+            ```
+            END
+        end
         entry do
             name 'See also'
             notes <<-'END'
