@@ -37,7 +37,6 @@ cheatsheet do
             notes <<-'END'
             ```
             SPC f e d
-            
             ```
             END
         end
@@ -56,5 +55,17 @@ cheatsheet do
             * [Configuring Spacemacs: A Tutorial](http://thume.ca/howto/2015/03/07/configuring-spacemacs-a-tutorial/)
             END
         end
+    end
+    category do
+      id 'Other'
+      entry do
+        name 'Switch to normal mode with control space'
+        notes <<-'END'
+        (defun dotspacemacs/user-config ()
+
+          (global-set-key (kbd "C-SPC") 'evil-escape)
+          )
+        END
+      end
     end
 end
