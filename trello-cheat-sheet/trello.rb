@@ -13,7 +13,8 @@ cheatsheet do
             END
         end
         entry do
-            name 'Filter' notes <<-'END'
+            name 'Filter'
+            notes <<-'END'
             ```
             F
             ```
