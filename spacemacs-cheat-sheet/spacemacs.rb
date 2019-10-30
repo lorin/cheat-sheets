@@ -59,6 +59,14 @@ cheatsheet do
     category do
       id 'Git'
       entry do
+        name 'magit status window'
+        notes <<-'END'
+        ```
+        SPC g s
+        ```
+        END
+      end
+      entry do
         name 'Toggle git gutter'
         notes <<-'END'
           ```
