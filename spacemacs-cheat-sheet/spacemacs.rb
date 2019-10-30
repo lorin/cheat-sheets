@@ -49,6 +49,14 @@ cheatsheet do
             END
         end
         entry do
+          name 'Toggle git gutter'
+          notes <<-'END'
+          ```
+          SPC T d
+          ```
+          END
+        end
+        entry do
             name 'Links'
             notes <<-'END'
             * [Quick start](https://github.com/syl20bnr/spacemacs/blob/master/doc/QUICK_START.org)
