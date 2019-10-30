@@ -57,14 +57,26 @@ cheatsheet do
         end
     end
     category do
-      id 'Other'
+      id 'Moving from vim'
       entry do
         name 'Switch to normal mode with control space'
         notes <<-'END'
+        ```
         (defun dotspacemacs/user-config ()
 
           (global-set-key (kbd "C-SPC") 'evil-escape)
           )
+        END
+        ```
+      end
+      entry do
+        name 'ControlP equivalent'
+        notes <<-'END'
+        ```
+        SPC p f
+        ```
+
+        For more details: <https://github.com/syl20bnr/spacemacs/issues/1544>
         END
       end
     end
