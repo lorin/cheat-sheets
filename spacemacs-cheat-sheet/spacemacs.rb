@@ -49,20 +49,32 @@ cheatsheet do
             END
         end
         entry do
-          name 'Toggle git gutter'
-          notes <<-'END'
-          ```
-          SPC T d
-          ```
-          END
-        end
-        entry do
             name 'Links'
             notes <<-'END'
             * [Quick start](https://github.com/syl20bnr/spacemacs/blob/master/doc/QUICK_START.org)
             * [Configuring Spacemacs: A Tutorial](http://thume.ca/howto/2015/03/07/configuring-spacemacs-a-tutorial/)
             END
         end
+    end
+    category do
+      id 'Git'
+      entry do
+        name 'Toggle git gutter'
+        notes <<-'END'
+          ```
+          SPC T d
+          ```
+          END
+      end
+      entry do
+        name 'Stage and commit'
+        notes <<-'END'
+        ```
+        spc g . w
+        spc g . c
+        ```
+        END
+      end
     end
     category do
       id 'Moving from vim'
