@@ -66,8 +66,8 @@ cheatsheet do
 
           (global-set-key (kbd "C-SPC") 'evil-escape)
           )
-        END
         ```
+        END
       end
       entry do
         name 'ControlP equivalent'
