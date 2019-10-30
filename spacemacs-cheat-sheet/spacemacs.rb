@@ -71,7 +71,7 @@ cheatsheet do
         notes <<-'END'
         ```
         spc g . w
-        spc g . c
+        spc g . C
         ```
         END
       end
