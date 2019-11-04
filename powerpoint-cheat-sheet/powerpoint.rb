@@ -23,8 +23,8 @@ cheatsheet do
           name 'Align text in middle of slide'
           notes <<-'END'
           1. Select text
-          2. Arrange → Align or Distribute → Align center
-          3. Arrange → Align or Distribute → Align center
+          2. Veritical: Arrange → Align or Distribute → Align middle 
+          3. Horizontal: Arrange → Align or Distribute → Align center
           END
         end
     end
