@@ -3,6 +3,17 @@ cheatsheet do
     docset_file_name 'vim'
     keyword 'vim'
     category do
+        id 'Copy-paste'
+        entry do
+            name 'Copy line 4 to current location'
+            notes <<-'END'
+            ```
+            :4t.
+            ```
+            END
+        end
+    end
+    category do
         id 'vim anywhere'
         entry do
             name 'How it works'
