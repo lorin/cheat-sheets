@@ -1,3 +1,4 @@
+# coding: utf-8
 cheatsheet do
     title 'mac'
     docset_file_name 'mac'
