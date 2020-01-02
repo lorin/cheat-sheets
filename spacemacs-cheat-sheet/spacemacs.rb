@@ -24,9 +24,27 @@ cheatsheet do
             END
         end
         entry do
+          name 'Run an Emacs command'
+          notes <<-'END'
+          ```
+          SPC SPC
+          ```
+          END
+        end
+        entry do
+          name 'Inspect a variable'
+          notes <<-'END'
+          ```
+          SPC h d v buffer-file-name
+          ```
+
+          Example: variable buffer-file-name
+        END
+        end
+        entry do
             name 'See also'
             notes <<-'END'
-            The clojure cheat sheet has cloure spacemacs stuff
+            The clojure cheat sheet has clojure spacemacs stuff
             END
         end
     end
@@ -86,6 +104,39 @@ cheatsheet do
         spc g . C
         ```
         END
+      end
+    end
+    category do
+      id 'Snippets'
+      entry do
+        name 'autocomplete'
+        notes <<-'END'
+        ```
+        Alt-/
+        ```
+
+        Alas, can't use tab
+        END
+      end
+      entry do
+        name 'Create a snippet'
+        notes <<-'FIN'
+        This example is for a snippet named "entry" that works for Ruby files.
+
+        Filename: `~/.emacs.d/private/snippets/ruby-mode/entry``
+
+        ```
+        # -*- mode: snippet -*-
+        #name : cheatset entry
+        #key : entry
+        # --
+        entry do
+        name '$0'
+        notes <<-'END'
+                END
+        end
+        ```
+        FIN
       end
     end
     category do
