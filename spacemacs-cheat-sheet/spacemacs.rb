@@ -141,15 +141,6 @@ cheatsheet do
         FIN
       end
     end
-    entry do
-      name ''
-      notes <<-'END'
-
-     END
-    end
-    category do
-      id 'foo'
-    end
     category do
       id 'Moving from vim'
       entry do
