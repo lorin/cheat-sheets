@@ -136,8 +136,19 @@ cheatsheet do
                 END
         end
         ```
+
+        Filename: `~/.emacs.d/private/snippets/ruby-mode/category``
         FIN
       end
+    end
+    entry do
+      name ''
+      notes <<-'END'
+
+     END
+    end
+    category do
+      id 'foo'
     end
     category do
       id 'Moving from vim'
