@@ -173,5 +173,14 @@ cheatsheet do
         For more details: <https://github.com/syl20bnr/spacemacs/issues/1544>
         END
       end
+      entry do
+        name 'Clear highlight search'
+        notes <<-'END'
+        ```
+        SPC s c
+        :nohl
+        ```
+        END
+      end
     end
 end
