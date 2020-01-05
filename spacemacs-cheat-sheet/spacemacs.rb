@@ -34,10 +34,10 @@ cheatsheet do
         entry do
           name 'Evaluate elisp'
           notes <<-'END'
-```
-Opt :
-```
-        END
+          ```
+          Opt :
+          ```
+          END
         end
         entry do
           name 'Inspect a variable'
