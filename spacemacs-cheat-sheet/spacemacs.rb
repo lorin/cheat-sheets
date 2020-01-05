@@ -24,6 +24,14 @@ cheatsheet do
             END
         end
         entry do
+          name 'Open a file with auto-complete'
+          notes <<-'END'
+          ```
+          SPC f f
+          ```
+          END
+        end
+        entry do
           name 'Run an Emacs command'
           notes <<-'END'
           ```
@@ -131,7 +139,7 @@ cheatsheet do
         notes <<-'FIN'
         This example is for a snippet named "entry" that works for Ruby files.
 
-        Filename: `~/.emacs.d/private/snippets/ruby-mode/entry``
+        Filename: `~/.emacs.d/private/snippets/ruby-mode/entry`
 
         ```
         # -*- mode: snippet -*-
@@ -141,11 +149,25 @@ cheatsheet do
         entry do
         name '$0'
         notes <<-'END'
-                END
+                  \`\`\`
+
+                  \`\`\`
+                  END
         end
         ```
 
-        Filename: `~/.emacs.d/private/snippets/ruby-mode/category``
+        Filename: `~/.emacs.d/private/snippets/ruby-mode/category`
+
+        ```
+        # -*- mode: snippet -*-
+        #name : cheatset category
+        #key : category
+        # --
+        category do
+        id '$0'
+
+        end
+        ```
         FIN
       end
     end
