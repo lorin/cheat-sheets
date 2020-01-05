@@ -14,7 +14,7 @@ cheatsheet do
         end
     end
     category do
-        id ''
+        id 'Basics'
         entry do
             name 'Escape shortcut'
             notes <<-'END'
@@ -30,6 +30,14 @@ cheatsheet do
           SPC SPC
           ```
           END
+        end
+        entry do
+          name 'Evaluate elisp'
+          notes <<-'END'
+```
+Opt :
+```
+        END
         end
         entry do
           name 'Inspect a variable'
