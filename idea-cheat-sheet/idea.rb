@@ -11,6 +11,15 @@ cheatsheet do
             END
         end
         entry do
+            name 'Show file in project file'
+            notes <<-'END'
+            ```
+            Alt F1
+            1
+            ```
+            END
+        end
+        entry do
             name 'Override methods'
             notes <<-'END'
             ```
