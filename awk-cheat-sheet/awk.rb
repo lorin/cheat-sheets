@@ -5,6 +5,14 @@ cheatsheet do
     category do
         id ''
         entry do
+            name 'Print the first field'
+            notes <<-'END'
+            ```
+            awk '{print $1}'
+            ```
+            END
+        end
+        entry do
             name 'Skip the first line'
             notes <<-'END'
             ```
