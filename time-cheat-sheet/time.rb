@@ -159,6 +159,17 @@ cheatsheet do
     category do
         id 'Python'
         entry do
+            name 'Parse ISO-8601'
+            notes <<-'END'
+            ```
+            import datetime
+
+            ts = "2020-03-05T18:04:58.576+00:00"
+            t = datetime.datetime.fromisoformat(ts)
+            ```
+            END
+        end
+        entry do
             name 'Time zones'
             notes <<-'END'
             ```
