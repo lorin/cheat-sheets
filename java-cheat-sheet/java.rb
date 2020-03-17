@@ -3,6 +3,17 @@ cheatsheet do
     docset_file_name 'Java'
     keyword 'java'
     category do
+        id 'Operations'
+        entry do
+            name 'Thread dump'
+            notes <<-'END'
+            ```
+            jstack
+            ```
+            END
+        end
+    end
+    category do
         id 'Time'
         entry do
             name 'Gist with conversions'
