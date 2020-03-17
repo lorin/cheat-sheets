@@ -12,6 +12,12 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Heap analysis'
+            notes <<-'END'
+            [Memory Analyzer (MAT)](https://www.eclipse.org/mat/)
+            END
+        end
     end
     category do
         id 'Time'
