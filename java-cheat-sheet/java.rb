@@ -10,6 +10,8 @@ cheatsheet do
             ```
             jstack
             ```
+
+            Use `jps` to get the process id
             END
         end
         entry do
