@@ -1,7 +1,24 @@
+# coding: utf-8
 cheatsheet do
     title 'idea'
     docset_file_name 'idea'
     keyword 'idea'
+    category do
+      id 'Navigatoin'
+      entry do
+        name 'Next highlighted error'
+        notes <<-'END'
+        I have it mapped like this:
+
+        ```
+        noremap <C-n> :action GotoNextError<CR>
+        noremap <C-p> :action GotoPreviousError<CR>
+        ```
+
+        `F2` is the official shortcut.
+        END
+      end
+    end
     category do
         id ''
         entry do
@@ -110,10 +127,10 @@ cheatsheet do
         entry do
             name 'Tests don\'t see proper dependencies'
             notes <<-'END'
-            I fixed this once by going into 
-            
+            I fixed this once by going into
+
             ```
-            File -> Project Structure -> Modules -> Dependencies 
+            File -> Project Structure -> Modules -> Dependencies
             ```
 
             and then removing a "test" module that had spuriously appeared (I already had a different test module previously).
