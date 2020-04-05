@@ -4,7 +4,7 @@ cheatsheet do
     docset_file_name 'idea'
     keyword 'idea'
     category do
-      id 'Navigatoin'
+      id 'Navigation'
       entry do
         name 'Next highlighted error'
         notes <<-'END'
@@ -77,6 +77,14 @@ cheatsheet do
             1. Find the task you want to run
             1. Right-click on it and select "Execute before build" and "Execute before rebuild"
             END
+        end
+        entry do
+          name 'Analyze an external stack trace'
+          notes <<-'END'
+          1. Copy the stack trace onto your clipboard
+          1. Shift Shift
+          1. Analyze stack trace
+        END
         end
     end
     category do
