@@ -145,4 +145,3 @@ cheatsheet do
         end
     end
 end
-
