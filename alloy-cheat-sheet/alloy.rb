@@ -3,7 +3,13 @@ cheatsheet do
     docset_file_name 'alloy'
     keyword 'alloy'
     category do
-        id 'External cheat sheets'
+        id 'External docs'
+        entry do
+          name 'Hillel docs'
+          notes <<-'END'
+          <https://alloy.readthedocs.io/en/latest/>
+          END
+        end
         entry do
             name 'Thomas A. Alspaugh'
             notes <<-'END'
@@ -30,6 +36,29 @@ cheatsheet do
             }
             ```
             END
+        end
+        entry do
+          name 'Implicit facts and ordering'
+          notes <<-'END'
+          Example:
+
+          ```
+          open util/ordering[State]
+
+          ... 
+
+          sig State {
+            obs: lone Observation,
+            emitted: lone ResourceEvent
+          } {
+
+              // Example that uses next and @
+              NoResource in obs => ResourceMissing in emitted and CreatedResourceStarted in next[this].@obs
+          ```
+
+          The `next` and `prev` functions aren't implicitly dereferenced, but you need
+          to dereference the field with `@`
+          END
         end
         entry do
             name 'Disjoint, total subsets'
