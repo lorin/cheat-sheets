@@ -34,6 +34,14 @@ cheatsheet do
             ```
             END
         end
+        entry do
+          name 'Show a file from a different branch'
+          notes <<-'END'
+          ```
+          git show branch:file
+          ```
+          END
+        end
     end
     category do
         id 'ignore'
