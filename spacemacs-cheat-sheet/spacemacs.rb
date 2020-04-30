@@ -21,6 +21,12 @@ cheatsheet do
             END
       end
       entry do
+        name 'persistent emacs'
+        notes <<-'END'
+        In the config file, set `dotspacemacs-persistent-server` to either `t` or `nil`
+        END
+      end
+      entry do
         name 'Restart emacs'
         notes <<-'END'
           ```
