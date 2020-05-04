@@ -64,4 +64,16 @@ cheatsheet do
             END
         end
     end
+    category do
+      id 'JSON (mysql)'
+      entry do
+        name 'extract field'
+        notes <<-'END'
+          ```sql
+          json_extract(json, "$.field")
+          ```
+          END
+      end
+
+    end
 end
