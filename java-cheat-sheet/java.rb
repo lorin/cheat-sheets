@@ -8,7 +8,7 @@ cheatsheet do
             name 'Thread dump'
             notes <<-'END'
             ```
-            jstack
+            jstack -l PID
             ```
 
             Use `jps` to get the process id
