@@ -69,6 +69,14 @@ cheatsheet do
       entry do
         name 'extract field'
         notes <<-'END'
+          Assume `json` is a field that contains JSON:
+
+          ```sql
+          json->'$.field'
+          ```
+
+          or
+
           ```sql
           json_extract(json, "$.field")
           ```
