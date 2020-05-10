@@ -872,6 +872,15 @@ cheatsheet do
         end
     end
     category do
+        id 'VS Code'
+        entry do
+            name 'Getting started docs'
+            notes <<-'END'
+            <https://github.com/alygin/vscode-tlaplus/wiki/Getting-Started>
+            END
+        end
+    end
+    category do
         id 'Recursion'
         entry do
             name 'Recursive operators'
