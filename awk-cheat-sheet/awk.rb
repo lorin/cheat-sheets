@@ -3,7 +3,7 @@ cheatsheet do
     docset_file_name 'awk'
     keyword 'awk'
     category do
-        id ''
+        id 'Fields'
         entry do
             name 'Print the first field'
             notes <<-'END'
@@ -57,6 +57,17 @@ cheatsheet do
             notes <<-'END'
             ```
             docker images | awk 'NR!=1 && /ch13.*/ {print $1":"$2}' | xargs docker rmi
+            ```
+            END
+        end
+    end
+    category do
+        id 'Lines'
+        entry do
+            name 'Print a range of lines'
+            notes <<-'END'
+            ```
+            awk 'NR==5160, NR==6361' log.txt
             ```
             END
         end
