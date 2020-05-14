@@ -852,14 +852,44 @@ cheatsheet do
         end
     end
     category do
-        id 'Installing JDKs locally'
+        id 'Installing JDKs locally (sdkman)'
         entry do
-            name 'SDKMAN!'
+            name 'Install'
             notes <<-'END'
             ```bash
             $ curl -s "https://get.sdkman.io" | bash
-            $ sdk list java 
-            $ sdk install java <version>
+            ```
+            END
+        end
+        entry do
+            name 'List available java versions'
+            notes <<-'END'
+            ```
+            sdk list java 
+            ```
+            END
+        end
+        entry do
+            name 'Install a java version'
+            notes <<-'END'
+            ```
+            sdk install java 8.0.252-zulu 
+            ```
+            END
+        end
+        entry do
+            name 'Set a different version as default'
+            notes <<-'END'
+            ```
+            sdk default java 8.0.202-zulu
+            ```
+            END
+        end
+        entry do
+            name 'Switch java versions in the current shell'
+            notes <<-'END'
+            ```
+            sdk use java 8.0.202-zulu
             ```
             END
         end
