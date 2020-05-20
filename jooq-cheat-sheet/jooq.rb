@@ -5,6 +5,14 @@ cheatsheet do
     category do
         id 'Code generation'
         entry do
+            name 'gradle task'
+            notes <<-'END'
+            ```
+            gw :keel-sql:generateJooqMetamodel
+            ```
+            END
+        end
+        entry do
             name 'Gradle setup'
             notes <<-'END'
             See <https://github.com/etiennestuder/gradle-jooq-plugin> for more details
