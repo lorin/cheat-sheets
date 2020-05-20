@@ -54,6 +54,23 @@ cheatsheet do
         end
     end
     category do
+        id 'Markdown'
+        entry do
+            name 'Key bindings reference'
+            notes <<-'END'
+            <https://develop.spacemacs.org/layers/+lang/markdown/README.html#key-bindings>
+            END
+        end
+        entry do
+            name 'Italics'
+            notes <<-'END'
+            ```
+            SPC m x i
+            ```
+            END
+        end
+    end
+    category do
       id 'Themes'
       entry do
         name 'Cycle themes'
