@@ -162,6 +162,15 @@ cheatsheet do
     category do
         id 'Keyboard shortcuts'
         entry do
+            name 'Hide gradle tool window'
+            notes <<-'END'
+            ```
+            shift ESC
+            
+            ```
+            END
+        end
+        entry do
             name 'Add constructor parameter as instance variable'
             notes <<-'END'
             ```
