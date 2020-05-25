@@ -8,7 +8,7 @@ cheatsheet do
             name 'gradle task'
             notes <<-'END'
             ```
-            gw :keel-sql:generateJooqMetamodel
+            gw generateJooqMetamodel
             ```
             END
         end
