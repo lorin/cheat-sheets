@@ -27,6 +27,14 @@ cheatsheet do
         END
       end
       entry do
+        name 'Close window without killing server'
+        notes <<-'END'
+        ```
+        SPC q z
+        ```
+        END
+      end
+      entry do
         name 'Restart emacs'
         notes <<-'END'
           ```
