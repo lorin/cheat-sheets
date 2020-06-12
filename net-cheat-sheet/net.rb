@@ -13,6 +13,14 @@ cheatsheet do
             END
         end
         entry do
+          name 'What ports is that pid listening on'
+          notes <<-'END'
+          ```
+          lsof -nP -iTCP | grep <PID> | grep LISTEN
+          ```
+          END
+        end
+        entry do
             name 'Who is listening on all ports (macOS)'
             notes <<-'END'
             ```
