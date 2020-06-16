@@ -18,6 +18,14 @@ cheatsheet do
         `F2` is the official shortcut.
         END
       end
+      entry do
+        name 'Copy path to clipbard'
+        notes <<-'END'
+          ```
+          CMD Shift C
+          ```
+          END
+      end
     end
     category do
         id ''
