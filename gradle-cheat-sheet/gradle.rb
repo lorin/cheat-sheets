@@ -3,6 +3,17 @@ cheatsheet do
     docset_file_name 'gradle'
     keyword 'gradle'
     category do
+        id 'Testing'
+        entry do
+            name 'Run a specific test'
+            notes <<-'END'
+            ```
+            ./gradlew test --tests com.example.MyTest
+            ```
+            END
+        end
+    end
+    category do
         id ''
         entry do
             name 'Custom variable in build.gradle'
