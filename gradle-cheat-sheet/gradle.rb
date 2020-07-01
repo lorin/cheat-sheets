@@ -8,7 +8,7 @@ cheatsheet do
             name 'Run a specific test'
             notes <<-'END'
             ```
-            ./gradlew test --tests com.example.MyTest
+            ./gradlew test --tests com.example.MyTest1 --tests com.example.MyTest2
             ```
             END
         end
