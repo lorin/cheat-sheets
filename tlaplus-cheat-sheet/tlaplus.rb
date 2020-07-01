@@ -702,29 +702,18 @@ cheatsheet do
 
             From https://groups.google.com/forum/#!topic/tlaplus/ZY2to27DhHU
 
-            1. Start the toolbox from the command line with the two parameters  to activate its console:
+            ```
+            /Applications/TLA+\ Toolbox.app/Contents/MacOS/toolbox -console -consoleLog
+            (This puts you in the osgi> console)
 
-                `/Applications/TLA+ Toolbox.app/Contents/MacOS/toolbox -console -consoleLog`
+            ss p2.console
+            start <id> (where id is the numerical id shown from previous, e.g. 151)
+            provaddrepo http://vrapper.sourceforge.net/update-site/stable
+            provlg http://vrapper.sourceforge.net/update-site/stable
 
-            2. In the console ("osgi>" prompt), activate the functionality to install plugins: 
-            
-                `start org.eclipse.equinox.p2.console`
+            ```
 
-            3. Add the p2 repository that contains the plugin: 
-
-                `provaddrepo http://vrapper.sourceforge.net/update-site/stable`
-
-            4. List the available "installation units" (IU) in the update site: 
-            
-                `provlg http://vrapper.sourceforge.net/update-site/stable`
-
-            5. Install the top-level UI: 
-            
-                `provinstall net.sourceforge.vrapper.feature.group 0.72.0 DefaultProfile`
-
-            6. Accept the modal dialog. 
-            
-            7. Restart the Toolbox.
+            Accept the modal dialog and restart the toolbox
 
             END
         end
