@@ -108,6 +108,14 @@ cheatsheet do
             END
         end
         entry do
+            name 'substring match'
+            notes <<-'END'
+            ```bash
+            < pipeline.json jq -r '.stages[] | select(.refId[0:1]=="7")'
+            ```
+            END
+        end
+        entry do
             name 'defining a variable'
             notes <<-'END'
             ```bash
