@@ -16,7 +16,7 @@ cheatsheet do
           name 'What ports is that pid listening on'
           notes <<-'END'
           ```
-          lsof -nP -iTCP | grep <PID> | grep LISTEN
+          lsof -nP -iTCP -sTCP:LISTEN | grep <PID> 
           ```
           END
         end
