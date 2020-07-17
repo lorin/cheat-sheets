@@ -171,6 +171,14 @@ cheatsheet do
         ```
         END
       end
+      entry do
+        name 'blame'
+        notes <<-'END'
+        ```
+        alt X magit-blame
+        ```
+        END
+      end
     end
     category do
       id 'Snippets'
