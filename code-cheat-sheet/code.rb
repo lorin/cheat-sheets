@@ -8,6 +8,7 @@ cheatsheet do
             name 'Next tab'
             command '⌘ ⎇ →'
         end
+
         entry do
             name 'Comand palette'
             command ' ⌘ ⇧ P'
