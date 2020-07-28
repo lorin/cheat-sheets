@@ -6,9 +6,15 @@ cheatsheet do
         id 'Keyboard shortcuts'
         entry do
             name 'Next tab'
-            notes <<-'END'
-            ⌘ ⎇ →
-            END
+            command '⌘ ⎇ →'
+        end
+        entry do
+            name 'Comand palette'
+            command ' ⌘ ⇧ P'
+        end
+        entry do
+            name 'Open file'
+            command '⌘ P'
         end
     end
 end
