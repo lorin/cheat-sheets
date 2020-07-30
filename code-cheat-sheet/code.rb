@@ -23,7 +23,6 @@ cheatsheet do
         entry do
             name 'Open terminal'
             command '^ `'
-            END
         end
     end
 end
