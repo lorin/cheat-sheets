@@ -20,5 +20,10 @@ cheatsheet do
             name 'Git commit'
             command '^ ⇧ G'
         end
+        entry do
+            name 'Open terminal'
+            command '^ `'
+            END
+        end
     end
 end
