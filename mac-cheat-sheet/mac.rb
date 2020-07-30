@@ -38,16 +38,17 @@ cheatsheet do
     category do
         id 'Keyboard'
         entry do
-            name 'Screen capture'
+            name 'Screen capture (native)'
+            command '⇧ ⌘ 4'
             notes <<-'END'
-            ```
-            ⇧ ⌘ 4
-            ```
 
             This is set in System Preferences > Keyboard > Shortcuts > Screen Shots.
 
-            I like to use Monosnap as an alternative
             END
+        end
+        entry do
+            name 'Screen capture (skitch)'
+            command '⇧ ⌘ 5'
         end
         entry do
             name 'Search menu items'
