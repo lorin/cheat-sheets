@@ -18,7 +18,7 @@ cheatsheet do
         end
         entry do
             name 'Git commit'
-            comand '^ ⇧ G'
+            command '^ ⇧ G'
             END
         end
     end
