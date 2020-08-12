@@ -12,6 +12,27 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Enable test coverage (jacoco)'
+            notes <<-'END'
+            ```
+            // Near the top
+            plugins {
+                id 'jacoco'
+            }
+
+            test {
+                finalizedBy jacocoTestReport // report is always generated after tests run
+            }
+
+            jacocoTestReport {
+                dependsOn test // tests are required to run before generating the report
+            }
+            ```
+
+            Report: `build/reports/jacoco/test/html/index.html`
+            END
+        end
     end
     category do
         id ''
