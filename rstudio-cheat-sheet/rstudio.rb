@@ -45,4 +45,17 @@ cheatsheet do
             END
         end
     end
+    category do
+        id 'import data'
+        entry do
+            name 'Import Excel data'
+            notes <<-'END'
+            1. Top-left, click environment tab
+            2. Click "Import Dataset -> From Excel..."
+
+            This will let you view the data and choose the types, then will generate code on the console.
+            END
+        end
+        
+    end
 end
