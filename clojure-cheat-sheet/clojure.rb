@@ -18,6 +18,16 @@ cheatsheet do
             END
         end
         entry do
+            name 'Specify the entrypoint'
+            notes <<-'END'
+            In `project.clj`, specify an entry point like this:
+
+            ```
+            :main myproj.core/myfunc
+            ```
+            END
+        end
+        entry do
             name 'Run'
             notes <<-'END'
             ```
