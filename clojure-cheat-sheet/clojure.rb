@@ -460,14 +460,25 @@ cheatsheet do
             name 'Evaluate in Calva'
             notes <<-'END'
             ```
-            ⌘ ENTER 
+            ⌘ ENTER  - evals the expression
+            ^ ENTER  - evals the sub-expression at the cursor
             ```
+            END
+        end
+        entry do
+            name 'Paredit'
+            notes <<-'END'
+            ```
+            ^ → - move the close paren to the right
+            ```
+
+            See <https://calva.io/paredit/>
             END
         end
         entry do
             name 'Plugins'
             notes <<-'END'
-            I use the Calva plugin. I also use the basic Clojure plugin.
+            I use the Calva plugin. 
 
             To make Calva happy, I use the Neovim plugin instead of the Vim plugin.
             END
