@@ -5,6 +5,14 @@ cheatsheet do
     category do
         id 'lein'
         entry do
+            name 'Connect to a running repl'
+            notes <<-'END'
+            ```
+            lein repl :connect 65400
+            ```
+            END
+        end
+        entry do
             name 'New project'
             notes <<-'END'
             ```
@@ -25,6 +33,8 @@ cheatsheet do
             ```
             :main myproj.core/myfunc
             ```
+
+            I think it defaults to an entrypoint named `-main`, need to check.
             END
         end
         entry do
