@@ -27,6 +27,30 @@ cheatsheet do
         end
     end
     category do
+        id 'I/O'
+        entry do
+            name 'Example'
+            notes <<-'END'
+            ```clojure
+          (ns myns.core
+            (:require clojure.java.io)
+            (:gen-class))
+
+            (defn write-dot [fname]
+              (with-open [w (clojure.java.io/writer fname)]
+                (binding [*out* w]
+                  (println "digraph {")
+                  (println "a -> b;")
+                  (println "b -> c;")
+                  (println "c -> d;")
+                  (println "d -> a;")
+                  (println "}"))))
+            ```
+            END
+        end
+        
+    end
+    category do
         id 'Functional'
         entry do
             name 'lambda'
@@ -42,9 +66,27 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Apply args to function'
+            notes <<-'END'
+            ```
+            (apply f args)  ; like (f *args) where * is Python
+            (apply + '[1 2 3]) ; (+ 1 2 3) -> 6 
+            
+            ```
+            END
+        end
+        entry do
+            name 'Filter out nils'
+            notes <<-'END'
+            ```clojure
+            (filter some? colls)
+            ```
+            END
+        end
     end
     category do
-        id 'Basic data structure stuff'
+        id 'Basics'
         entry do
             name 'First and remaining elements'
             notes <<-'END'
@@ -60,6 +102,14 @@ cheatsheet do
             ```clojure
             (conj [1 2] 3) ; -> [1 2 3]
             (conj '(1 2) 3) ; -> (3 1 2)
+            ```
+            END
+        end
+        entry do
+            name 'Insert multiple items'
+            notes <<-'END'
+            ```clojure
+            (into [1 2 3] [4 5 6]) ; [1 2 3 4 5 6]
             ```
             END
         end
@@ -85,19 +135,32 @@ cheatsheet do
             END
         end
         entry do
-            name 'Add a field'
+            name 'Add / modify a field'
             notes <<-'END'
             ```clojure
             (assoc x :size "small") ; {:color "blue", :flavor "lemon", :size "small"}
+            (assoc x :color "red") ; {:color "red", :flavor "lemon"}
             ```
             END
         end
         entry do
-            name 'Change a field'
+            name 'Add / modify a nested field'
             notes <<-'END'
             ```clojure
-            
+            (def x {:foo {:bar "baz"}})
+            (assoc-in x [:foo :bar] "quux") ; {:foo {:bar "quux"}}
             ```
+            END
+        end
+        entry do
+            name 'Update a field using a function'
+            notes <<-'END'
+            ```clojure
+            (def x {:count 5})
+            (update x :count #(* % 2) ; {:count 10}
+            ```
+
+            `update-in` works like `assoc-in`
             END
         end
         entry do
@@ -125,14 +188,6 @@ cheatsheet do
     category do
         id 'lein'
         entry do
-            name 'Connect to a running repl'
-            notes <<-'END'
-            ```
-            lein repl :connect 65400
-            ```
-            END
-        end
-        entry do
             name 'New project'
             notes <<-'END'
             ```
@@ -145,6 +200,22 @@ cheatsheet do
             The main file is: `myappname/src/myap_appname/core.clj`
 
             The main function is `-main`.
+            END
+        end
+        entry do
+            name 'repl'
+            notes <<-'END'
+            ```
+            lein repl
+            ```
+            END
+        end
+        entry do
+            name 'Connect to a running repl'
+            notes <<-'END'
+            ```
+            lein repl :connect 65400
+            ```
             END
         end
         entry do
@@ -165,19 +236,11 @@ cheatsheet do
             ```
             END
         end
-        entry do
-            name 'repl'
-            notes <<-'END'
-            ```
-            lein repl
-            ```
-            END
-        end
     end
     category do
         id 'namespaces'
         entry do
-            name 'Example'
+            name 'Require: create a namespace with library dependencies'
             notes <<-'END'
             ```
             (ns foo
@@ -186,6 +249,32 @@ cheatsheet do
                         [korma.db :refer [postgres defdb]]
                         [korma.core :refer [defentity select insert values]])
               (:refer-clojure))
+            ```
+            END
+        end
+        entry do
+            name 'Require: import a namespace in the REPL'
+            notes <<-'END'
+            ```clojure
+            (require 'clojure.data.json)
+            (require '[clojure.data.json :as json])
+            ```
+            END
+        end
+        entry do
+            name 'Reload namespace in the REPL'
+            notes <<-'END'
+            ```clojure
+            (use 'the.namespace :reload)
+            
+            ```
+            END
+        end
+        entry do
+            name 'Current namespace (REPL)'
+            notes <<-'END'
+            ```clojure
+            (str *ns*) ; name of ns as a string
             ```
             END
         end
@@ -423,34 +512,14 @@ cheatsheet do
     category do
         id ''
         entry do
-            name 'Loops with loop/recur'
+            name 'Loops/tail recursion with loop/recur'
             notes <<-'END'
-            ```
-            ; sum numbers from 1 to 10
-
-            (loop [x 10 running_total 0]
-                (if (= x 0)
-                    running_total
-                    (recur (- x 1) (+ running_total x))))
-            ```
-            END
-        end
-    end
-    category do
-        id 'Collections'
-        entry do
-            name 'Add one element to a collection: conj'
-            notes <<-'END'
-            ```
-            (conj coll elt)
-            ```
-            END
-        end
-        entry do
-            name 'Add many elements to a collection: into'
-            notes <<-'END'
-            ```
-            (into coll elts)
+            ```clojure
+            (defn sum [x]
+              (loop [x x acc 0]
+                  (if (= x 0)
+                    acc
+                    (recur (- x 1) (+ acc x)))))
             ```
             END
         end
