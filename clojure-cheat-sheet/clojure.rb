@@ -3,6 +3,47 @@ cheatsheet do
     docset_file_name 'clojure'
     keyword 'clojure'
     category do
+        id 'Functional'
+        entry do
+            name 'lambda'
+            notes <<-'END'
+            ```clojure
+            #(+ % 1)
+            ```
+
+            The `%` is the argument. For multi-args:
+
+            ```clojure
+            #(+ %1 %2)
+            ```
+            END
+        end
+    end
+    category do
+        id 'Data structures'
+        entry do
+            name 'Insert an item'
+            notes <<-'END'
+            ```clojure
+            (conj [1 2] 3) ; -> [1 2 3]
+            (conj '(1 2) 3) ; -> (3 1 2)
+            ```
+            END
+        end
+    end
+    category do
+        id 'Maps'
+        entry do
+            name 'Get an entry'
+            notes <<-'END'
+            ```
+            (def x {:color blue :flavor lemon})
+            ```
+            END
+        end
+        
+    end
+    category do
         id 'lein'
         entry do
             name 'Connect to a running repl'
@@ -23,18 +64,18 @@ cheatsheet do
             and put the files in there.
 
             The main file is: `myappname/src/myap_appname/core.clj`
+
+            The main function is `-main`.
             END
         end
         entry do
-            name 'Specify the entrypoint'
+            name 'Specify an alternate entrypoint'
             notes <<-'END'
             In `project.clj`, specify an entry point like this:
 
             ```
             :main myproj.core/myfunc
             ```
-
-            I think it defaults to an entrypoint named `-main`, need to check.
             END
         end
         entry do
@@ -50,57 +91,6 @@ cheatsheet do
             notes <<-'END'
             ```
             lein repl
-            ```
-            END
-        end
-    end
-    category do
-        id 'vim-fireplace'
-        entry do
-            name 'Prereq: start a repl'
-            notes <<-'END'
-            ```
-            lein repl
-            ```
-            END
-        end
-        entry do
-            name 'Evaluate at cursor'
-            notes <<-'END'
-            ```
-            cqq
-            ```
-            END
-        end
-        entry do
-            name 'Blank input'
-            notes <<-'END'
-            ```
-            cqc
-            ```
-            END
-        end
-        entry do
-            name 'Evaluate a range'
-            notes <<-'END'
-            ```
-            :Eval
-            ```
-            END
-        end
-        entry do
-            name 'Doc lookup under cursor'
-            notes <<-'END'
-            ```
-            K
-            ```
-            END
-        end
-        entry do
-            name 'Doc lookup supplying arg'
-            notes <<-'END'
-            ```
-            :Doc <arg>
             ```
             END
         end
@@ -520,6 +510,57 @@ cheatsheet do
 
             * `SPC 1` to switch buffers 
             * `q` to close help
+            END
+        end
+    end
+    category do
+        id 'vim-fireplace'
+        entry do
+            name 'Prereq: start a repl'
+            notes <<-'END'
+            ```
+            lein repl
+            ```
+            END
+        end
+        entry do
+            name 'Evaluate at cursor'
+            notes <<-'END'
+            ```
+            cqq
+            ```
+            END
+        end
+        entry do
+            name 'Blank input'
+            notes <<-'END'
+            ```
+            cqc
+            ```
+            END
+        end
+        entry do
+            name 'Evaluate a range'
+            notes <<-'END'
+            ```
+            :Eval
+            ```
+            END
+        end
+        entry do
+            name 'Doc lookup under cursor'
+            notes <<-'END'
+            ```
+            K
+            ```
+            END
+        end
+        entry do
+            name 'Doc lookup supplying arg'
+            notes <<-'END'
+            ```
+            :Doc <arg>
+            ```
             END
         end
     end
