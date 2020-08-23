@@ -3,6 +3,30 @@ cheatsheet do
     docset_file_name 'clojure'
     keyword 'clojure'
     category do
+        id 'Using libraries'
+        entry do
+            name 'Specifying and downloading jars'
+            notes <<-'END'
+            Add the dependences to project.clj, for example:
+
+            ```clojure
+            :dependencies [[org.clojure/clojure "1.10.1"]
+                           [org.clojure/data.json "1.0.0"]]                 
+
+            ```
+            From gradle style:
+
+            `org.exmaple:lib:1.2.3 -> org.example/libname "1.2.3"`
+
+            Tell lein to download dependencies:
+
+            ```
+            lein deps
+            ```
+            END
+        end
+    end
+    category do
         id 'Functional'
         entry do
             name 'lambda'
@@ -39,6 +63,14 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Size/length of a collection'
+            notes <<-'END'
+            ```
+            (count s)
+            ```
+            END
+        end
     end
     category do
         id 'Maps'
@@ -57,6 +89,14 @@ cheatsheet do
             notes <<-'END'
             ```clojure
             (assoc x :size "small") ; {:color "blue", :flavor "lemon", :size "small"}
+            ```
+            END
+        end
+        entry do
+            name 'Change a field'
+            notes <<-'END'
+            ```clojure
+            
             ```
             END
         end
@@ -130,17 +170,6 @@ cheatsheet do
             notes <<-'END'
             ```
             lein repl
-            ```
-            END
-        end
-    end
-    category do
-        id 'Basics'
-        entry do
-            name 'Size/length of a collection'
-            notes <<-'END'
-            ```
-            count
             ```
             END
         end
@@ -227,6 +256,62 @@ cheatsheet do
             (Outer$Inner.)
 
             
+            ```
+            END
+        end
+    end
+    category do
+        id 'Control flow'
+        entry do
+            name 'do'
+            notes <<-'END'
+            ```clojure
+            (do
+            (println "Hello")
+            (println ("World")))
+            ```
+            END
+        end
+        entry do
+            name 'when'
+            notes <<-'END'
+            ```clojure
+            (when (= s "foo")
+              (println "s is")
+              (println "foo!"))
+            ```
+            END
+        end
+        entry do
+            name 'cond'
+            notes <<-'END'
+            ```clojure
+            (cond
+              (= x 1) "1"
+              (= x 2) "2"
+              :else "not 1 or 2")
+            ```
+            END
+        end
+    end
+    category do
+        id 'Exceptions'
+        entry do
+            name 'try/catch'
+            notes <<-'END'
+            ```clojure
+            (try
+              (myfunc 1 2)
+              (catch ArithmeticException e (println ("arithmetic error")))
+              )catch SomeOtherException e (println("something else happened)))
+            ```
+            END
+        end
+        entry do
+            name 'Throw'
+            notes <<-'END'
+            ```
+            (throw (ex-info "Badness!" {:more-details "here"}))
             ```
             END
         end
@@ -441,34 +526,6 @@ cheatsheet do
 
             ; Check again, should be there
             (in? 3)
-            ```
-            END
-        end
-    end
-    category do
-        id 'deps'
-        entry do
-            name 'Specify deps'
-            notes <<-'END'
-            In project.cls.
-
-
-            ```
-            :dependencies [[org.clojure/clojure "1.8.0"]
-                           [org.example/libname "1.2.3"]
-
-            ```
-
-            From gradle style:
-
-            `org.exmaple:lib:1.2.3 -> org.example/libname "1.2.3"`
-            END
-        end
-        entry do
-            name 'Download deps'
-            notes <<-'END'
-            ```
-            lein deps
             ```
             END
         end
