@@ -20,7 +20,7 @@ cheatsheet do
         end
     end
     category do
-        id 'Data structures'
+        id 'Basic data structure stuff'
         entry do
             name 'Insert an item'
             notes <<-'END'
@@ -36,8 +36,32 @@ cheatsheet do
         entry do
             name 'Get an entry'
             notes <<-'END'
+            ```clojure
+            (def x {:color "blue" :flavor "lemon"})
+            (x :color) ; "blue"
+            (:color x) ; "blue" (only works for keywords, not strings as keys)
             ```
-            (def x {:color blue :flavor lemon})
+            END
+        end
+        entry do
+            name 'Add a field'
+            notes <<-'END'
+            ```clojure
+            (assoc x :size "small") ; {:color "blue", :flavor "lemon", :size "small"}
+            ```
+            END
+        end
+    end
+    category do
+        id 'Sets'
+        entry do
+            name 'Set as function'
+            notes <<-'END'
+            ```clojure
+            (#{ "a" "b" "c"} "b") ; "b"
+            (#{ "a" "b" "c"} "d") ; nil
+
+            
             ```
             END
         end
@@ -240,6 +264,26 @@ cheatsheet do
             ```
             END
         end
+    end
+    category do
+        id 'VSCode'
+        entry do
+            name 'Evaluate in Calva'
+            notes <<-'END'
+            ```
+            ⌘ ENTER 
+            ```
+            END
+        end
+        entry do
+            name 'Plugins'
+            notes <<-'END'
+            I use the Calva plugin. I also use the basic Clojure plugin.
+
+            To make Calva happy, I use the Neovim plugin instead of the Vim plugin.
+            END
+        end
+        
     end
     category do
         id 'IntelliJ'
