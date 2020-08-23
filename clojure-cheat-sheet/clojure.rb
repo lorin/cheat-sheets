@@ -267,6 +267,8 @@ cheatsheet do
             ```clojure
             (use 'the.namespace :reload)
             
+            ;; This seems to work
+            (use (symbol (str *ns*)) :reload)
             ```
             END
         end
