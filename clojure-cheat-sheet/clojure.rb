@@ -22,6 +22,15 @@ cheatsheet do
     category do
         id 'Basic data structure stuff'
         entry do
+            name 'First and remaining elements'
+            notes <<-'END'
+            ```clojure
+            (first [1 2 3]) ; 1
+            (rest [1 2 3]) ; [2 3]
+            ```
+            END
+        end
+        entry do
             name 'Insert an item'
             notes <<-'END'
             ```clojure
@@ -51,6 +60,14 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Remove a field'
+            notes <<-'END'
+            ```clojure
+            (dissoc x :color) ; {:flavor "lemon"}
+            ```
+            END
+        end
     end
     category do
         id 'Sets'
@@ -60,8 +77,6 @@ cheatsheet do
             ```clojure
             (#{ "a" "b" "c"} "b") ; "b"
             (#{ "a" "b" "c"} "d") ; nil
-
-            
             ```
             END
         end
@@ -284,25 +299,6 @@ cheatsheet do
             END
         end
         
-    end
-    category do
-        id 'IntelliJ'
-        entry do
-            name 'Plugin'
-            notes <<-'END'
-            ```
-            Preferences -> Plugins -> Browse repositories ... -> Cursive
-            ```
-            END
-        end
-        entry do
-            name 'Run a REPL'
-            notes <<-'END'
-            ```
-            (Run configurations) -> Edit configurations... -> + -> Clojure REPL -> Local
-            ```
-            END
-        end
     end
     category do
         id 'Defining things'
@@ -604,6 +600,25 @@ cheatsheet do
             notes <<-'END'
             ```
             :Doc <arg>
+            ```
+            END
+        end
+    end
+    category do
+        id 'IntelliJ'
+        entry do
+            name 'Plugin'
+            notes <<-'END'
+            ```
+            Preferences -> Plugins -> Browse repositories ... -> Cursive
+            ```
+            END
+        end
+        entry do
+            name 'Run a REPL'
+            notes <<-'END'
+            ```
+            (Run configurations) -> Edit configurations... -> + -> Clojure REPL -> Local
             ```
             END
         end

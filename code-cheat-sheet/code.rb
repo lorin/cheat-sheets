@@ -5,6 +5,10 @@ cheatsheet do
     category do
         id 'Keyboard shortcuts'
         entry do
+            name 'fold'
+            command '⌘ ⎇ ['
+        end
+        entry do
             name 'Next tab'
             command '⌘ ⎇ →'
         end
