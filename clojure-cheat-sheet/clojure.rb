@@ -29,6 +29,23 @@ cheatsheet do
     category do
         id 'I/O'
         entry do
+            name 'Read a whole file'
+            notes <<-'END'
+            ```clojure
+            (slurp "file.txt")
+            ```
+            END
+        end
+        entry do
+            name 'Write a whole file'
+            notes <<-'END'
+            ```clojure
+            (spit "file.txt" "contents of file")
+            
+            ```
+            END
+        end
+        entry do
             name 'Example'
             notes <<-'END'
             ```clojure
@@ -80,7 +97,16 @@ cheatsheet do
             name 'Filter out nils'
             notes <<-'END'
             ```clojure
-            (filter some? colls)
+            (filter some? coll)
+            ```
+            END
+        end
+        entry do
+            name 'Filter non-empty collections'
+            notes <<-'END'
+            ```clojure
+            (filter seq coll-of-colls)
+            
             ```
             END
         end
@@ -233,6 +259,17 @@ cheatsheet do
             notes <<-'END'
             ```
             lein run
+            ```
+            END
+        end
+    end
+    category do
+        id 'Strings'
+        entry do
+            name 'Join a collection of strings'
+            notes <<-'END'
+            ```clojure
+            (clojure.string/join coll)
             ```
             END
         end
