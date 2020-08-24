@@ -106,7 +106,6 @@ cheatsheet do
             notes <<-'END'
             ```clojure
             (filter seq coll-of-colls)
-            
             ```
             END
         end
@@ -270,6 +269,14 @@ cheatsheet do
             notes <<-'END'
             ```clojure
             (clojure.string/join coll)
+            ```
+            END
+        end
+        entry do
+            name 'Check for substring'
+            notes <<-'END'
+            ```clojure
+            (clojure.string/includes? s "us-east-1")
             ```
             END
         end
