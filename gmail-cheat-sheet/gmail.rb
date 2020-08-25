@@ -14,6 +14,12 @@ cheatsheet do
             Above will match emails on Nov. 12, 2018.
             END
         end
+        entry do
+            name 'Turn off search highlight'
+            notes <<-'END'
+            More → Turn off highlighting
+            END
+        end
     end
     category do
         id 'Keyboard shortcuts'
