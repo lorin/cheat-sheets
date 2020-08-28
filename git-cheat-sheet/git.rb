@@ -3,6 +3,33 @@ cheatsheet do
     docset_file_name 'git'
     keyword 'git'
     category do
+        id 'diff'
+        entry do
+            name 'List changed files'
+            notes <<-'END'
+            ```
+            git diff --name-only master
+            ```
+            END
+        end
+        entry do
+            name 'Word-level diffs'
+            notes <<-'END'
+            ```
+            git diff --word-diff
+            ```
+            END
+        end
+        entry do
+            name 'Histogram'
+            notes <<-'END'
+            ```
+            git diff <branch> | diffstat
+            ```
+            END
+        end
+    end
+    category do
         id ''
         entry do
             name 'Set upstream for current branch'
@@ -98,42 +125,12 @@ cheatsheet do
         end
     end
     category do
-        id 'diff'
-        entry do
-            name 'Histogram'
-            notes <<-'END'
-            ```
-            git diff <branch> | diffstat
-            ```
-            END
-        end
-    end
-    category do
         id 'stash'
         entry do
             name 'Stash untracked files'
             notes <<-'END'
             ```
             git stash save -u
-            ```
-            END
-        end
-    end
-    category do
-        id 'diffs'
-        entry do
-            name 'Word-level diffs'
-            notes <<-'END'
-            ```
-            git diff --word-diff
-            ```
-            END
-        end
-        entry do
-            name 'List changed files'
-            notes <<-'END'
-            ```
-            git diff --name-only master
             ```
             END
         end
