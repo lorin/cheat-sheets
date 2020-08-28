@@ -187,6 +187,14 @@ cheatsheet do
             name 'push tag'
             command 'git push origin tagname'
         end
+        entry do
+            name 'List tags in sorted order'
+            notes <<-'END'
+            ```
+            git tag --sort=-v:refname
+            ```
+            END
+        end
     end
     category do
         id 'merge'
