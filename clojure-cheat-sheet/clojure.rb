@@ -275,6 +275,16 @@ cheatsheet do
             END
         end
         entry do
+            name 'Last three values'
+            notes <<-'END'
+            ```clojure
+            *1
+            *2
+            *3
+            ```
+            END
+        end
+        entry do
             name 'Connect to a running repl'
             notes <<-'END'
             ```
