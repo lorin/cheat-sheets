@@ -514,7 +514,7 @@ cheatsheet do
               )
               (:refer-clojure))
 
-            ; query and converrt keys to keywrods
+            ; query and converrt keys to keywords
             (-> "http://www.example.com" client/get :body (json/read-str :key-fn keyword))
             ```
             END
