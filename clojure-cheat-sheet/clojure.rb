@@ -16,7 +16,7 @@ cheatsheet do
             ```
             From gradle style:
 
-            `org.exmaple:lib:1.2.3 -> org.example/libname "1.2.3"`
+            `org.example:lib:1.2.3 -> org.example/libname "1.2.3"`
 
             Tell lein to download dependencies:
 
@@ -228,6 +228,22 @@ cheatsheet do
             END
         end
         entry do
+            name 'Download dependencies'
+            notes <<-'END'
+            ```
+            lein deps
+            ```
+            END
+        end
+        entry do
+            name 'Run'
+            notes <<-'END'
+            ```
+            lein run
+            ```
+            END
+        end
+        entry do
             name 'repl'
             notes <<-'END'
             ```
@@ -250,14 +266,6 @@ cheatsheet do
 
             ```
             :main myproj.core/myfunc
-            ```
-            END
-        end
-        entry do
-            name 'Run'
-            notes <<-'END'
-            ```
-            lein run
             ```
             END
         end
