@@ -102,6 +102,15 @@ cheatsheet do
             END
         end
         entry do
+            name 'Invert a predicate'
+            notes <<-'END'
+            ```clojure
+            (complement pred?)
+            
+            ```
+            END
+        end
+        entry do
             name 'Filter non-empty collections'
             notes <<-'END'
             ```clojure
