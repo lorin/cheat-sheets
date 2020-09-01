@@ -452,6 +452,19 @@ cheatsheet do
         end
     end
     category do
+        id 'JSON parsing'
+        entry do
+            name 'Dependency'
+            notes <<-'END'
+            ```clojure
+            :dependencies [[org.clojure/clojure "1.10.1"]
+                           [org.clojure/data.json "1.0.0"]]
+            ```
+            END
+        end
+        
+    end
+    category do
         id 'HTTP client'
         entry do
             name 'Docs'
@@ -460,13 +473,23 @@ cheatsheet do
             END
         end
         entry do
+            name 'lein dependencies'
+            notes <<-'END'
+            ```
+            :dependencies [[org.clojure/clojure "1.10.1"]
+                           [org.clojure/data.json "1.0.0"]
+                           [clj-http "3.10.1"]]
+            ```
+            END
+        end
+        entry do
             name 'build.gradle'
             notes <<-'END'
             ```
             dependencies {
               compile 'org.clojure:clojure:1.8.0'
-              compile 'org.clojure:data.json:0.2.3'
-              compile "clj-http:clj-http:3.7.0"
+              compile 'org.clojure:data.json:1.0.0'
+              compile "clj-http:clj-http:3.10.1"
             }
             ```
 
