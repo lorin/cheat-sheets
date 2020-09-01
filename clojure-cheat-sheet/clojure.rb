@@ -25,6 +25,20 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'refer example with pretty-print (pprint)'
+            notes <<-'END'
+            ```clojure
+            (ns parse-csv.core
+            (:require [clojure.data.csv :as csv]
+                      [clojure.java.io :as io]
+                      [clojure.pprint :refer [pprint]])
+              (:gen-class))
+
+            (pprint ...)
+            ```
+            END
+        end
     end
     category do
         id 'I/O'
