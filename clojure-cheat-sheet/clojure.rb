@@ -41,6 +41,35 @@ cheatsheet do
         end
     end
     category do
+        id 'Functions'
+        entry do
+            name 'Multiple arity'
+            notes <<-'END'
+            ```clojure
+            (defn myfunc
+            ([x]
+              (println "You called myfunc with one arg"))
+            ([x y]
+              (println "You called myfunc with two args")))
+            ```
+            END
+        end
+        entry do
+            name 'Named parameters'
+            notes <<-'END'
+            ```clojure
+            (defn job-info
+              [& {:keys [name job income] :or {job "unemployed" income "$0.00"}}]
+              (if name
+                [name job income]
+                (println "No name specified")))
+            ```
+            Example from <http://clojure-doc.org/articles/language/functions.html>
+            END
+        end
+        
+    end
+    category do
         id 'I/O'
         entry do
             name 'Read a whole file'
