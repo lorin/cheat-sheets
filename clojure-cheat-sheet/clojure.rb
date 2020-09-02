@@ -516,7 +516,7 @@ cheatsheet do
             (try
               (myfunc 1 2)
               (catch ArithmeticException e (println ("arithmetic error")))
-              )catch SomeOtherException e (println("something else happened)))
+              (catch SomeOtherException e (println("something else happened)))
             ```
             END
         end
