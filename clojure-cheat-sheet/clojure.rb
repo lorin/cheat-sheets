@@ -221,6 +221,14 @@ cheatsheet do
             END
         end
         entry do
+            name 'Create a map from two lists of equal size'
+            notes <<-'END'
+            ```clojure
+            (zipmap [:a, :b, :c] [1, 2, 3]) ; {:a 1, :b 2, :c 3}
+            ```
+            END
+        end
+        entry do
             name 'Add / modify a nested field'
             notes <<-'END'
             ```clojure
