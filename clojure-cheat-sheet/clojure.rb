@@ -63,8 +63,24 @@ cheatsheet do
               (if name
                 [name job income]
                 (println "No name specified")))
+
+            ; invoking
+            (job-info :name "me" :job "coder" :income "$1")
             ```
             Example from <http://clojure-doc.org/articles/language/functions.html>
+            END
+        end
+        entry do
+            name 'Single map as argument'
+            notes <<-'END'
+            ```clojure
+            (defn myfunc
+            [{:keys [foo bar baz]}] ... )
+
+            ; invoking
+            (myfunc {:foo 1 :bar 2 :baz 3})
+            
+            ```
             END
         end
         
@@ -531,6 +547,27 @@ cheatsheet do
     end
     category do
         id 'JSON parsing'
+        entry do
+            name 'Read JSON from a file'
+            notes <<-'END'
+            ```clojure
+            (ns ... (:require [clojure.data.json :as json]))
+
+            (-> "file.json" slurp (json/read-str :key-fn keyword)))
+            ```
+            END
+        end
+        entry do
+            name 'Dump json to stdout'
+            notes <<-'END'
+            ```clojure
+            (ns myns.core
+                (:require [clojure.data.json :as json])
+
+            (json/pprint obj)
+            ```
+            END
+        end
         entry do
             name 'Dependency'
             notes <<-'END'
