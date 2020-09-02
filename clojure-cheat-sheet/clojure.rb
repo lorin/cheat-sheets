@@ -55,7 +55,7 @@ cheatsheet do
             END
         end
         entry do
-            name 'Named parameters'
+            name 'Named parameters (keyword args)'
             notes <<-'END'
             ```clojure
             (defn job-info
