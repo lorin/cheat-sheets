@@ -80,7 +80,7 @@ cheatsheet do
             END
         end
         entry do
-            name 'Length of an array'
+            name 'Count / size / length of an array'
             notes <<-'END'
             ```
             jq '.values | length'
