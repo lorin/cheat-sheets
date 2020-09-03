@@ -3,6 +3,21 @@ cheatsheet do
     docset_file_name 'zsh'
     keyword 'zsh'
     category do
+        id 'Control constructs'
+        entry do
+            name 'for loop'
+            notes <<-'END'
+            ```zsh
+            for region in us-east-1 eu-west-1 us-west-1 us-west-2
+            do
+            echo $region
+            done
+            ```
+            END
+        end
+        
+    end
+    category do
         id 'General'
         entry do
             name 'Run zsh without loading anything'
