@@ -5,7 +5,15 @@ cheatsheet do
     category do
         id 'Code generation'
         entry do
-            name 'gradle task'
+            name 'gradle task (nu.studer.jooq plugin)'
+            notes <<-'END'
+            ```
+            gq jooqGenerate
+            ```
+            END
+        end
+        entry do
+            name 'gradle task (ch.ayedo.jooqmodelator plugin)'
             notes <<-'END'
             ```
             gw generateJooqMetamodel
