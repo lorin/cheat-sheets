@@ -8,11 +8,12 @@ cheatsheet do
             name 'for loop'
             notes <<-'END'
             ```zsh
-            for region in us-east-1 eu-west-1 us-west-1 us-west-2
-            do
+            for region in us-east-1 eu-west-1 us-west-1 us-west-2; do
             echo $region
             done
             ```
+
+            You can also remove the semicolon and put the do on the next line.
             END
         end
         
