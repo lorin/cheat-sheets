@@ -6,6 +6,15 @@ cheatsheet do
     category do
       id 'Navigation'
       entry do
+          name 'Next/prev tab'
+          notes <<-'END'
+          ```
+          CMD Shift ]
+          CMD Shift [
+          ```
+          END
+      end
+      entry do
         name 'Next highlighted error'
         notes <<-'END'
         I have it mapped like this:
@@ -59,7 +68,7 @@ cheatsheet do
             Preferences... -> Editor -> General
             ```
 
-            Under "Other": Strip trailing spaces on Save"
+            Under "Other": Strip trailing spaces on Save
             END
         end
         entry do
