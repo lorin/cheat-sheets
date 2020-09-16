@@ -3,6 +3,23 @@ cheatsheet do
     docset_file_name 'clojure'
     keyword 'clojure'
     category do
+        id 'Scripting with planck'
+        entry do
+            name 'shebang and slurp'
+            notes <<-'END'
+            ```
+            #!/usr/local/bin/planck
+
+            (require '[planck.core :refer [slurp]])
+            
+            (def data
+                (slurp "myfile.txt"))
+            ```
+            END
+        end
+        
+    end
+    category do
         id 'Using libraries'
         entry do
             name 'Specifying and downloading jars'
