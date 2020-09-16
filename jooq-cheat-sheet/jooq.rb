@@ -8,7 +8,7 @@ cheatsheet do
             name 'gradle task (nu.studer.jooq plugin)'
             notes <<-'END'
             ```
-            gq jooqGenerate
+            gw jooqGenerate
             ```
             END
         end
