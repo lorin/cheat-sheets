@@ -27,9 +27,11 @@ cheatsheet do
             name 'if statement'
             notes <<-'END'
             ```
-            if [[ conditional here ]]
+            if [[ test condition here ]]
             then
              echo "conditional was true"
+            else
+             echo "conditional was false"
             fi
             ```
             END
