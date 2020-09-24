@@ -26,7 +26,7 @@ cheatsheet do
         entry do
             name 'if statement'
             notes <<-'END'
-            ```
+            ```zsh
             if [[ test condition here ]]
             then
              echo "conditional was true"
@@ -34,6 +34,8 @@ cheatsheet do
              echo "conditional was false"
             fi
             ```
+
+            Note: if you want to just use the return value of a program,
             END
         end
     end
