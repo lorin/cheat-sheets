@@ -14,10 +14,10 @@ cheatsheet do
             done
             ```
 
-            You can also do:
+            You can also save a line with a semicolon:
 
             ```zsh
-            for x in $(ls); do
+            for f in $(ls); do
                 ...
             done
             ```
@@ -34,8 +34,6 @@ cheatsheet do
              echo "conditional was false"
             fi
             ```
-
-            Note: if you want to just use the return value of a program,
             END
         end
     end
