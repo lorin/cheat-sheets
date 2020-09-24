@@ -8,15 +8,32 @@ cheatsheet do
             name 'for loop'
             notes <<-'END'
             ```zsh
-            for region in us-east-1 eu-west-1 us-west-1 us-west-2; do
-            echo $region
+            for region in us-east-1 eu-west-1 us-west-1 us-west-2
+            do
+                echo $region
             done
             ```
 
-            You can also remove the semicolon and put the do on the next line.
+            You can also do:
+
+            ```zsh
+            for x in $(ls); do
+                ...
+            done
+            ```
             END
         end
-        
+        entry do
+            name 'if statement'
+            notes <<-'END'
+            ```
+            if [[ conditional here ]]
+            then
+             echo "conditional was true"
+            fi
+            ```
+            END
+        end
     end
     category do
         id 'General'
