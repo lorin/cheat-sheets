@@ -181,11 +181,11 @@ cheatsheet do
         id 'tags'
         entry do
             name 'add a tag'
-            command 'git tag -a tagname'
+            command 'git tag -a v1.0.0'
         end
         entry do
             name 'push tag'
-            command 'git push origin tagname'
+            command 'git push origin v1.0.0'
         end
         entry do
             name 'List tags in sorted order'
