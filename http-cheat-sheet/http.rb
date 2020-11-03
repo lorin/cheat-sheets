@@ -3,6 +3,18 @@ cheatsheet do
     docset_file_name 'http'
     keyword 'http'
     category do
+        id 'Headers'
+        entry do
+            name 'Accept yaml'
+            notes <<-'END'
+            ```
+            Accept: application/x-yaml
+            ```
+            END
+        end
+        
+    end
+    category do
         id 'httpie'
         entry do
             name 'Docs'
