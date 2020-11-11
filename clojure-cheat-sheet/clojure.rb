@@ -144,6 +144,24 @@ cheatsheet do
         
     end
     category do
+        id 'docs'
+        entry do
+            name 'Doc in repl'
+            notes <<-'END'
+            The `doc` function doesn't get loaded by default into the calva REPL.
+
+            Command palette:  Require REPL utilities, like (doc) etecetera, into current namespace
+
+            Or, manually:
+
+            ```clojure
+            (use 'clojure.repl)
+            ```
+            END
+        end
+        
+    end
+    category do
         id 'Functional'
         entry do
             name 'lambda'
