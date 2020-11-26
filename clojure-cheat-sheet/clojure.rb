@@ -3,59 +3,132 @@ cheatsheet do
     docset_file_name 'clojure'
     keyword 'clojure'
     category do
-        id 'Scripting with planck'
+        id 'Basic examples'
         entry do
-            name 'shebang and slurp'
+            name 'Example'
+            notes <<-'END'
+            ```clojure
+            (ns foo
+              (:require [clj-http.client :as client]
+                        [clojure.data.json :as json]
+                        [korma.db :refer [postgres defdb]]
+                        [korma.core :refer [defentity select insert values]])
+              (:refer-clojure :exclude [get]))
+
+            (import 'java.awt.Toolkit)
+            (import 'java.awt.datatransfer.DataFlavor)
+            
+            ```
+            END
+        end
+    end
+    category do
+        id 'repl'
+        entry do
+            name 'Bring in a namespace'
+            notes <<-'END'
+            ```clojure
+
+            ; Simplest way, like import *
+            (use 'clojure.java.io)
+
+            (require 'clojure.data.json)
+            (require '[clojure.data.json :as json])
+            ```
+            END
+        end
+        entry do
+            name 'Reload namespace in the REPL'
+            notes <<-'END'
+            ```clojure
+            (use 'the.namespace :reload)
+            
+            ;; This seems to work
+            (use (symbol (str *ns*)) :reload)
+            ```
+            END
+        end
+        entry do
+            name 'Current namespace (REPL)'
+            notes <<-'END'
+            ```clojure
+            (str *ns*) ; name of ns as a string
+            ```
+            END
+        end
+        entry do
+            name 'Last three values'
+            notes <<-'END'
+            ```clojure
+            *1
+            *2
+            *3
+            ```
+            END
+        end
+        entry do
+            name 'Doc in repl'
+            notes <<-'END'
+            The `doc` function does not get loaded by default into the calva REPL.
+
+            Command palette:  Require REPL utilities, like (doc) etecetera, into current namespace
+
+            Or, manually:
+
+            ```clojure
+            (use 'clojure.repl)
+            ```
+            END
+        end
+        entry do
+            name 'Launch a repl'
             notes <<-'END'
             ```
-            #!/usr/local/bin/planck
+            lein repl
+            ```
+            END
+        end
+        entry do
+            name 'Connect to a running repl'
+            notes <<-'END'
+            ```
+            lein repl :connect 65400
+            ```
+            END
+        end
+    end
+    category do
+        id 'Java interop'
+        entry do
+            name 'Import'
+            notes <<-'END'
+            ```clojure
+            ; a single class
+            (import 'java.class.goes.here)
 
-            (require '[planck.core :refer [slurp]])
-            
-            (def data
-                (slurp "myfile.txt"))
+            ; multiple classes from the sample namespace
+            (import '(package.name Class1 Class2))
+            ```
+            END
+        end
+        entry do
+            name 'Call regular method'
+            notes <<-'END'
+            ```clojure
+            (.method obj arg1 )
+            ```
+            END
+        end
+        entry do
+            name 'Call static method'
+            notes <<-'END'
+            ```clojure
+            (import 'java.awt.Toolkit)
+            (. Toolkit getDefaultToolkit) 
             ```
             END
         end
         
-    end
-    category do
-        id 'Using libraries'
-        entry do
-            name 'Specifying and downloading jars'
-            notes <<-'END'
-            Add the dependences to project.clj, for example:
-
-            ```clojure
-            :dependencies [[org.clojure/clojure "1.10.1"]
-                           [org.clojure/data.json "1.0.0"]]                 
-
-            ```
-            From gradle style:
-
-            `org.example:lib:1.2.3 -> org.example/libname "1.2.3"`
-
-            Tell lein to download dependencies:
-
-            ```
-            lein deps
-            ```
-            END
-        end
-        entry do
-            name 'refer example with pretty-print (pprint)'
-            notes <<-'END'
-            ```clojure
-            (ns parse-csv.core
-            (:require [clojure.data.csv :as csv]
-                      [clojure.java.io :as io]
-                      [clojure.pprint :refer [pprint]])
-              (:gen-class))
-
-            (pprint ...)
-            ```
-            END
-        end
     end
     category do
         id 'Functions'
@@ -144,24 +217,6 @@ cheatsheet do
         
     end
     category do
-        id 'docs'
-        entry do
-            name 'Doc in repl'
-            notes <<-'END'
-            The `doc` function doesn't get loaded by default into the calva REPL.
-
-            Command palette:  Require REPL utilities, like (doc) etecetera, into current namespace
-
-            Or, manually:
-
-            ```clojure
-            (use 'clojure.repl)
-            ```
-            END
-        end
-        
-    end
-    category do
         id 'Functional'
         entry do
             name 'lambda'
@@ -214,7 +269,7 @@ cheatsheet do
         end
     end
     category do
-        id 'Basics'
+        id 'Collections'
         entry do
             name 'First and remaining elements'
             notes <<-'END'
@@ -351,32 +406,6 @@ cheatsheet do
             notes <<-'END'
             ```
             lein run
-            ```
-            END
-        end
-        entry do
-            name 'repl'
-            notes <<-'END'
-            ```
-            lein repl
-            ```
-            END
-        end
-        entry do
-            name 'Last three values'
-            notes <<-'END'
-            ```clojure
-            *1
-            *2
-            *3
-            ```
-            END
-        end
-        entry do
-            name 'Connect to a running repl'
-            notes <<-'END'
-            ```
-            lein repl :connect 65400
             ```
             END
         end
@@ -975,6 +1004,61 @@ cheatsheet do
             notes <<-'END'
             ```
             (Run configurations) -> Edit configurations... -> + -> Clojure REPL -> Local
+            ```
+            END
+        end
+    end
+    category do
+        id 'Scripting with planck'
+        entry do
+            name 'shebang and slurp'
+            notes <<-'END'
+            ```
+            #!/usr/local/bin/planck
+
+            (require '[planck.core :refer [slurp]])
+            
+            (def data
+                (slurp "myfile.txt"))
+            ```
+            END
+        end
+        
+    end
+    category do
+        id 'Using libraries'
+        entry do
+            name 'Specifying and downloading jars'
+            notes <<-'END'
+            Add the dependences to project.clj, for example:
+
+            ```clojure
+            :dependencies [[org.clojure/clojure "1.10.1"]
+                           [org.clojure/data.json "1.0.0"]]                 
+
+            ```
+            From gradle style:
+
+            `org.example:lib:1.2.3 -> org.example/libname "1.2.3"`
+
+            Tell lein to download dependencies:
+
+            ```
+            lein deps
+            ```
+            END
+        end
+        entry do
+            name 'refer example with pretty-print (pprint)'
+            notes <<-'END'
+            ```clojure
+            (ns parse-csv.core
+            (:require [clojure.data.csv :as csv]
+                      [clojure.java.io :as io]
+                      [clojure.pprint :refer [pprint]])
+              (:gen-class))
+
+            (pprint ...)
             ```
             END
         end
