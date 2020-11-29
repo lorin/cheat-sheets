@@ -23,7 +23,7 @@ cheatsheet do
         end
     end
     category do
-        id 'repl'
+        id 'REPL'
         entry do
             name 'Bring in a namespace'
             notes <<-'END'
@@ -38,7 +38,7 @@ cheatsheet do
             END
         end
         entry do
-            name 'Reload namespace in the REPL'
+            name 'Reload namespace'
             notes <<-'END'
             ```clojure
             (use 'the.namespace :reload)
@@ -49,7 +49,7 @@ cheatsheet do
             END
         end
         entry do
-            name 'Current namespace (REPL)'
+            name 'Current namespace'
             notes <<-'END'
             ```clojure
             (str *ns*) ; name of ns as a string
@@ -67,7 +67,7 @@ cheatsheet do
             END
         end
         entry do
-            name 'Doc in repl'
+            name 'Help info (doc)'
             notes <<-'END'
             The `doc` function does not get loaded by default into the calva REPL.
 
@@ -218,6 +218,26 @@ cheatsheet do
     end
     category do
         id 'Functional'
+        entry do
+            name 'zip'
+            notes <<-'END'
+            Call `map` using a function that takes multiple args,
+            and then pass each seq as a separate arg.
+
+            ```
+            > (map vector '(1 2 3) '("a" "b" "c"))
+            ([1 "a"] [2 "b"] [3 "c"])
+            ```
+
+            If you have a collection of collections, use apply
+
+            ```
+            > (apply map vector [[1 2 3] 
+                                 [4 5 6]])
+            ([1 4] [2 5] [3 6])
+            ```
+            END
+        end
         entry do
             name 'lambda'
             notes <<-'END'
@@ -499,21 +519,6 @@ cheatsheet do
         end
     end
     category do
-        id 'Basic stuff'
-        entry do
-            name 'zip'
-            notes <<-'END'
-            Call `map` using a function that takes multiple args,
-            and then pass each seq as a separate arg:
-
-            ```
-            > (map vector '(1 2 3) '("a" "b" "c"))
-            ([1 "a"] [2 "b"] [3 "c"])
-            ```
-            END
-        end
-    end
-    category do
         id 'Java interop'
         entry do
             name 'Method call'
@@ -718,6 +723,7 @@ cheatsheet do
             notes <<-'END'
             ```
             ^ → - move the close paren to the right
+            ^ ALT S - delete paren
             ```
 
             See <https://calva.io/paredit/>
