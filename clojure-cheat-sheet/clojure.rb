@@ -124,6 +124,9 @@ cheatsheet do
             notes <<-'END'
             ```clojure
             (import 'java.awt.Toolkit)
+
+            ;; Either of these works:
+            (Toolkit/getDefaultToolkit) 
             (. Toolkit getDefaultToolkit) 
             ```
             END
