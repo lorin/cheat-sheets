@@ -1035,6 +1035,32 @@ cheatsheet do
         
     end
     category do
+        id 'Time'
+        entry do
+            name 'Convert an ISO8601 timestamp to a different string'
+            notes <<-'END'
+            ```clojure
+            (ns myns.foo
+            (:import (java.time Instant ZoneId)
+                    (java.time.format DateTimeFormatter))
+            )
+
+            (defn human-readable-time
+            "Convert a time string from: 2020-12-05T01:22:38.107432Z 
+            to: 12/04 05:22PM"
+            [timestamp]
+            (let [pattern "MM/dd hh:mma"
+                  formatter (DateTimeFormatter/ofPattern pattern)
+                  instant (Instant/parse timestamp)
+                  zone (ZoneId/systemDefault)
+                  local-time (.atZone instant zone)]
+                (.format local-time formatter)))
+            ```
+            END
+        end
+        
+    end
+    category do
         id 'Using libraries'
         entry do
             name 'Specifying and downloading jars'
