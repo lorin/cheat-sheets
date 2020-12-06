@@ -1041,19 +1041,31 @@ cheatsheet do
             notes <<-'END'
             ```clojure
             (ns myns.foo
-            (:import (java.time Instant ZoneId)
-                    (java.time.format DateTimeFormatter))
-            )
+             (:import (java.time Instant ZoneId)
+                      (java.time.format DateTimeFormatter)))
+
+            (defn iso8601->local
+            "Convert in iso8601 string to local date time
+
+            > (iso8601-local \"2020-12-05T01:22:38.107432Z\")
+            #object[java.time.ZonedDateTime 0x3e251c97 \"2020-12-04T17:22:38.107432-08:00[America/Los_Angeles]\"]
+            "
+            [timestamp]
+            (let [instant (Instant/parse timestamp)
+                  zone (ZoneId/systemDefault)]
+                (.atZone instant zone)))
+
 
             (defn human-readable-time
-            "Convert a time string from: 2020-12-05T01:22:38.107432Z 
-            to: 12/04 05:22PM"
+            "Convert a time string from ISO-8601 to a specific human-readable format
+            
+            > (human-readable-time \"2020-12-05T01:22:38.107432Z\"))
+            \"12/04 05:22PM\"
+            "
             [timestamp]
             (let [pattern "MM/dd hh:mma"
                   formatter (DateTimeFormatter/ofPattern pattern)
-                  instant (Instant/parse timestamp)
-                  zone (ZoneId/systemDefault)
-                  local-time (.atZone instant zone)]
+                  local-time (iso8601->local timestamp)]
                 (.format local-time formatter)))
             ```
             END
