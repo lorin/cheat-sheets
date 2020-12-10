@@ -13,6 +13,14 @@ cheatsheet do
             END
         end
         entry do
+            name 'Stop after one test'
+            notes <<-'END'
+            ```
+            ./gradlew test --fail-fast
+            ```
+            END
+        end
+        entry do
             name 'Enable test coverage (jacoco)'
             notes <<-'END'
             ```
