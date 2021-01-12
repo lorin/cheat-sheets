@@ -13,7 +13,7 @@ cheatsheet do
             END
         end
         entry do
-            name 'Stop after one test'
+            name 'Stop / fail after one test'
             notes <<-'END'
             ```
             ./gradlew test --fail-fast
