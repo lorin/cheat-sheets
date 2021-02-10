@@ -19,6 +19,22 @@ cheatsheet do
             * PDT: -7
             END
         end
+        entry do
+            name "Today's date"
+            notes <<-'END'
+            ```
+            date -u "+%F"
+            ```
+            END
+        end
+        entry do
+            name '60 days from today'
+            notes <<-'END'
+            ```
+            dateadd $(date -u "+%F") +60d
+            ```
+            END
+        end
     end
     category do
         id 'RFC3339'
