@@ -164,6 +164,21 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Return an error'
+            notes <<-'END'
+            Throw an exception object, Kotlin example 
+
+            ```kotlin
+            import org.springframework.http.HttpStatus.NOT_FOUND
+            import org.springframework.web.bind.annotation.ResponseStatus
+
+            @ResponseStatus(NOT_FOUND)
+            private class InvalidVerificationId(id: String, context: VerificationContext) :
+                IllegalStateException("Unknown verification id: $id. Expecting one of: ${context.verifications.map { it.id }}")
+            ```
+            END
+        end
     end
     category do
         id 'Rest clients'

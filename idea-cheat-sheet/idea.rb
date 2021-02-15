@@ -39,6 +39,14 @@ cheatsheet do
     category do
         id ''
         entry do
+            name 'Show type of expression'
+            notes <<-'END'
+            ```
+            Ctrl Shift P
+            ```
+            END
+        end
+        entry do
             name 'IDEA project files'
             notes <<-'END'
             They end in .ipr
