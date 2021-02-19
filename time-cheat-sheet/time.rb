@@ -28,10 +28,20 @@ cheatsheet do
             END
         end
         entry do
+            name 'Convert to local time zone'
+            notes <<-'END'
+            ```
+            $ dateconv --zone "America/Los_Angeles" -f "%I:%M:%S %p" "2021-02-19T22:02:34.126Z"
+            02:02:34 PM
+            ```
+            END
+        end
+        entry do
             name '60 days from today'
             notes <<-'END'
             ```
-            dateadd $(date -u "+%F") +60d
+            dateadd $(date -u "+%F") +60
+            d
             ```
             END
         end
