@@ -125,6 +125,28 @@ cheatsheet do
         end
     end
     category do
+        id 'commit'
+        entry do
+            name "Don't ignore hash marks"
+            notes <<-'END'
+            Use cleanup of scissors or whitespace:
+
+            ```
+            git commit --cleanup=scissors
+            git commit --cleanup=whitespace
+            ```
+
+            configure in .gitconfig by doing:
+
+            ```
+            [commit]
+                cleanup = scissors
+            ```
+            END
+        end
+        
+    end
+    category do
         id 'stash'
         entry do
             name 'Stash untracked files'
