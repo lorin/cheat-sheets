@@ -127,6 +127,14 @@ cheatsheet do
     category do
         id 'commit'
         entry do
+            name 'amend without changing message'
+            notes <<-'END'
+            ```
+            git commit --amend --no-edit
+            ```
+            END
+        end
+        entry do
             name "Don't ignore hash marks"
             notes <<-'END'
             Use cleanup of scissors or whitespace:
