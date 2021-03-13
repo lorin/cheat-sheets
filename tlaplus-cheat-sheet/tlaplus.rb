@@ -707,9 +707,10 @@ cheatsheet do
             (This puts you in the osgi> console)
 
             ss p2.console
-            start <id> (where id is the numerical id shown from previous, e.g. 151)
+            start <id> (where id is the numerical id shown from previous, e.g. 152)
             provaddrepo http://vrapper.sourceforge.net/update-site/stable
             provlg http://vrapper.sourceforge.net/update-site/stable
+            provinstall net.sourceforge.vrapper.feature.group 0.74.0 DefaultProfile
 
             ```
 
