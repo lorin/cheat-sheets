@@ -40,7 +40,7 @@ cheatsheet do
             name 'Basic update'
             notes <<-'END'
             ```sql
-            update tags_tickets set tag_id=15 where tag_id=35;
+            update tags_tickets set tag_id=15, ended_at=now() where tag_id=35;
             ```
             END
         end
