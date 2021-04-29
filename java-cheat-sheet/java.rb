@@ -5,13 +5,19 @@ cheatsheet do
     category do
         id 'Operations'
         entry do
-            name 'Thread dump'
+            name 'Thread dump / stack trace analysis'
             notes <<-'END'
             ```
             jstack -l PID
             ```
 
             Use `jps` to get the process id
+            END
+        end
+        entry do
+            name 'Spotify thread dump summary'
+            notes <<-'END'
+            <https://spotify.github.io/threaddump-analyzer/>
             END
         end
         entry do
