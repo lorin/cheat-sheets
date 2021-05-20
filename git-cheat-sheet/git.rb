@@ -3,12 +3,42 @@ cheatsheet do
     docset_file_name 'git'
     keyword 'git'
     category do
+        id 'subtree'
+        entry do
+            name 'Diff subtree'
+            notes <<-'END'
+            ```
+            git diff oss-upstream/master master:oss/
+            ```
+            END
+        end
+        entry do
+            name 'Cherry-pick'
+            notes <<-'END'
+            ```
+            git cherry-pick -x --strategy=subtree -Xsubtree=oss/ <gitHash>
+            ```
+            END
+        end
+    end
+    category do
         id 'diff'
         entry do
             name 'List changed files'
             notes <<-'END'
             ```
             git diff --name-only master
+            ```
+            END
+        end
+        entry do
+            name 'diff and patch'
+            notes <<-'END'
+            ```
+            git diff oss-upstream/master master:oss/ --binary > ~/Desktop/patch.diff
+            git checkout -b <name of branch> oss-upstream/master
+
+            git apply --index  ~/Desktop/patch.diff 
             ```
             END
         end
