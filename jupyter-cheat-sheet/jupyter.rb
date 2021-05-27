@@ -3,6 +3,20 @@ cheatsheet do
     docset_file_name 'jupyter'
     keyword 'jupyter'
     category do
+        id 'bash'
+        entry do
+            name 'Display an image'
+            notes <<-'END'
+            Use the `display` bash command.
+
+            ```
+            curl -s http://www.example.com/image.png | display
+            ```
+            END
+        end
+        
+    end
+    category do
         id 'Keyboard shortcuts'
         entry do
             name 'Docs'
