@@ -3,6 +3,26 @@ cheatsheet do
     docset_file_name 'jupyter'
     keyword 'jupyter'
     category do
+        id 'Embedding stuff'
+        entry do
+            name 'Display an image from a url'
+            notes <<-'END'
+            ```python
+            from IPython.display import Image
+
+            def show(url):
+                display(Image(url=url))
+
+            ...
+
+            show("http://www.example.com/image.png")
+            
+            ```
+            END
+        end
+        
+    end
+    category do
         id 'bash'
         entry do
             name 'Display an image'
