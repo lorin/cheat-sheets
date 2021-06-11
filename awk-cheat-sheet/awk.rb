@@ -5,9 +5,9 @@ cheatsheet do
     category do
         id 'Fields'
         entry do
-            name 'Print first field of first line'
+            name 'Print first field of second line'
             notes <<-'END'
-            ```
+            ```bash
             awk 'NR==2 {print $1}'
             ```
             END
