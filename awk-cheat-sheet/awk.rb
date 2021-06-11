@@ -5,6 +5,14 @@ cheatsheet do
     category do
         id 'Fields'
         entry do
+            name 'Print first field of first line'
+            notes <<-'END'
+            ```
+            awk 'NR==2 {print $1}'
+            ```
+            END
+        end
+        entry do
             name 'Print the first field'
             notes <<-'END'
             ```
