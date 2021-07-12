@@ -7,8 +7,8 @@ cheatsheet do
         entry do
             name 'Diff subtree'
             notes <<-'END'
-            ```
-            git diff oss-upstream/master master:oss/
+            ```bash
+            git diff oss-upstream/master HEAD:oss/ -- . ':!*/dependencies.lock'
             ```
             END
         end
