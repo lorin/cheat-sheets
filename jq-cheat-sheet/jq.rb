@@ -5,6 +5,58 @@ cheatsheet do
     category do
         id ''
         entry do
+            name 'Resource ids from delivery config (table)'
+            notes <<-'END'
+            ```
+           .environments[]  
+            | . as $env  
+            | { 
+            env: $env.name, 
+            resources: (.resources[] | .metadata.id)
+            } 
+            | [.env, .resources] 
+            | @tsv 
+            ```
+            END
+        end
+        entry do
+            name 'Resource ids from delivery config (jsonl)'
+            notes <<-'END'
+            ```
+            .environments[] 
+            | . as $env 
+            | { 
+               env: $env.name, 
+               resources: (.resources | map(.metadata.id))
+              } 
+            
+            ```
+            END
+        end
+        entry do
+            name 'Resource ids from delivery config (json)'
+            notes <<-'END'
+            ```
+            .environments
+            | [.[] 
+            | . as $env 
+            | { 
+               env: $env.name, 
+               resources: (.resources | map(.metadata.id))
+              } 
+            ]
+            ```
+            END
+        end
+        entry do
+            name 'Convert a stream/list of objects to an array'
+            notes <<-'END'
+            ```
+            .foo | [.[] | f]
+            ```
+            END
+        end
+        entry do
             name 'Read from a file'
             notes <<-'END'
             ```
