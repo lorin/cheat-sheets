@@ -24,6 +24,22 @@ cheatsheet do
             name 'Open link in sidebar (mouse)'
             command 'SHIFT Click'
         end
+        entry do
+            name 'expand'
+            command 'CMD down'
+        end
+        entry do
+            name 'collapse'
+            command 'CMD up'
+        end
+        entry do
+            name 'move block up'
+            command 'CMD SHIFT up'
+        end
+        entry do
+            name 'move block down'
+            command 'CMD SHIFT down'
+        end
     end
     category do
         id 'Functionality'
