@@ -9,8 +9,12 @@ cheatsheet do
             command 'CTRL SHIFT D'
         end
         entry do
+            name 'Focus on current block (or open lock'
+            command 'CTRL O'
+        end
+        entry do
             name 'Open link or block in sidebar'
-            command 'CTL SHIFT O'
+            command 'CTRL SHIFT O'
         end
         entry do
             name 'Create note'
