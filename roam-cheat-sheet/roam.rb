@@ -9,6 +9,10 @@ cheatsheet do
             command 'CTRL SHIFT D'
         end
         entry do
+            name 'Open link or block in sidebar'
+            command 'CTL SHIFT O'
+        end
+        entry do
             name 'Create note'
             command 'CMD U'
         end
@@ -17,11 +21,7 @@ cheatsheet do
             command 'CMD Enter'
         end
         entry do
-            name 'Open current page in sidebar'
-            command 'CTL SHIFT O'
-        end
-        entry do
-            name 'Open link in sidebar'
+            name 'Open link in sidebar (mouse)'
             command 'SHIFT Click'
         end
     end
