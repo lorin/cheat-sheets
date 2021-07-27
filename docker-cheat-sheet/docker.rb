@@ -24,6 +24,14 @@ cheatsheet do
     category do
         id 'Basics'
         entry do
+            name 'Get stdout (console output) of running container'
+            notes <<-'END'
+            ```shell
+            docker logs $CONTAINER_ID
+            ```
+            END
+        end
+        entry do
             name 'Port order'
             notes <<-'END'
             ```
