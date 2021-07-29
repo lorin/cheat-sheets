@@ -70,6 +70,17 @@ cheatsheet do
             END
         end
         entry do
+            name 'Reference the upstream tracking branch'
+            notes <<-'END'
+            ```
+            @{upstream}
+            @{u}
+            ```
+            See <https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches>
+
+            END
+        end
+        entry do
             name 'Useful links'
             notes <<-'END'
             <https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/>
