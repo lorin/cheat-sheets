@@ -5,7 +5,7 @@ cheatsheet do
     category do
         id 'File types'
         entry do
-            name 'Match against a file type'
+            name 'Match against a file type (language)'
             notes <<-'END'
             ```
             rg -t kotlin '@Test'
