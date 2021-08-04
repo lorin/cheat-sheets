@@ -5,6 +5,37 @@ cheatsheet do
     category do
         id ''
         entry do
+          name 'Query with variables'
+          notes <<-'END'
+
+          Variables are declared at the top.
+
+          ```graphql
+          query($appName: String!) {
+            application(appName: $appName) {
+              environments {
+                name,
+                state {
+                  resources {
+                    kind
+                    displayName
+                  }
+                }
+              }
+            }
+          }
+          ```
+
+          Variable values are specified in the "query variables" in a json object.
+
+          ```json
+          {
+            "appName": "acme"
+          }
+          ```
+          END
+        end
+        entry do
             name 'Query for version info with verifications'
             notes <<-'END'
             ### Query
