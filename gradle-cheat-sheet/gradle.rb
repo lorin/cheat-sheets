@@ -121,6 +121,18 @@ cheatsheet do
     category do
         id 'jars'
         entry do
+            name 'Depend on the most recent version'
+            notes <<-'END'
+            Append `:latest.release`, e.g.:
+
+            ```
+            dependencies {
+                implementation("com.acme:my-cool-library:latest.release")
+            }
+            ```
+            END
+        end
+        entry do
             name 'Find jars'
             notes <<-'END'
             <https://search.maven.org>
