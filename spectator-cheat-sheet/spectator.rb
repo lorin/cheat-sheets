@@ -9,6 +9,7 @@ cheatsheet do
             notes <<-'END'
             ```kotlin
             import com.netflix.spectator.api.Registry
+
             class MyClass(
                 private val spectator: Registry
             ) {
@@ -18,11 +19,8 @@ cheatsheet do
                     spectator.counter(
                         counterId.withTags("action", "push", "color", "blue")
                       ).increment()
-
                 }
-
             }
-            
             ```
             END
         end
