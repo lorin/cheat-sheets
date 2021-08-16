@@ -31,6 +31,14 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'For an emoji reaction'
+            notes <<-'END'
+            ```
+            in:spinnaker has::managed-delivery
+            ```
+            END
+        end
     end
     category do
         id 'Commands'
