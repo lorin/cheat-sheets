@@ -105,6 +105,22 @@ cheatsheet do
             END
         end
         entry do
+            name 'select a single row and turn it into a list'
+            notes <<-'END'
+            ```kotlin
+            val ids : List<String> =
+                jooq.select(RESOURCE_LAST_CHECKED.RESOURCE_UID)
+                .from(RESOURCE_LAST_CHECKED)
+                .where(RESOURCE_LAST_CHECKED.AT.lessOrEqual(cutoff))
+                .and(RESOURCE_LAST_CHECKED.IGNORE.notEqual(true))
+                .orderBy(RESOURCE_LAST_CHECKED.AT)
+                .limit(limit)
+                .fetch()
+                .map { (id) -> id }
+            ```
+            END
+        end
+        entry do
             name 'JOIN'
             notes <<-'END'
             ```java
