@@ -187,6 +187,16 @@ cheatsheet do
     category do
         id 'Keyboard shortcuts'
         entry do
+            name 'Sourcegraph '
+            notes <<-'END'
+            ```
+            Open file: ALT-A
+            Copy link to file: ALT-C
+            
+            ```
+            END
+        end
+        entry do
             name 'Hide gradle tool window'
             notes <<-'END'
             ```

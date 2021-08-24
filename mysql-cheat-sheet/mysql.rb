@@ -3,6 +3,26 @@ cheatsheet do
     docset_file_name 'mysql'
     keyword 'mysql'
     category do
+        id 'admin'
+        entry do
+            name 'Show the current status of processes / threads'
+            notes <<-'END'
+            ```
+            -- As root
+            show processlist
+            ```
+            END
+        end
+      entry do
+          name 'Kill / terminate process'
+          notes <<-'END'
+          ```
+          kill <id>
+          ```
+          END
+      end  
+    end
+    category do
         id 'Basics'
         entry do
             name 'port'
