@@ -29,4 +29,16 @@ cheatsheet do
             command '^ `'
         end
     end
+    category do
+        id ''
+        entry do
+            name 'Format doc'
+            notes <<-'END'
+            Command: `Format document`
+
+            (I use the Prettier plugin)
+            END
+        end
+        
+    end
 end

@@ -79,24 +79,12 @@ cheatsheet do
         entry do
             name 'Checking invocation with return value'
             notes <<-'END'
-            If your mock needs to return a value, you 
-            must specify it in the "then" section, not "given" or "when"
+            If your mock needs to return a value, and you want
+            to check it was called, you have to specify it exactly once.
 
-            For example, do this:
+            FOr 
 
-            ```groovy
-            then:
-            1 * foo.bar(3,4) >> 12
             ```
-
-            Don't do this:
-
-            ```groovy
-            when:
-            foo.bar(3,4) >> 12
-
-            then:
-            1 * foo.bar(3,4)
             ```
             END
         end
@@ -123,7 +111,7 @@ cheatsheet do
             1 * foo.bar({ it.getCount() == 12 })
             ```
 
-            The weakness of the above method is that you don't get a meaningful
+            The weakness of the above method is that you do not get a meaningful
             message if the assertion fails, you just get "it didn't get called".
             See below for even better.
             END
@@ -148,9 +136,35 @@ cheatsheet do
         entry do
             name 'Return one thing'
             notes <<-'END'
-            ```
+            ```groovy
+            given:
             def widget = Stub(widget)
             widget.foo() >> "bar"
+            ```
+            END
+        end
+        entry do
+            name 'Return one thing and ensure only called once'
+            notes <<-'END'
+            ```groovy
+            given:
+            def widget = Mock(widget)
+            1 * widget.foo() >> "bar"
+
+            ...
+            ```
+            END
+        end
+        entry do
+            name 'Do not care about argument'
+            notes <<-'END'
+            ```
+            // don't care about second arg
+            widget.foo(4, _) >> "output"
+
+            // don't care about any args
+            widget.foo(_*) >> "output"
+            
             ```
             END
         end
