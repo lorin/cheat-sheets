@@ -96,6 +96,18 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Register a configuration bean'
+            notes <<-'END'
+            Instead of using `@Bean` or `@Component` annotations on the config
+            class itself, you can use the `@EnableConfigurationProperties` annotation on the class where you want to inject the config into.
+
+            ```kotlin
+
+            ```
+
+            END
+        end
     end
     category do
         id 'Controllers'
