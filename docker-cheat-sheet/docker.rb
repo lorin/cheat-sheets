@@ -3,12 +3,13 @@ cheatsheet do
     docset_file_name 'docker'
     keyword 'docker'
     category do
-        id 'Building and running'
+        id 'Running'
         entry do
-            name 'Build and tag an image'
+            name 'Run an arbitrary command'
             notes <<-'END'
             ```
-            docker build --tag keel-build --file Dockerfile.compile .
+            docker run mycontainer /bin/echo hello world
+            
             ```
             END
         end
@@ -17,6 +18,18 @@ cheatsheet do
             notes <<-'END'
             ```
             docker run -v $PWD:/keel -w /keel -t keel-build ./gradlew test
+            ```
+            END
+        end
+        
+    end
+    category do
+        id 'Building'
+        entry do
+            name 'Build and tag an image'
+            notes <<-'END'
+            ```
+            docker build --tag keel-build --file Dockerfile.compile .
             ```
             END
         end

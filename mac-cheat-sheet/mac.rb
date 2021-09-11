@@ -29,6 +29,15 @@ cheatsheet do
     category do
         id ''
         entry do
+            name 'Announce the time via CLI'
+            notes <<-'END'
+            ```bash
+            # From https://apple.stackexchange.com/a/53634/1058
+            defaults write com.apple.speech.synthesis.general.prefs TimeAnnouncementPrefs -dict-add TimeAnnouncementsEnabled 1
+            ```
+            END
+        end
+        entry do
             name 'Mute iMessage'
             notes <<-'END'
             System preferences -> Notifications -> Messages -> None
