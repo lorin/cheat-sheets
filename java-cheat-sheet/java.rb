@@ -3,15 +3,22 @@ cheatsheet do
     docset_file_name 'Java'
     keyword 'java'
     category do
-        id 'Operations'
+        id 'Operations / perf'
         entry do
             name 'Thread dump / stack trace analysis'
             notes <<-'END'
-            ```
+            ```shell
             jstack -l PID
             ```
-
             Use `jps` to get the process id
+            END
+        end
+        entry do
+            name 'Historgram of allocated objects'
+            notes <<-'END'
+            ```shell
+            jmap -histo PID
+            ```
             END
         end
         entry do
