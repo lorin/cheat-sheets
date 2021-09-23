@@ -17,7 +17,9 @@ cheatsheet do
         entry do
             name 'Turn off search highlight'
             notes <<-'END'
-            More → Turn off highlighting
+            1. Find the subject header
+            2. To the right of the header, there are icons
+            3. Click the circled x
             END
         end
     end
