@@ -157,6 +157,14 @@ cheatsheet do
             END
         end
         entry do
+            name 'Show log of a deleted file'
+            notes <<-'END'
+            ```
+            git log -- path/to/file.txt
+            ```
+            END
+        end
+        entry do
             name 'Date range'
             notes <<-'END'
             ```
