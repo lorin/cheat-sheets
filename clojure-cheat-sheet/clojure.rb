@@ -292,6 +292,18 @@ cheatsheet do
         end
     end
     category do
+        id 'Sequences'
+        entry do
+            name '1,2,3,...'
+            notes <<-'END'
+            ```
+            (take 5 (range))
+            ```
+            END
+        end
+        
+    end
+    category do
         id 'Collections'
         entry do
             name 'First and remaining elements'
