@@ -3,6 +3,17 @@ cheatsheet do
     docset_file_name 'mysql'
     keyword 'mysql'
     category do
+        id 'json'
+        entry do
+            name 'Query a json field'
+            notes <<-'END'
+            ```sql
+            select spec->"$.moniker" from active_resource where kind='titus/cluster@v1';
+            ```
+            END
+        end
+    end
+    category do
         id 'admin'
         entry do
             name 'Show the current status of processes / threads'
