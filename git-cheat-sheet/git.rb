@@ -3,7 +3,16 @@ cheatsheet do
     docset_file_name 'git'
     keyword 'git'
     category do
-        id 'subtree'
+        id 'subtree and worktree'
+        entry do
+            name 'Check out a second version of the code using worktree'
+            notes <<-'END'
+            ```
+            git worktree add ../other-basse-dir
+            
+            ```
+            END
+        end
         entry do
             name 'Diff subtree'
             notes <<-'END'
@@ -304,7 +313,7 @@ cheatsheet do
             git merge-base --is-ancestor <maybe-ancestor-commit> <descendant-commit>
             ```
 
-            It doesn't produce any output, but returns 0 on success, 1 on failure.
+            It doesnt produce any output, but returns 0 on success, 1 on failure.
             END
         end
         entry do
