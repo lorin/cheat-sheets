@@ -7,7 +7,7 @@ cheatsheet do
         entry do
             name 'Check out a second version of the code using worktree'
             notes <<-'END'
-            ```
+            ```bash
             git worktree add ../other-basse-dir
             
             ```
@@ -24,7 +24,7 @@ cheatsheet do
         entry do
             name 'Cherry-pick'
             notes <<-'END'
-            ```
+            ```bash
             git cherry-pick -x --strategy=subtree -Xsubtree=oss/ <gitHash>
             ```
             END
