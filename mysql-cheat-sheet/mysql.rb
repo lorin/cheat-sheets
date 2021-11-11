@@ -31,7 +31,7 @@ cheatsheet do
           kill <id>
           ```
           END
-      end  
+      end
     end
     category do
         id 'Basics'
@@ -44,6 +44,14 @@ cheatsheet do
             notes <<-'END'
             ```
             mysql -u $USER -h $HOSTNAME [$DBNAME] -p
+            ```
+            END
+        end
+        entry do
+            name 'Connect to local container on a port'
+            notes <<-'END'
+            ```
+            mysql -h 127.0.0.1 -P 6603 -u root -psa
             ```
             END
         end
