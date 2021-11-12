@@ -7,7 +7,7 @@ cheatsheet do
         entry do
             name 'Run an arbitrary command'
             notes <<-'END'
-            ```
+            ```bash
             docker run mycontainer /bin/echo hello world
 
             ```
@@ -16,7 +16,7 @@ cheatsheet do
         entry do
             name 'Run gradle tests'
             notes <<-'END'
-            ```
+            ```bash
             docker run -v $PWD:/keel -w /keel -t keel-build ./gradlew test
             ```
             END
@@ -24,7 +24,7 @@ cheatsheet do
         entry do
             name 'Set the platform architecture'
             notes <<-'END'
-            ```
+            ```bash
             docker run --platform=linux/amd64 ...
 
             export DOCKER_DEFAULT_PLATFORM=linux/amd64
