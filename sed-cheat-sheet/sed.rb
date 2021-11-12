@@ -12,5 +12,13 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'In place replace'
+            notes <<-'END'
+            ```
+            gsed -i "s/dbms: mysql/dbms: mysql,mariadb/g" *.yml
+            ```
+            END
+        end
     end
 end
