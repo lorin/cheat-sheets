@@ -9,7 +9,7 @@ cheatsheet do
             notes <<-'END'
             ```
             docker run mycontainer /bin/echo hello world
-            
+
             ```
             END
         end
@@ -21,7 +21,18 @@ cheatsheet do
             ```
             END
         end
-        
+        entry do
+            name 'Set the platform architecture'
+            notes <<-'END'
+            ```
+            docker run --platform=linux/amd64 ...
+
+            export DOCKER_DEFAULT_PLATFORM=linux/amd64
+
+            ```
+            END
+        end
+
     end
     category do
         id 'Building'
