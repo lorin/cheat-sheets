@@ -36,6 +36,23 @@ cheatsheet do
           END
         end
         entry do
+          name 'Querying for multiple return types'
+          notes <<-'END'
+          ```
+          query {
+            md_application(appName: "kee") {
+              ... on MD_Application {
+                name
+              }
+              ... on MD_Error {
+                message
+              }
+            }
+          }
+          ```
+          END
+        end
+        entry do
             name 'Query for version info with verifications'
             notes <<-'END'
             ### Query
