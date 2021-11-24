@@ -1,0 +1,31 @@
+cheatsheet do
+    title 'doom'
+    docset_file_name 'doom'
+    keyword 'doom'
+    category do
+        id ''
+        entry do
+            name 'Things should know'
+            notes <<-'END'
+
+  1. Don't forget to run 'doom sync', then restart Emacs, after modifying
+     ~/.doom.d/init.el or ~/.doom.d/packages.el.
+
+     This command ensures needed packages are installed, orphaned packages are
+     removed, and your autoloads/cache files are up to date. When in doubt, run
+     'doom sync'!
+
+  2. If something goes wrong, run `doom doctor`. It diagnoses common issues with
+     your environment and setup, and may offer clues about what is wrong.
+
+  3. Use 'doom upgrade' to update Doom. Doing it any other way will require
+     additional steps. Run 'doom help upgrade' to understand those extra steps.
+
+  4. Access Doom's documentation from within Emacs via 'SPC h d h' or 'C-h d h'
+     (or 'M-x doom/help')
+
+  Have fun!
+            END
+        end
+    end
+end
