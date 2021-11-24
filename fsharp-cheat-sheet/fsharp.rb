@@ -5,6 +5,14 @@ cheatsheet do
     category do
         id ''
         entry do
+            name 'REPL'
+            notes <<-'END'
+            ```bash
+            dotnet fsi
+            ```
+            END
+        end
+        entry do
             name 'Scripting'
             notes <<-'END'
             ```fsharp
