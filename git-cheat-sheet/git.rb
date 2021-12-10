@@ -9,7 +9,7 @@ cheatsheet do
             notes <<-'END'
             ```bash
             git worktree add ../other-basse-dir
-            
+
             ```
             END
         end
@@ -47,7 +47,7 @@ cheatsheet do
             git diff oss-upstream/master master:oss/ --binary > ~/Desktop/patch.diff
             git checkout -b <name of branch> oss-upstream/master
 
-            git apply --index  ~/Desktop/patch.diff 
+            git apply --index  ~/Desktop/patch.diff
             ```
             END
         end
@@ -69,11 +69,19 @@ cheatsheet do
         end
     end
     category do
-        id ''
+        id 'Remotes'
+        entry do
+            name 'Set default tracking roemote'
+            notes <<-'END'
+            ```bash
+            git config checkout.defaultRemote origin
+            ```
+            END
+        end
         entry do
             name 'Set upstream for current branch'
             notes <<-'END'
-            ```
+            ```bash
             git branch -u origin/my-branch
             ```
             END
@@ -81,7 +89,7 @@ cheatsheet do
         entry do
             name 'Reference the upstream tracking branch'
             notes <<-'END'
-            ```
+            ```bash
             @{upstream}
             @{u}
             ```
@@ -210,7 +218,7 @@ cheatsheet do
             ```
             END
         end
-        
+
     end
     category do
         id 'stash'
@@ -321,7 +329,7 @@ cheatsheet do
             notes <<-'END'
             ```
             git merge-base feature master
-            
+
             ```
             END
         end
