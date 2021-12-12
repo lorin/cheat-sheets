@@ -3,6 +3,24 @@ cheatsheet do
     docset_file_name 'gradle'
     keyword 'gradle'
     category do
+        id 'jars etc'
+        entry do
+            name 'Which version of a jar is linked?'
+            notes <<-'END'
+            ```
+            ./gradlew resolve
+            ```
+
+            This will generate a build scan.
+
+            Click the URL.
+            Go to "Dependencies" on the right.
+
+            END
+        end
+
+    end
+    category do
         id 'Testing'
         entry do
             name 'Run a specific test'
@@ -69,7 +87,7 @@ cheatsheet do
                         url = jdbcURL
                         ...
                     }
-                   ... 
+                   ...
                }
             }
             ```
@@ -97,7 +115,7 @@ cheatsheet do
                         user = db.user
                         ...
                     }
-                   ... 
+                   ...
                }
             }
             ```
