@@ -15,7 +15,7 @@ cheatsheet do
 
             Click the URL.
             Go to "Dependencies" on the right.
-
+            Click on a project, and then click "compileClasspath"
             END
         end
 
