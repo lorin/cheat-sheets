@@ -57,6 +57,15 @@ cheatsheet do
     category do
         id 'REPL'
         entry do
+            name 'CLI'
+            notes <<-'END'
+            ```
+            clj - clojure REPL with rlwrap
+            ```
+
+            END
+        end
+        entry do
             name 'Bring in a namespace'
             notes <<-'END'
             ```clojure
