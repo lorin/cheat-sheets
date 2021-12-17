@@ -3,6 +3,38 @@ cheatsheet do
     docset_file_name 'clojure'
     keyword 'clojure'
     category do
+        id 'Babashka'
+        entry do
+            name 'References'
+            notes <<-'END'
+            * [Babashka book](https://book.babashka.org/)
+            * [main repo](https://github.com/babashka/babashka)
+            * [babashka/curl](https://github.com/babashka/babashka.curl)
+            END
+        end
+        entry do
+            name 'Example'
+            notes <<-'END'
+            ```clojure
+            #!/usr/bin/env bb
+            (require '[babashka.curl :as curl])
+            (require '[cheshire.core :as json])
+            (require '[clojure.pprint :as pprint])
+
+            (def url "http://www.example.com/contents.json)
+
+            (->
+                (curl/get url)
+                :body
+                (json/parse-string true) ; true means convert keys to symbols
+                pprint/pprint
+            )
+            ```
+            END
+        end
+
+    end
+    category do
         id 'Basic examples'
         entry do
             name 'Example'
@@ -17,7 +49,7 @@ cheatsheet do
 
             (import 'java.awt.Toolkit)
             (import 'java.awt.datatransfer.DataFlavor)
-            
+
             ```
             END
         end
@@ -42,7 +74,7 @@ cheatsheet do
             notes <<-'END'
             ```clojure
             (use 'the.namespace :reload)
-            
+
             ;; This seems to work
             (use (symbol (str *ns*)) :reload)
             ```
@@ -126,12 +158,12 @@ cheatsheet do
             (import 'java.awt.Toolkit)
 
             ;; Either of these works:
-            (Toolkit/getDefaultToolkit) 
-            (. Toolkit getDefaultToolkit) 
+            (Toolkit/getDefaultToolkit)
+            (. Toolkit getDefaultToolkit)
             ```
             END
         end
-        
+
     end
     category do
         id 'Functions'
@@ -172,11 +204,11 @@ cheatsheet do
 
             ; invoking
             (myfunc {:foo 1 :bar 2 :baz 3})
-            
+
             ```
             END
         end
-        
+
     end
     category do
         id 'I/O'
@@ -193,7 +225,7 @@ cheatsheet do
             notes <<-'END'
             ```clojure
             (spit "file.txt" "contents of file")
-            
+
             ```
             END
         end
@@ -217,7 +249,7 @@ cheatsheet do
             ```
             END
         end
-        
+
     end
     category do
         id 'Functional'
@@ -235,7 +267,7 @@ cheatsheet do
             If you have a collection of collections, use apply
 
             ```
-            > (apply map vector [[1 2 3] 
+            > (apply map vector [[1 2 3]
                                  [4 5 6]])
             ([1 4] [2 5] [3 6])
             ```
@@ -260,8 +292,8 @@ cheatsheet do
             notes <<-'END'
             ```
             (apply f args)  ; like (f *args) where * is Python
-            (apply + '[1 2 3]) ; (+ 1 2 3) -> 6 
-            
+            (apply + '[1 2 3]) ; (+ 1 2 3) -> 6
+
             ```
             END
         end
@@ -278,7 +310,7 @@ cheatsheet do
             notes <<-'END'
             ```clojure
             (complement pred?)
-            
+
             ```
             END
         end
@@ -301,7 +333,7 @@ cheatsheet do
             ```
             END
         end
-        
+
     end
     category do
         id 'Collections'
@@ -409,7 +441,7 @@ cheatsheet do
             ```
             END
         end
-        
+
     end
     category do
         id 'lein'
@@ -503,7 +535,7 @@ cheatsheet do
             notes <<-'END'
             ```clojure
             (use 'the.namespace :reload)
-            
+
             ;; This seems to work
             (use (symbol (str *ns*)) :reload)
             ```
@@ -568,7 +600,7 @@ cheatsheet do
 
             (Outer$Inner.)
 
-            
+
             ```
             END
         end
@@ -661,7 +693,7 @@ cheatsheet do
             ```
             END
         end
-        
+
     end
     category do
         id 'HTTP client'
@@ -747,12 +779,12 @@ cheatsheet do
         entry do
             name 'Plugins'
             notes <<-'END'
-            I use the Calva plugin. 
+            I use the Calva plugin.
 
             To make Calva happy, I use the Neovim plugin instead of the Vim plugin.
             END
         end
-        
+
     end
     category do
         id 'Defining things'
@@ -951,10 +983,10 @@ cheatsheet do
             name 'Help on function'
             notes <<-'END'
             ```
-            <space> m h h 
+            <space> m h h
             ```
 
-            * `SPC 1` to switch buffers 
+            * `SPC 1` to switch buffers
             * `q` to close help
             END
         end
@@ -1038,13 +1070,13 @@ cheatsheet do
             #!/usr/local/bin/planck
 
             (require '[planck.core :refer [slurp]])
-            
+
             (def data
                 (slurp "myfile.txt"))
             ```
             END
         end
-        
+
     end
     category do
         id 'Time'
@@ -1070,7 +1102,7 @@ cheatsheet do
 
             (defn human-readable-time
             "Convert a time string from ISO-8601 to a specific human-readable format
-            
+
             > (human-readable-time \"2020-12-05T01:22:38.107432Z\"))
             \"12/04 05:22PM\"
             "
@@ -1082,7 +1114,7 @@ cheatsheet do
             ```
             END
         end
-        
+
     end
     category do
         id 'Using libraries'
@@ -1093,7 +1125,7 @@ cheatsheet do
 
             ```clojure
             :dependencies [[org.clojure/clojure "1.10.1"]
-                           [org.clojure/data.json "1.0.0"]]                 
+                           [org.clojure/data.json "1.0.0"]]
 
             ```
             From gradle style:
