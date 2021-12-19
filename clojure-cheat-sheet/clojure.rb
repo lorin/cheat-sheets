@@ -1241,4 +1241,37 @@ cheatsheet do
             END
         end
     end
+    category do
+        id 'spec'
+        entry do
+            name 'Clojure spec basics'
+            notes <<-'END'
+            ```clojure
+            (ns my-ns
+                (:require [clojure.spec.alpha :as s]))
+
+
+            (s/def ::server-groups (s/coll-of ::server-group))
+            (s/def ::server-group
+                (s/keys :req-un
+                        [::name
+                         ::region ...]))
+            (s/def ::region string?)
+
+            (s/def ::instance-common (s/keys ...))
+            (s/def ::instance-titus-specific
+                (s/keys :req-un [...]))
+            (s/keys ::instance-ec2-specific (s/keys ...))
+
+            (s/def ::instance
+                (s/and ::instance-common
+                    ; NB. or specs have a tag for each branch!
+                    (s/or :titus ::instance-titus-specific
+                          :ec2  ::instance-ec2-specific)))
+
+            ```
+            END
+        end
+
+    end
 end
