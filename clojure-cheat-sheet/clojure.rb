@@ -3,6 +3,37 @@ cheatsheet do
     docset_file_name 'clojure'
     keyword 'clojure'
     category do
+        id 'Basic examples'
+        entry do
+            name 'Example'
+            notes <<-'END'
+            ```clojure
+            (ns foo
+              (:require [clj-http.client :as client]
+                        [clojure.data.json :as json]
+                        [korma.db :refer [postgres defdb]]
+                        [korma.core :refer [defentity select insert values]])
+              (:refer-clojure :exclude [get]))
+
+            (import 'java.awt.Toolkit)
+            (import 'java.awt.datatransfer.DataFlavor)
+
+            ```
+            END
+        end
+    end
+    category do
+        id 'Collections'
+        entry do
+            name 'Element by index'
+            notes <<-'END'
+            ```clojure
+            (nth mycoll 4)
+            ```
+            END
+        end
+    end
+    category do
         id 'Babashka'
         entry do
             name 'References'
@@ -33,26 +64,6 @@ cheatsheet do
             END
         end
 
-    end
-    category do
-        id 'Basic examples'
-        entry do
-            name 'Example'
-            notes <<-'END'
-            ```clojure
-            (ns foo
-              (:require [clj-http.client :as client]
-                        [clojure.data.json :as json]
-                        [korma.db :refer [postgres defdb]]
-                        [korma.core :refer [defentity select insert values]])
-              (:refer-clojure :exclude [get]))
-
-            (import 'java.awt.Toolkit)
-            (import 'java.awt.datatransfer.DataFlavor)
-
-            ```
-            END
-        end
     end
     category do
         id 'REPL'
@@ -121,6 +132,62 @@ cheatsheet do
             ```
             END
         end
+    end
+    category do
+        id 'CLI tooling'
+        entry do
+            name 'deps.edn'
+            notes <<-'END'
+            ```clojure
+            {:deps
+             {clojure.java-time/clojure.java-time {:mvn/version "0.3.2"}
+              babashka/babashka.curl {:mvn/version "0.1.1"}
+              cheshire/cheshire {:mvn/version "5.10.1"}}}
+            ```
+            END
+        end
+        entry do
+            name 'Launch a repl'
+            notes <<-'END'
+            ```
+            clj
+            ```
+            END
+        end
+        entry do
+            name 'Source organization and execution'
+            notes <<-'END'
+            File organization:
+
+            ```
+            .
+            ├── deps.edn
+            └── src
+            └── hello.clj
+            ```
+
+            hello.clj
+
+            ```clojure
+            (ns hello
+             ... )
+
+            (defn run [opts]
+               ... )
+            ```
+
+
+            Running the run function in the hello namespace:
+
+            ```bash
+             clj -X hello/run
+            ```
+            END
+        end
+
+    end
+    category do
+        id "Leiningen"
         entry do
             name 'Launch a repl'
             notes <<-'END'
@@ -676,10 +743,20 @@ cheatsheet do
             name 'Read JSON from a file'
             notes <<-'END'
             ```clojure
+            ; cheshire
+            (ns ... (:require [cheshire.core :as json]))
+
+            (-> "file.json" slurp (json/parse-string true)))
+
+
+            ; clojure.data.json
             (ns ... (:require [clojure.data.json :as json]))
 
             (-> "file.json" slurp (json/read-str :key-fn keyword)))
             ```
+
+
+
             END
         end
         entry do
@@ -764,13 +841,14 @@ cheatsheet do
         end
     end
     category do
-        id 'VSCode'
+        id 'VSCode (Calva)'
         entry do
             name 'Evaluate in Calva'
             notes <<-'END'
             ```
-            ⌘ ENTER  - evals the expression
+            ALT ENTER  - evals the expression
             ^ ENTER  - evals the sub-expression at the cursor
+            ESC - clears the inline expression
             ```
             END
         end
