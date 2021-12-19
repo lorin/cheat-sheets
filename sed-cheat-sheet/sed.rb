@@ -5,6 +5,14 @@ cheatsheet do
     category do
         id 'Common tasks'
         entry do
+            name 'Turn space into backslash enter'
+            notes <<-'END'
+            ```
+            sed "s/ / \\\\\n/g"
+            ```
+            END
+        end
+        entry do
             name 'Strip leading timestamp from GitHub Actions log'
             notes <<-'END'
             ```
