@@ -478,6 +478,14 @@ cheatsheet do
             END
         end
         entry do
+            name 'Retrieve (get) a nested field'
+            notes <<-'END'
+            ```clojure
+            (get-in task [:execution :stages 0])
+            ```
+            END
+        end
+        entry do
             name 'Add / modify a nested field'
             notes <<-'END'
             ```clojure
@@ -849,6 +857,15 @@ cheatsheet do
             ALT ENTER  - evals the expression
             ^ ENTER  - evals the sub-expression at the cursor
             ESC - clears the inline expression
+            ```
+            END
+        end
+        entry do
+            name 'Move between panes'
+            notes <<-'END'
+            ```
+            CMD 1
+            CMD 2
             ```
             END
         end
@@ -1268,6 +1285,44 @@ cheatsheet do
                     ; NB. or specs have a tag for each branch!
                     (s/or :titus ::instance-titus-specific
                           :ec2  ::instance-ec2-specific)))
+
+            ```
+            END
+        end
+    end
+    category do
+        id 'Parsers (instaparse)'
+        entry do
+            name 'Example grammar'
+            notes <<-'END'
+            ```clojure
+            ; deps.edn
+            {:deps
+                {instaparse/instaparse {:mvn/version "1.4.10"}}}
+
+            ; actual code
+
+            (ns myns
+                (:require [instaparse.core :as insta]))
+
+            ; a buildInfo/image is of the form "proj/app:v1.2.3-h123.abc1234"
+            ; sometimes the version string isn't there
+            (def buildInfo-image-parser
+               (insta/parser
+                "S = project '/' app ':' version?
+                 project = word
+                 app = word
+                 word = #'[a-zA-Z]+'
+                 version = semver '-' buildNumber '.' shortSha
+                 semver = 'v' number '.' number '.' number
+                 buildNumber = 'h' number
+                 number = #'[0-9]+'
+                 shortSha = #'[0-9a-f]{7}'"
+                ))
+
+            ; I use it in a spec like this:
+            (s/def :buildInfo/image #(not (insta/failure? (buildInfo-image-parser %))))
+
 
             ```
             END

@@ -45,7 +45,7 @@ cheatsheet do
           ```
           open util/ordering[State]
 
-          ... 
+          ...
 
           sig State {
             obs: lone Observation,
@@ -290,7 +290,7 @@ cheatsheet do
             }
 
             // To get all of the ops
-            HEvent.x[Obj].op 
+            HEvent.x[Obj].op
             ```
             END
         end
@@ -412,7 +412,7 @@ cheatsheet do
         entry do
             name 'View a module'
             notes <<-'END'
-            File -> Open Sample Models ... 
+            File -> Open Sample Models ...
 
             Look in the "util" directory.
             END
@@ -466,7 +466,7 @@ cheatsheet do
             ...
 
             StateOrd/first
-            
+
             ```
             END
         end
@@ -510,7 +510,7 @@ cheatsheet do
 			Here's a skeleton
 
 			```
-			open util/ordering[State] 
+			open util/ordering[State]
 
 			sig State { ... }
 
@@ -576,7 +576,7 @@ cheatsheet do
             `seq Foo` is shorthand for `Int -> Foo`
 
             See <http:/alloytools.org/quickguide/seq.html>
-            
+
             ```
             sig Book { }
             sig Person {
