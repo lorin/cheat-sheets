@@ -297,7 +297,7 @@ cheatsheet do
 
     end
     category do
-        id 'I/O'
+        id 'I/O (files and directories)'
         entry do
             name 'Read a whole file'
             notes <<-'END'
@@ -311,7 +311,26 @@ cheatsheet do
             notes <<-'END'
             ```clojure
             (spit "file.txt" "contents of file")
-
+            ```
+            END
+        end
+        entry do
+            name 'Create a directory'
+            notes <<-'END'
+            ```clojure
+           (defn create-dir
+             [name]
+             (.mkdir (java.io.File. name)))
+            ```
+            END
+        end
+        entry do
+            name 'Get name of directory'
+            notes <<-'END'
+            ```clojure
+            (defn get-directory-name
+             [path]
+             (-> path java.io.File. .getCanonicalFile .getName))
             ```
             END
         end
