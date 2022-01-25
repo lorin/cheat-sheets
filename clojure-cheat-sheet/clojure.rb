@@ -23,17 +23,6 @@ cheatsheet do
         end
     end
     category do
-        id 'Collections'
-        entry do
-            name 'Element by index'
-            notes <<-'END'
-            ```clojure
-            (nth mycoll 4)
-            ```
-            END
-        end
-    end
-    category do
         id 'Babashka'
         entry do
             name 'References'
@@ -77,6 +66,17 @@ cheatsheet do
 
     end
     category do
+        id 'Destructuring'
+        entry do
+            name 'Destructure a map'
+            notes <<-'END'
+            ```clojure
+            (let [{:keys [foo bar baz]} m] ... )
+            ```
+            END
+        end
+    end
+    category do
         id 'REPL'
         entry do
             name 'CLI'
@@ -84,7 +84,6 @@ cheatsheet do
             ```
             clj - clojure REPL with rlwrap
             ```
-
             END
         end
         entry do
@@ -424,6 +423,14 @@ cheatsheet do
     end
     category do
         id 'Collections'
+        entry do
+            name 'Element by index'
+            notes <<-'END'
+            ```clojure
+            (nth mycoll 4)
+            ```
+            END
+        end
         entry do
             name 'First and remaining elements'
             notes <<-'END'
