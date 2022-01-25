@@ -9,7 +9,7 @@ cheatsheet do
             command 'CTRL SHIFT D'
         end
         entry do
-            name 'Focus on current block (or open lock'
+            name 'Focus on current block (or open block)'
             command 'CTRL O'
         end
         entry do

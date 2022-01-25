@@ -12,13 +12,17 @@ cheatsheet do
 
           ```graphql
           query($appName: String!) {
-            application(appName: $appName) {
-              environments {
-                name,
-                state {
-                  resources {
-                    kind
-                    displayName
+            md_application(appName: $appName) {
+              ... on MD_Application {
+                environments {
+                  name
+                  state {
+                    resources {
+                      state {
+                        resourceId
+                        status
+                      }
+                    }
                   }
                 }
               }

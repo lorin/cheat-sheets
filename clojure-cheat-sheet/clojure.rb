@@ -63,6 +63,17 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Detect if executed'
+            notes <<-'END'
+            ```clojure
+
+            (when
+                (= *file* (System/getProperty "babashka.file"))
+                (-main))
+            ```
+            END
+        end
 
     end
     category do
