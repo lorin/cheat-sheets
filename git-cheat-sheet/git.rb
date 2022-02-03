@@ -3,6 +3,18 @@ cheatsheet do
     docset_file_name 'git'
     keyword 'git'
     category do
+        id 'pushing'
+        entry do
+            name 'push a new branch'
+            notes <<-'END'
+            ```bash
+            git push -u origin branch-name
+            ```
+            END
+        end
+
+    end
+    category do
         id 'subtree and worktree'
         entry do
             name 'Check out a second version of the code using worktree'
