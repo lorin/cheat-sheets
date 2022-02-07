@@ -87,6 +87,14 @@ cheatsheet do
             END
         end
         entry do
+            name 'Use doc in repl'
+            notes <<-'END'
+            ```clojure
+            (use 'clojure.repl)
+            ```
+            END
+        end
+        entry do
             name 'Bring in a namespace'
             notes <<-'END'
             ```clojure
