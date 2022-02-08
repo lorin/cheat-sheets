@@ -5,12 +5,34 @@ cheatsheet do
     category do
         id 'Types'
         entry do
+            name 'String that can only take on certain values'
+            notes <<-'END'
+            ```typescript
+            type status = 'PASS' | 'FAIL'
+            ```
+            END
+        end
+        entry do
+            name 'Object whose keys are only certain strings'
+            notes <<-'END'
+            ```typescript
+            const statusToText: { [key in Status]: string } = {
+                PASS: "it pased!",
+                FAIL: "it failed!"
+            };
+
+            // use it like this
+            statusToText[status]
+            ```
+            END
+        end
+        entry do
             name 'Define a type for an object'
             notes <<-'END'
             ```tsx
             interface Widget {sku: string, description: string};
 
-            const row = (widget: Widget) => 
+            const row = (widget: Widget) =>
                 <tr>
                     <td>{widget.sku}</td>
                     <td>{widget.description}</td>
@@ -61,7 +83,7 @@ cheatsheet do
             const Widget = () => <h1>Widget</h1>;
 
             export default Widget;
-            
+
             ```
             END
         end
@@ -124,7 +146,7 @@ cheatsheet do
 
             ...
             <span style={myStyles}>Stuff goes here</span>
-            
+
             ```
             END
         end
