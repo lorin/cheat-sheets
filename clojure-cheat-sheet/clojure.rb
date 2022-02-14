@@ -37,9 +37,20 @@ cheatsheet do
             notes <<-'END'
             ```clojure
             #!/usr/bin/env bb
-            (require '[babashka.curl :as curl])
-            (require '[cheshire.core :as json])
-            (require '[clojure.pprint :as pprint])
+            (ns myscript
+                (:require [babashka.curl :as curl])
+                (:require [cheshire.core :as json])
+                (:require [clojure.pprint :as pprint])
+                (:require [clojure.java.shell :refer [sh]]))
+
+            (defn get-clipboard-contents
+                []
+                (-> "pbpaste" sh :out))
+
+            (defn parse-clipboard-contents
+                []
+                (-> (get-clibpard-contents) (json/parse-string true))
+
 
             (def url "http://www.example.com/contents.json)
 
@@ -59,7 +70,7 @@ cheatsheet do
 
             (when
                 (= *file* (System/getProperty "babashka.file"))
-                (-main))
+                (main *command-line-args*))
             ```
             END
         end
