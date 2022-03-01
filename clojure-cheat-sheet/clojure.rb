@@ -77,6 +77,23 @@ cheatsheet do
 
     end
     category do
+        id 'Dispatching'
+        entry do
+            name 'condp'
+            notes <<-'END'
+            ```clojure
+            (condp = cmd
+              "apps" (list-apps)
+              "validate" (validate args)
+              "publish" (publish args)
+              "status" (status args)
+              "zap" (zap args)
+              (print-usage))
+            ```
+            END
+        end
+    end
+    category do
         id 'Destructuring'
         entry do
             name 'Destructure a map'
