@@ -82,13 +82,15 @@ cheatsheet do
             name 'condp'
             notes <<-'END'
             ```clojure
-            (condp = cmd
-              "apps" (list-apps)
-              "validate" (validate args)
-              "publish" (publish args)
-              "status" (status args)
-              "zap" (zap args)
-              (print-usage))
+            (defn main
+              [[cmd & args]]
+              (condp = cmd
+                "apps" (list-apps)
+                "validate" (validate args)
+                "publish" (publish args)
+                "status" (status args)
+                "zap" (zap args)
+                (print-usage)))
             ```
             END
         end
