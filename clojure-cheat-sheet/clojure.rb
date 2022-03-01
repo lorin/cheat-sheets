@@ -94,6 +94,23 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'multimethods'
+            notes <<-'END'
+            ```clojure
+            (defmulti command first)
+
+            (defmethod command "apps" [_] (list-apps))
+            (defmethod command "validate" [[_ args]] (validate args))
+            (defmethod command "status" [[_ args]] (status args))
+            (defmethod command "zap" [[_ args]] (zap args))
+            (defmethod command :default [_] (print-usage))
+
+            (defn main [args]
+                (command args))
+            ```
+            END
+        end
     end
     category do
         id 'Destructuring'
