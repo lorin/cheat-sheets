@@ -14,7 +14,7 @@ cheatsheet do
         end
     end
     category do
-        id 'admin'
+        id 'admin / perf'
         entry do
             name 'Show the current status of processes / threads'
             notes <<-'END'
@@ -30,6 +30,39 @@ cheatsheet do
           ```
           kill <id>
           ```
+          END
+      end
+      entry do
+          name 'See blocking / blocked queries'
+          notes <<-'END'
+          ```mysql
+          SELECT
+          r.trx_id waiting_trx_id,
+          r.trx_mysql_thread_id waiting_thread,
+          r.trx_query waiting_query,
+          b.trx_id blocking_trx_id,
+          b.trx_mysql_thread_id blocking_thread,
+          b.trx_query blocking_query
+          FROM       information_schema.innodb_lock_waits w
+          INNER JOIN information_schema.innodb_trx b
+            ON b.trx_id = w.blocking_trx_id
+          INNER JOIN information_schema.innodb_trx r
+            ON r.trx_id = w.requesting_trx_id;
+          ```
+
+          The column `waiting_thread` is the thread id for the blocked one.
+          Column `blocking_thread` is for the thread that blocking others.
+          END
+      end
+      entry do
+          name 'Check all write operaitons'
+          notes <<-'END'
+          ```mysql
+          select * from information_schema.innodb_trx\G
+          ```
+
+          The column `trx_state` would show "LOCK_WAIT" for blocked transactions.
+          The `trx_mysql_thread_id` will identify the blocked thread.
           END
       end
     end
