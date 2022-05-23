@@ -39,6 +39,14 @@ cheatsheet do
             (I use the Prettier plugin)
             END
         end
-        
+        entry do
+            name 'copy with syntax higlighting'
+            notes <<-'END'
+            1. Highlight the code
+            1. Ctrl Shift P (Command Palette)
+            1. "Copy With Syntax Highlighting"
+            END
+        end
+
     end
 end
