@@ -16,25 +16,25 @@ cheatsheet do
             ...
 
             show("http://www.example.com/image.png")
-            
+
             ```
             END
         end
-        
+
     end
     category do
         id 'bash'
         entry do
             name 'Display an image'
             notes <<-'END'
-            Use the `display` bash command.
+            Use the `display` bash command. You probably want `-L` for redirection.
 
             ```
-            curl -s http://www.example.com/image.png | display
+            curl -sL http://www.example.com/image.png | display
             ```
             END
         end
-        
+
     end
     category do
         id 'Keyboard shortcuts'
