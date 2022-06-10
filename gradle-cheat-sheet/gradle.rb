@@ -70,6 +70,8 @@ cheatsheet do
 
             $ gw liquibaseUpdateSql -PliquibaseRunList=local
             ```
+
+            For more details, see [Project properties](https://docs.gradle.org/current/userguide/build_environment.html#sec:project_properties)
             END
         end
 
