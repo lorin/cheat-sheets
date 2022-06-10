@@ -61,7 +61,18 @@ cheatsheet do
         end
     end
     category do
-        id ''
+        id 'variables and properties'
+        entry do
+            name 'Set a project property on the command line'
+            notes <<-'END'
+            ```
+            # Use -Pkey=value
+
+            $ gw liquibaseUpdateSql -PliquibaseRunList=local
+            ```
+            END
+        end
+
         entry do
             name 'Custom variable in build.gradle'
             notes <<-'END'
