@@ -4,5 +4,16 @@ cheatsheet do
     keyword 'liquibase'
     category do
         id ''
+        entry do
+            name 'Look at the migration SQL'
+            notes <<-'END'
+            ```
+            # Assuming you're using the gradle plugin and have this in gradle.properties
+            # liquibaseTaskPrefix=liquibase
+            ./gradlew liquibaseUpateSql
+
+            ```
+            END
+        end
     end
 end
