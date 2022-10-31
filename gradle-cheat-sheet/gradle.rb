@@ -177,6 +177,14 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Dependency insights'
+            notes <<-'END'
+            ```
+            ./gradlew keel-web:dI --dependency io.strikt:strikt-jackson --configuration testCompileClasspath
+            ```
+            END
+        end
     end
     category do
         id 'Nebula stuff'
