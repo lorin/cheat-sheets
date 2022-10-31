@@ -4,6 +4,16 @@ cheatsheet do
     docset_file_name 'idea'
     keyword 'idea'
     category do
+        id 'Run configs'
+        entry do
+            name 'In repository'
+            notes <<-'END'
+            Put the FOO.run.xml files in the `.run` directory.
+            END
+        end
+
+    end
+    category do
       id 'Navigation'
       entry do
           name 'Next/prev tab'
@@ -120,7 +130,7 @@ cheatsheet do
             1. Open the Database tab on the left
             2. Click on the "console" icon (next to funnel)
 
-            This will open a terminal where you can type SQL. 
+            This will open a terminal where you can type SQL.
 
             Hit CMD-Enter and the result will appear at the bottom.
             END
@@ -192,7 +202,7 @@ cheatsheet do
             ```
             Open file: ALT-A
             Copy link to file: ALT-C
-            
+
             ```
             END
         end
@@ -201,7 +211,7 @@ cheatsheet do
             notes <<-'END'
             ```
             shift ESC
-            
+
             ```
             END
         end
