@@ -7,7 +7,7 @@ cheatsheet do
         entry do
             name 'Serialize'
             notes <<-'END'
-            ```
+            ```kotlin
             val mapper = ObjectMapper()
             val obj = ...
             val s = mapper.writeValueAsString(obj)
@@ -20,7 +20,7 @@ cheatsheet do
         entry do
             name 'Convert from object to map'
             notes <<-'END'
-            ```
+            ```kotlin
             val mapper = ObjectMapper()
             val obj = ...
             val m = mapper.convertValue(obj, Map::class.java)
