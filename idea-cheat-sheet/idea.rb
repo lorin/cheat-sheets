@@ -25,6 +25,15 @@ cheatsheet do
           END
       end
       entry do
+        name 'Adjust size of current tab'
+        notes <<-'END'
+        ```
+        ALT Shift ]
+        ALT Shift [
+        ```
+        END
+      end
+      entry do
         name 'Next highlighted error'
         notes <<-'END'
         I have it mapped like this:
