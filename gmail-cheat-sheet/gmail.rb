@@ -8,7 +8,7 @@ cheatsheet do
             name 'On a certain date'
             notes <<-'END'
             ```
-            label:my-label after:2018/11/12 before:2018/11/13  
+            label:my-label after:2018/11/12 before:2018/11/13
             ```
 
             Above will match emails on Nov. 12, 2018.
@@ -17,9 +17,7 @@ cheatsheet do
         entry do
             name 'Turn off search highlight'
             notes <<-'END'
-            1. Find the subject header
-            2. To the right of the header, there are icons
-            3. Click the circled x
+            Look under the "More" menu.
             END
         end
     end
