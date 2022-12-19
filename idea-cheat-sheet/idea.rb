@@ -25,11 +25,20 @@ cheatsheet do
           END
       end
       entry do
+        name 'Move a tab (tab shifter plugin)'
+        notes <<-'END'
+        ```
+        CTL ALT/OPT ]
+        CTL ALT/OPT [
+        ```
+        END
+      end
+      entry do
         name 'Adjust size of current tab'
         notes <<-'END'
         ```
-        ALT Shift ]
-        ALT Shift [
+        ALT/OPT Shift ]
+        ALT/OPT Shift [
         ```
         END
       end
