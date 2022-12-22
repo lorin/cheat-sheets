@@ -56,6 +56,14 @@ cheatsheet do
             END
         end
         entry do
+            name 'Word count'
+            notes <<-'END'
+            ```
+            {{word-count}}
+            ```
+            END
+        end
+        entry do
             name 'Calculator'
             notes <<-'END'
             ```
