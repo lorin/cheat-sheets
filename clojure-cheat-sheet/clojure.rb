@@ -965,9 +965,12 @@ cheatsheet do
             name 'Paredit'
             notes <<-'END'
             ```
-            ^ → - move the close paren to the right
+            ^ L - move the close paren to the right (slurp)
+            ^ H - move the close paren to the left (barf)
             ^ ALT S - delete paren
             ```
+
+            I remapped slurp and barf.
 
             See <https://calva.io/paredit/>
             END
