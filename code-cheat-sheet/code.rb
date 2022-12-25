@@ -9,6 +9,14 @@ cheatsheet do
             command '⌘ B'
         end
         entry do
+            name 'Show/hide terminal'
+            notes <<-'END'
+            ```
+            ^ `
+            ```
+            END
+        end
+        entry do
             name 'fold'
             command '⌘ ⎇ ['
         end
