@@ -34,6 +34,18 @@ cheatsheet do
         end
     end
     category do
+        id 'HTML'
+        entry do
+            name 'Delete surrounding tag'
+            notes <<-'END'
+            ```
+            Emmet: Remove tag
+            ```
+            END
+        end
+
+    end
+    category do
         id ''
         entry do
             name 'Format doc'
