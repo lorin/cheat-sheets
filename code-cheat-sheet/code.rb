@@ -5,6 +5,10 @@ cheatsheet do
     category do
         id 'Keyboard shortcuts'
         entry do
+            name 'show/hide left panel'
+            command '⌘ B'
+        end
+        entry do
             name 'fold'
             command '⌘ ⎇ ['
         end
