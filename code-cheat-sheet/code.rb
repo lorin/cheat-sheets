@@ -10,11 +10,7 @@ cheatsheet do
         end
         entry do
             name 'Show/hide terminal'
-            notes <<-'END'
-            ```
-            ^ `
-            ```
-            END
+            command '^ `'
         end
         entry do
             name 'fold'

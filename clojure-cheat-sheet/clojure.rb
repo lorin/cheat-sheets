@@ -134,6 +134,14 @@ cheatsheet do
             END
         end
         entry do
+            name 'Switch namespaces'
+            notes <<-'END'
+            ```
+            (in-ns 'timeline.core)
+            ```
+            END
+        end
+        entry do
             name 'Use doc in repl'
             notes <<-'END'
             ```clojure
