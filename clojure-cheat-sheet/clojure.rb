@@ -561,6 +561,14 @@ cheatsheet do
             END
         end
         entry do
+            name 'Create a subset map'
+            notes <<-'END'
+            ```clojure
+            (select-keys m [:foo :bar :baz])
+            ```
+            END
+        end
+        entry do
             name 'Add / modify a field'
             notes <<-'END'
             ```clojure
