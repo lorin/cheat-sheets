@@ -38,19 +38,15 @@ cheatsheet do
         end
     end
     category do
-        id 'HTML'
+        id 'General'
         entry do
-            name 'Delete surrounding tag'
+            name 'Change keybindings'
             notes <<-'END'
             ```
-            Emmet: Remove tag
+            Code → Preferences → Keyboard shortcuts
             ```
             END
         end
-
-    end
-    category do
-        id ''
         entry do
             name 'Format doc'
             notes <<-'END'
@@ -67,6 +63,16 @@ cheatsheet do
             1. "Copy With Syntax Highlighting"
             END
         end
-
+    end
+    category do
+        id 'HTML'
+        entry do
+            name 'Delete surrounding tag'
+            notes <<-'END'
+            ```
+            Emmet: Remove tag
+            ```
+            END
+        end
     end
 end
