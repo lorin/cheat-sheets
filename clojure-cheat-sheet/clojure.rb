@@ -674,6 +674,14 @@ cheatsheet do
     category do
         id 'Strings'
         entry do
+            name 'Concatenate strings'
+            notes <<-'END'
+            ```
+            (str "foo" "bar" "baz)
+            ```
+            END
+        end
+        entry do
             name 'Join a collection of strings'
             notes <<-'END'
             ```clojure
