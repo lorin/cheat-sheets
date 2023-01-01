@@ -122,6 +122,19 @@ cheatsheet do
             ```
             END
         end
+        entry do
+            name 'Nested destructuring'
+            notes <<-'END'
+            ```clojure
+            ; {:key "val" {:meta {:numItems 12}}}
+            (defn coll->count
+              [{:keys [key]
+                {:keys [numItems]} :meta}]
+              {:key key
+               :count numItems})
+            ```
+            END
+        end
     end
     category do
         id 'REPL'
