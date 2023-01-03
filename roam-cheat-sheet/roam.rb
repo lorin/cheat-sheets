@@ -9,6 +9,14 @@ cheatsheet do
             command 'CTRL SHIFT D'
         end
         entry do
+            name 'Command palette'
+            command 'CMD P'
+        end
+        entry do
+            name 'Search'
+            command 'CMD U'
+        end
+        entry do
             name 'Focus on current block (or open block)'
             command 'CTRL O'
         end
