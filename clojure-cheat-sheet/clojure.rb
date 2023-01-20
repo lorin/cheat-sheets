@@ -67,14 +67,20 @@ cheatsheet do
             name 'Detect if executed'
             notes <<-'END'
             ```clojure
-
             (when
                 (= *file* (System/getProperty "babashka.file"))
                 (main *command-line-args*))
             ```
             END
         end
+        entry do
+            name 'main function, alternate'
+            notes <<-'END'
+            ```
 
+            ```
+            END
+        end
     end
     category do
         id 'Dispatching'
@@ -233,6 +239,23 @@ cheatsheet do
             END
         end
         entry do
+            name 'Portal'
+            notes <<-'END'
+            ```clojure
+            ; deps.edn
+            {:deps
+              {djblue/portal {:mvn/version "0.35.1"}}}
+
+            ; src
+            (require '[portal.api :as p])
+            (def p (p/open {:launcher :vs-code}))
+            (add-tap #'p/submit)
+
+            (tap> {:foo 'bar})
+            ```
+            END
+        end
+        entry do
             name 'Launch a repl'
             notes <<-'END'
             ```
@@ -249,7 +272,7 @@ cheatsheet do
             .
             ├── deps.edn
             └── src
-            └── hello.clj
+               └── hello.clj
             ```
 
             hello.clj
