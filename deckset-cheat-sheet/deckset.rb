@@ -5,7 +5,7 @@ cheatsheet do
     category do
         id ''
         entry do
-            name 'Metadata'
+            name 'Style and slide numbers'
             notes <<-'END'
             ```
             slidenumbers: false
@@ -42,9 +42,9 @@ cheatsheet do
             notes <<-'END'
             ```
             # Text goes here
-            
+
             ^ Speaker notes are here
-            
+
             ```
             END
         end
