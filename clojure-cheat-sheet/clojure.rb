@@ -950,6 +950,16 @@ cheatsheet do
             END
         end
         entry do
+            name 'CLI dependencies'
+            notes <<-'END'
+            ```clojure
+            {:deps
+             {clj-http/clj-http {:mvn/version "3.10.1"}
+              org.clojure/data.json {:mvn/version "1.0.0"}
+            ```
+            END
+        end
+        entry do
             name 'lein dependencies'
             notes <<-'END'
             ```
@@ -983,7 +993,7 @@ cheatsheet do
               )
               (:refer-clojure))
 
-            ; query and converrt keys to keywords
+            ; query and convet keys to keywords
             (-> "http://www.example.com" client/get :body (json/read-str :key-fn keyword))
             ```
             END
