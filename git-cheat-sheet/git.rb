@@ -53,6 +53,14 @@ cheatsheet do
             END
         end
         entry do
+            name 'List of commits between two commits'
+            notes <<-'END'
+            ```
+            git log --oneline --ancestry-path old-sha..new-sha
+            ```
+            END
+        end
+        entry do
             name 'diff and patch'
             notes <<-'END'
             ```
